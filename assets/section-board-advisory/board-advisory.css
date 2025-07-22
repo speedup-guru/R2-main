@@ -1,0 +1,15 @@
+.mbf-info:after {
+    content: "\2b";
+    font-family: Font Awesome\ 6 Pro;
+    background: #fff;
+    color: #212848;
+    min-width: 30px;
+    height: 30px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+}
+.advisory__member[aria-expanded="true"] .mbf-info:after {
+    content: "\f068";
+}
