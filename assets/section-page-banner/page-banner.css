@@ -1,8 +1,0 @@
-.page-banner-title{
-    color:var(--pg-title, #212428)
-}
-@media(max-width:767px){
-    .page-banner-title{
-        color:var(--pg-title-mob, #fff)
-    }
-}
