@@ -1,0 +1,6 @@
+.detailed_guide_btn img{
+    filter: invert(1);
+}
+.detailed_guide_btn:hover img {
+    filter: invert(0);
+}

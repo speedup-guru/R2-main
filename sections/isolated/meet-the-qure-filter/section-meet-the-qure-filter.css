@@ -1,0 +1,80 @@
+
+/* ==================== Section column with filter tab */
+.qure-filter-tabs {
+    padding: 9px 10px;
+    background: #fff;
+    border-radius: 100px;
+    border: 1px solid var(--border-color);
+    display: inline-flex;
+    gap: 0 15px;
+}
+.qure-filter-link {
+    --btn-padding: 3px 20px;
+    --btn-primary-bg: #fff;
+    --btn-primary-color: #8B8C8E;
+    --btn-font-size: 18px;
+}
+.qure-filter-link.active, .qure-filter-link:hover {
+    --btn-primary-bg-hover: #91BAEC;
+    --btn-primary-color-hover:#212428;
+}
+.qure-filter-list {
+    background: #F6F6F7;
+    grid-template-columns: repeat(2,1fr);
+    gap: 20px;
+}
+.qure-filter-list .qure-filter-item {
+    display: flex;
+    align-items: center;
+    gap: 0 10px;
+    font-size: 16px;
+}
+.qure-filter-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+.qure-filter-cards .filter-card-item {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.qure-filter-cards .filter-card-item .filter-card-video-icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.filter-modal .modal-content {
+    background: transparent;
+    border: none;
+}
+.filter-modal .modal-content .modal-body {
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 0;
+}
+.filter-modal-video {
+    max-width:225px;
+    margin:0 auto;
+    border-radius: 10px;
+    overflow: hidden;
+}
+@media (max-width:991px){
+    .qure-filter-list .qure-filter-item{
+        flex-wrap: wrap;
+    }
+    .qure-filter-list .qure-filter-item .qure-filter-icon {
+        width: 100%;
+    }
+}
+@media (max-width:991px){
+.qure-filter-link {
+    --btn-font-size: 16px;
+}
+}
+/* ==================== Section column with filter tab end */
