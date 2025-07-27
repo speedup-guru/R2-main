@@ -400,7 +400,11 @@
             </div>
         </div>
     </div>
-    <script src="sections/isolated/collection-block/section-collection-block.js"></script>
+   <script>
+      document.addEventListener("DOMContentLoaded", function () {
+         loadScriptOnce('section-collection-block', 'sections/isolated/collection-block/section-collection-block.js');
+      });
+   </script>
     <!--Collection Block-->
     <!-- Bundle banner -->
    <link rel="stylesheet" href="sections/isolated/bundle-banner/bundle-banner.css" />
