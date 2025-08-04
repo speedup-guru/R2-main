@@ -109,6 +109,14 @@
 .offer_bundle .bundle-content p{
     font-size: 18px;
 }
+.offer_bundle.qure__section .swiper-slide-thumb-active img {
+    border: 1px solid #212428;
+}
+.offer_bundle.qure__section  .swiper-thumbnail-with-arrow img{
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: 10px;
+}
 @media(max-width:767px){
 .product_popups  ul.nav-pills {
     flex-wrap: wrap;

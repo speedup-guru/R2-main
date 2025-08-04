@@ -34,3 +34,28 @@
 .advisory__member.active:after{
     opacity: 0;
 }
+.product-with-link {
+    display: grid;
+    grid-template-columns: 90px 1fr;
+    padding: 16px;
+    align-items: center;
+    gap: 16px;
+    align-self: stretch;
+    border-radius: 10px;
+    border: 1px solid var(--Charcoal-10, #DFE0E0);
+    color: inherit;
+}
+.product-with-link:hover {
+    border-color: var(--qure-charcoal);
+}
+.product-with-link + .product-with-link{
+    margin-top: 20px;
+}
+@media(max-width:767px){
+    .board-advisory-thumbs .qure__product-gallery {
+        padding: 0 15px;
+    }
+    .board-advisory-thumbs .qure__product-gallery {
+        padding: 0 15px;
+    }
+}

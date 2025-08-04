@@ -1,0 +1,25 @@
+.contact-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+.contact-info {
+    display: grid;
+    grid-template-columns: 70px 1fr;
+    gap: 0 15px;
+    align-items: center;
+}
+.contact-info .cont-img img {
+    max-width: 100%;
+}
+@media(max-width:767px){
+    .contact-container {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 0;
+    }
+    .contact-info + .contact-info {
+    padding-top: 20px;
+    margin-top: 20px;
+    border-top: 1px solid #DFE0E0;
+}
+}

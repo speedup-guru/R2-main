@@ -23,6 +23,7 @@
     font-size: 20px;
     padding-right: 20px;
     position: relative;
+    color: #212428;
 }
 .title_content{
     font-family: "TT Commons";
@@ -85,11 +86,11 @@
     grid-template-columns: 250px 1fr;
     align-items: center;
     border: 1px solid #DFE0E0;
-    border-radius: 10px;
+    border-radius: 12px;
     overflow: hidden;
 }
 .step_card .step_body {
-    padding: 24px;
+    padding: 22px;
 }
 .step_card-main {
     padding-right: 1px;
@@ -104,6 +105,7 @@
     min-height: 80px;
     display: grid;
     grid-template-columns: 40px 1fr 40px;
+    align-items: center;
 }
 .mi_details {
     display: grid;
@@ -143,6 +145,9 @@
 .qure__accordion-header, .qure__accordion-header:not(.collapsed){
     font-size: 16px;
 }
+.step_card-main .step_card{
+    height: 100%;
+}
 @media(max-width:991px){
     .tab-pane {
         border-bottom: 1.5px solid #DFE0E0;
@@ -157,6 +162,7 @@
 @media(max-width: 767px){
     .step_card {
     grid-template-columns: 1fr;
+    align-items: start;
 }
 .step_card
 .step_body {

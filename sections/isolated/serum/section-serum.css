@@ -58,7 +58,11 @@
     border-radius: 50px;
     object-fit: cover;
 }
+.qure__serum-or{
+    height: calc(var(--eq__height) - 75px);
+}
 @media(max-width:767px){
     .qure__serum-title {padding: 24px 16px;}
     .qure__serum-qualities {gap:0 20px;padding: 24px 16px;}
+    .qure__serum-or{height: auto;}
 }

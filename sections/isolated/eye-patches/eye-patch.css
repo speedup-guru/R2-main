@@ -1,6 +1,6 @@
 .patch-versus-col {
     display: flex;
-    align-items: end;
+    align-items: center;
     height: calc(var(--child-height) + 140px);
 }
 .patch-versus {

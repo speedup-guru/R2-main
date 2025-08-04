@@ -1,5 +1,5 @@
 /* ============================ featured product bundle ===========================*/
-.patch__product-rating {padding: 8px 20px;background: #F6F6F7;border-radius: 5px;}
+.patch__product-rating {padding: 8px 15px;background: #F6F6F7;border-radius: 5px;}
 .patch__product-rating strong {font-weight: 600;}
 .patch__single-shortdes li {padding-left: 25px;position: relative;}
 .patch__single-shortdes li + li {margin-top: 15px;}
@@ -29,7 +29,7 @@
     gap: 10px;
     background: #F6F6F7;
     border-radius: 5px;
-    max-width: 415px;
+    max-width: 458px;
     margin: 0 auto;
     font-size: 14px;
     line-height: 18px;
@@ -100,7 +100,7 @@
 }
 .patch__results {
     display: grid;
-    grid-template-columns: 80px 1fr;
+    grid-template-columns: 70px 1fr;
     padding: 24px 12px;
     background: #F6F6F7;
     border-radius: 10px;
@@ -169,5 +169,7 @@
     .qure__variant-box .qv-img{max-width: 45px;}
     .exclusive_tag .tag_content {padding: 4px 20px 4px;font-size: 18px;}
     .qure__variant-item .div{font-size: 16px;}
+    .patch__product-rating span{font-size: 14px;}
+    .patch__product-main {grid-template-columns: 1fr;}
 }
 /* ============================ featured product bundle end ===========================*/

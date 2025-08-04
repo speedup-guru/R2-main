@@ -17,6 +17,10 @@
 .banner-text--des span{
     background-color: var(--base-color);
 }
+.banner-text--des strong {
+    font-weight: normal;
+    background:var(--base-color);
+}
 .banner-text--des li {
     padding-left: 28px;
     position: relative;
@@ -31,6 +35,10 @@
     position: absolute;
     left: 0;
     color: var(--color-ice);
+}
+.banner-text--media >  img {
+    border-radius: 10px;
+    overflow: hidden;
 }
 .it_img {
     border-radius: 8px !important;
@@ -117,7 +125,17 @@
     border-radius: 40px;
     background: #fff;
 }
-
+.prod_img_with_title img {
+    max-width: 80px;
+}
+.prod_img_with_title p{
+    color: #212428;
+}
+.prod_wrapper {
+    padding: 12px 16px;
+    border-radius: 10px;
+    background: var(--Mist, #F6F6F7);
+}
 @media(max-width:767px){
     .banner-text--heading {
         font-size: var(--text-heading-font-size-mob, 28px);

@@ -2,24 +2,14 @@
     height:100%;
     border: 1px solid var(--Charcoal-10, #DFE0E0);
     border-radius: 10px 10px;
+    overflow: hidden;
 }
-/* .trusted_video_content{
-    border-radius: 0px 0px 10px 10px;
-    border: 1px solid var(--Charcoal-10, #DFE0E0);
-    height:calc(100% - var(--child-height));
-} */
+.trusted_video_card .filter-card-item > img {
+    width: 100%;
+}
 .trusted_video_content{
     position: relative;
 }
-/* .trusted_video_content p:last-child:before {
-    content: "\f058";
-    display: inline-block;
-    font-family: Font Awesome\ 6 Pro;
-    font-weight: 900;
-    font-size: 14px;
-    margin-right: 10px;
-    color: #C7E5DB;
-} */
 
 .trusted_video_content p:last-child {
     display: flex;

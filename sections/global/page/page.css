@@ -1,49 +1,5 @@
-/* 
-.qure__policies h6 {
-    margin-top: 20px;
-    display: inline-block;
-    margin-bottom: 20px;
-    font-size: 20px;
-    font-family: var(--body-font-family);
-    font-weight: 600;
-}
-.qure__policies p {
-    margin-bottom: 15px;
-}
-.qure__policies ol, .qure__policies ul {
-    margin-bottom: 20px;
-    margin-left: 15px;
-    margin-top: -20px;
-}
-.qure__policies li {
-    padding-left: 12px;
-    position: relative;
-}
-.qure__policies li + li {
-    margin-top: 3px;
-}
-.qure__policies li:before {
-    content: '';
-    display: inline-block;
-    height: 4px;
-    width: 4px;
-    background: #212428;
-    position: absolute;
-    left: 0;
-    top: 10px;
-    border-radius: 10px;
-}
-.qure__policies a {
-    color: inherit;
-    text-decoration: underline;
-} */
-
-
-
-
 .qure__policies h2 {
     text-transform: capitalize;
-    margin-bottom: 40px;
 }
 
 .qure__policies p {
@@ -85,11 +41,12 @@
 
 .qure__policies .subscriptions_content {
     padding-bottom: 23px;
+    padding-top:12px;
 }
 
-.qure__policies .cancel_section {
+/* .qure__policies .cancel_section {
     padding: 12px 0;
-}
+} */
 .qure__policies .cancel_section:last-child{
     padding-bottom: 0;
 }
@@ -111,23 +68,10 @@
     word-break: break-word;
 }
 
-/* .qure__policies ul li:not(:last-child),
-.qure__policies ul:not(:last-child) {
-    padding-bottom: 40px;
-} */
-
-/* .qure__policies ol li:not(:last-child) {
-    padding-bottom: 30px;
-} */
-
 .qure__policies .nested_li li {
     padding-top: 20px;
     list-style-type: disc;
 }
-/* .qure__policies ol li {
-    list-style: decimal;
-    font-size: 14px;
-} */
 
 .qure__policies ._abc ul li {
     list-style: lower-alpha;
@@ -162,19 +106,9 @@
     font-weight: bold;
 }
 
-/* .qure__policies ol.ol_li_roman li {
-    padding-bottom: 4px !important;
-    list-style-type: lower-roman;
-} */
-
-/* .qure__policies .without_padding li {
-    padding-bottom: 4px !important;
-    margin-bottom: 0 !important;
-} */
-
 @media screen and (max-width: 768px) {
     .qure__policies {
-        margin: 40px 0;
+        /* margin: 40px 0; */
         margin-bottom: 70px;
     }
 
@@ -194,10 +128,6 @@
         line-height: 26px;
         letter-spacing: 0.16px;
         font-weight: 600;
-    }
-
-    .qure__policies .subscriptions_content {
-        margin-top: 30px;
     }
 
     .qure__policies .header_content {
@@ -227,7 +157,7 @@
         margin-bottom: 22px;
     }
 
-    .qure__policies .cancel_section {
+    /* .qure__policies .cancel_section {
         padding: 18px 0;
-    }
+    } */
 }

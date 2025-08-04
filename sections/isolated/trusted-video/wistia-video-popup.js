@@ -20,3 +20,8 @@
   }
 
   initWistiaModal();
+  
+new bootstrap.Modal(document.getElementById('reusableWistiaModal'), {
+  backdrop: true,
+  keyboard: true
+});
