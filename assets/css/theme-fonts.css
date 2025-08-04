@@ -37,8 +37,6 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
-
 .qure-arrow-right:before {
   content: "\61";
 }
@@ -71,6 +69,30 @@
 }
 .qure-shipping:before {
   content: "\6b";
+}
+.qure-watch:before {
+  content: "\6c";
+}
+.qure-calendar:before {
+  content: "\6d";
+}
+.qure-badge:before {
+  content: "\6e";
+}
+.qure-cursor:before {
+  content: "\6f";
+}
+.qure-battery:before {
+  content: "\70";
+}
+.qure-waves:before {
+  content: "\71";
+}
+.qure-modes:before {
+  content: "\72";
+}
+.qure-bows:before {
+  content: "\73";
 }
 
 @font-face {

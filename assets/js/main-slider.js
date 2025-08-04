@@ -23,6 +23,7 @@ var QureSettingsSwiper = {
             pd = e?.dataset.rowtablet ? e?.dataset.rowtablet : 1,
             pm = e?.dataset.rowmobile ? e?.dataset.rowmobile : 1,
             h = e?.dataset.spacing ? e?.dataset.spacing : 0,
+            hm = e?.dataset.spacingmob ? e?.dataset.spacingmob : 0,
             g = "true" === e?.dataset.paginationFraction,
             f = "true" === e?.dataset.animationSrcoll,
             cs = "true" === e?.dataset.slidecenter,
@@ -32,11 +33,15 @@ var QureSettingsSwiper = {
             al = e?.dataset.arrowleft ? e?.dataset.arrowleft : "qure-swiper-button-prev", 
             ar = e?.dataset.arrowright ? e?.dataset.arrowright : "qure-swiper-button-next",
             pg = e?.dataset.pagination ? e?.dataset.pagination : "swiper-pagination"; 
+            let rawHm = e?.dataset.spacingmob;
+            let safeHm = Number(rawHm ?? 15);
+            safeHm = safeHm >= 15 ? 15 : safeHm;
         h = Number(h), c = Number(c), d = Number(d), n && (n = {
             delay: c
-        }), t = new Swiper("#qure__swiper-" + m, {
+        }),
+         t = new Swiper("#qure__swiper-" + m, {
             slidesPerView: b ? "auto" : a,
-            spaceBetween: h >= 15 ? 15 : h,
+            spaceBetween: safeHm,
             autoplay: n,
             loop: o,
             effect: u,
@@ -62,7 +67,7 @@ var QureSettingsSwiper = {
                 type: g ? "fraction" : "bullets"
             },
             breakpoints: {
-                768: {
+                600: {
                     slidesPerView: r,
                     spaceBetween: h >= 30 ? 30 : h,
                     grid: {
