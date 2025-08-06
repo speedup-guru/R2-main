@@ -51,10 +51,10 @@ outline-color: #797d7c24;
 .filter_points .point_column {
     position: absolute;
 }
-.filter_points img {
+/* .filter_points img {
     max-width: 410px;
     width: 100%;
-}
+} */
 .filter_points .accordion-button.collapsed {
     opacity: 0.5;
 }
@@ -69,7 +69,8 @@ outline-color: #797d7c24;
     width: 40px;
 } */
 .point_column.p_one .p_text,
-.point_column.p_two .p_text {
+.point_column.p_two .p_text,
+.point_column.p_three .p_text {
     width: 70px;
 }
 .filter_points .point_column .p_text{

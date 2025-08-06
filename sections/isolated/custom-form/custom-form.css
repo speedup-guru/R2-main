@@ -1,0 +1,15 @@
+.qure_input {
+    border-radius: 10px;
+    border: 1px solid var(--Charcoal-10, #DFE0E0);
+    display: flex;
+    overflow: hidden;
+}
+.qure_input input, .qure_input textarea {
+    width: 100%;
+    border: 0;
+    padding: 24px 16px;
+    font-size: 16px;
+}
+.qure_input input {
+    height: 58px;
+}

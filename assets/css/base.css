@@ -16,11 +16,11 @@
     --qure-transition: all .4s;
     --quer-transform: scale(1.05);
     --qure-charcoal:#212428;
-    --input-padding:14px 20px;
+    --input-padding:16px 24px;
     --input-bg: var(--white-color);
-    --input-border-color:var(--white-color);
-    --input-font-size:20px;
-    --input-border-radius:50px;
+    --input-border-color:#DFE0E0;
+    --input-font-size:16px;
+    --input-border-radius:10px;
     --input-color:#8B8C8E;
     --border-color:#8B8C8E;
     --color-green:#008763;
@@ -313,7 +313,7 @@ body {
 }
 
 /*========================== Inputs============================ */
-input[type=search], input[type=tel], input[type=text], input[type=number], input[type=email], input[type=date], input[type=password], select, textarea {
+input[type=search], input[type=tel], input[type=text], input[type=number], input[type=email], input[type=date], input[type=password], select, textarea, .form-control,.qure__custom-dropdown {
     padding: var(--input-padding);
     border: 1px solid var(--input-border-color);
     background: var(--input-bg);
@@ -324,11 +324,35 @@ input[type=search], input[type=tel], input[type=text], input[type=number], input
     font-size: var(--input-font-size);
     transition: var(--qure-transition);
 }
-input[type=search]:focus, input[type=tel]:focus, input[type=text]:focus, input[type=number]:focus, input[type=email]:focus, input[type=password]:focus, select:focus, textarea:focus {
+input[type=search]:focus, input[type=tel]:focus, input[type=text]:focus, input[type=number]:focus, input[type=email]:focus, input[type=password]:focus, select:focus, textarea:focus,.form-control:focus , .qure__custom-dropdown:focus{
     outline: 0;
-    border:none;
+    /* border:none; */
+    border-color: var(--bs-body-color);
     box-shadow: none;
     font-size: var(--input-font-size);
+}
+input[type=search]::placeholder, input[type=tel]::placeholder, input[type=text]::placeholder, input[type=number]::placeholder, input[type=email]::placeholder, input[type=password]::placeholder, select::placeholder, textarea::placeholder,.form-control::placeholder {
+    color: var(--input-color);
+}
+textarea.form-control {
+    min-height: 160px;
+}
+.form-check-input {
+    width: 24px;
+    height: 24px;
+    margin-top:0;
+}
+.form-check-input:checked {
+    background-color: var(--qure-charcoal);
+    border-color: var(--qure-charcoal);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='15' height='10' viewBox='0 0 15 10' fill='none'%3E%3Cpath d='M13.318 1L5.318 9L1.68164 5.36364' stroke='white' stroke-width='1.77778' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat no-repeat;
+    background-position: center center;
+    background-size: 12px 12px;
+}
+.form-check-input:focus {
+    box-shadow: none;
+    border-color: var(--input-border-color);
 }
 /*========================== Inputs end============================ */
 
@@ -580,7 +604,36 @@ input[type=search]:focus, input[type=tel]:focus, input[type=text]:focus, input[t
 .qure__accordion-item ol > li + li{margin-top: 5px;}
 .qure__accordion-item ul > li:before {position: relative;content: '';display: inline-block;height: 4px;min-width: 4px;background: var(--qure-charcoal);border-radius: 10px;top: 10px;}
 .qure__accordion-item ol > li:before {content: "\f058";display: inline-block;font-family: Font Awesome\ 6 Pro;font-weight: 400;font-size: 14px;margin-right: 10px;color: #91baec;}
+.qure__accordion-item ul.list-number, .qure__accordion-item ul.circle-number{
+    counter-reset: listNumber;
+}
+.qure__accordion-item ul.list-number li,
+.qure__accordion-item ul.circle-number li{
+    counter-increment: listNumber;
+  list-style: none;
+  position: relative;
+}
+.qure__accordion-item ul.circle-number > li:before,
+.qure__accordion-item ul.list-number > li:before {
+    content: counter(listNumber)"";
+    background: transparent;
+    height: 20px;
+    min-width: 20px;
+    border: 1px solid;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 5px;
+}
+.qure__accordion-item ul.list-number > li:before {
+    width: auto;
+    border: none;
+    min-width: unset;
+    top: 2px;
+}
 .qure__accordion-content .accordion-body {padding-top: 0;padding-bottom: 20px;}
+
 .accordion-flush>.qure__accordion-item:last-child{border-bottom: var(--bs-accordion-border-width) solid var(--bs-accordion-border-color) !important;}
 .q-tabs {display: flex;flex-wrap: wrap;gap: 10px 30px;}
 .q-tabs .q-link {background: none;padding: 0;border: none;color: #B5B6B7;}
@@ -636,7 +689,7 @@ input[type=search]:focus, input[type=tel]:focus, input[type=text]:focus, input[t
     text-align: center;
 }
 .btn-sm{
-    font-size:var(--btn-sm-font-size,16px);
+    font-size:var(--btn-sm-font-size,18px);
     padding: var(--btn-sm-padding, 4px 20px);
 }
 .btn-md{
@@ -752,6 +805,9 @@ input[type=search]:focus, input[type=tel]:focus, input[type=text]:focus, input[t
 @media(max-width:767px){
     .btn,.btn--primary,.btn--secondary,.lvideo-wrap .lvideo-close{
     font-size:var(--btn-font-mob, 20px);
+}
+.btn-sm {
+    font-size: var(--btn-sm-font-mob,16px);
 }
 }
 /* ======================Buttons ========================*/

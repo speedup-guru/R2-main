@@ -76,10 +76,24 @@
 }
 
 .qure__price .price__sale {
+    position: relative;
     color: #8B8C8E;
-    text-decoration: line-through;
     font-size: 20px;
     margin: 0 10px;
+}
+
+.qure__price .price__sale {
+    text-decoration: none;
+}
+
+.qure__price .price__sale::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-color: currentColor;
+    top: 55%;
 }
 
 .qure__single-shortdes li {
@@ -483,6 +497,9 @@
     .qure__variant-box .qv-img {
         max-width: 45px;
     }
+    .qure__featured-product-bundle .qure__accordion-header{
+    font-size: 16px;
+}
 }
 
 /* ============================ featured product bundle end ===========================*/

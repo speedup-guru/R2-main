@@ -204,18 +204,6 @@
     font-size: 14px;
     flex-wrap: wrap;
 }
-.qure__sticky-atc {
-    position: fixed;
-    bottom: 0;
-    z-index: 1;
-    background: #FFF;
-    width: 100%;
-    border-top: 1px solid var(--Charcoal-10, #DFE0E0);
-}
-.qure__sticky-atc .btn {
-    max-width: 400px;
-    width: 100%;
-}
 
 .icon-with-text img {
     height: 40px;
@@ -299,10 +287,6 @@
         font-size: 16px;
         width: 30px;
         height:30px;
-    }
-    .qure__sticky-atc .btn {
-        font-size: 18px;
-        padding: 10px 40px;
     }
     .qure__bundle-box {
     padding: 10px;

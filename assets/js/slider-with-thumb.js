@@ -75,6 +75,9 @@ class SlideImageWithThumbs extends HTMLElement {
     });
     }
 }
+customElements.define('slide-with-thumbs', SlideImageWithThumbs);
+
+
 
 var QureEventProductSlider = {
   init: function () {

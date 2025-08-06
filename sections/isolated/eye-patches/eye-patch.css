@@ -1,7 +1,8 @@
 .patch-versus-col {
     display: flex;
-    align-items: center;
+    align-items: end;
     height: calc(var(--child-height) + 140px);
+    margin-bottom: -100px;
 }
 .patch-versus {
     display: flex;
@@ -97,6 +98,7 @@
     .patch-versus-col {
         height: var(--child-height);
         align-items: center;
+        margin-bottom: unset;
     }
     .patch-versus {
         height: 50px;
@@ -106,5 +108,8 @@
         margin: 0 -10px;
         position: relative;
         z-index: 1;
+    }
+    .patch-list-row .patch-list{
+        font-size: 16px;
     }
 }

@@ -1,0 +1,19 @@
+.qure__sticky-atc {
+    position: fixed;
+    bottom: 0;
+    z-index: 1;
+    background: #FFF;
+    width: 100%;
+    border-top: 1px solid var(--Charcoal-10, #DFE0E0);
+}
+.qure__sticky-atc .btn {
+    max-width: 400px;
+    width: 100%;
+}
+
+@media(max-width:991px){
+    .qure__sticky-atc .btn {
+        font-size: 18px;
+        padding: 10px 40px;
+    }
+}

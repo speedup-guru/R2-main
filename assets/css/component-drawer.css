@@ -29,6 +29,11 @@ input[type=number] {
 .offcanvas {
     --bs-offcanvas-width: 450px
 }
+.offcanvas-dynamic-content{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
 .offcanvas-header {
     display: flex;
     align-items: center;
