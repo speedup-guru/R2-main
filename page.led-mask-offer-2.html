@@ -2067,23 +2067,6 @@
                     <!-- Repeat this block for each video -->
                     <div class="swiper-slide">
                         <div class="trusted_video_card d-block">
-                           <a class="popup-youtube lvideo filter-card-item filter-card-video"
-                              data-url="https://www.youtube.com/watch?v=_w8yWCPeijg">
-                                <img src="sections/isolated/trusted-video/images/lmv-1.webp" alt="doctor review"
-                                    class="img-fluid" />
-                            </a>
-                            <div class="trusted_video_content d-flex flex-column justify-content-between gap-4 p-24">
-                                <p>"Qure has a fully customized mask which has 5 clinical-grade wavelength for aging and acne."</p>
-                                <div class="drs_rev">
-                                    <p>Dr. Prem Tripathi</p>
-                                    <p>Board-Certified Dermatologist</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Repeat this block for each video -->
-                    <div class="swiper-slide">
-                        <div class="trusted_video_card d-block">
                             <a class="popup-youtube lvideo filter-card-item filter-card-video"
                               data-url="https://www.youtube.com/watch?v=1iXBgh7WPOY">
                                 <img src="sections/isolated/trusted-video/images/lmv-2.webp" alt="doctor review"
@@ -2165,6 +2148,29 @@
                             </div>
                         </div>
                     </div>
+                     <!-- Repeat this block for each video -->
+                    <div class="swiper-slide">
+                        <div class="trusted_video_card d-block">
+                           <a href="#" data-bs-toggle="modal" data-bs-target="#reusableWistiaModal"
+                                data-video-id="qnxqysx3sg" class="filter-card-item filter-card-video">
+                                <div class="filter-card-video-icon align-items-end px-20 py-10 d-none">
+                                    <div class="align-items-center d-flex justify-content-between w-100">
+                                        <div class="text-white fs-20">Watch: How To Install</div>
+                                        <img src="assets/images/play_button.svg" alt="">
+                                    </div>
+                                </div>
+                                <img src="sections/isolated/trusted-video/images/lmv-1.webp" alt="doctor review"
+                                    class="img-fluid" />
+                            </a>
+                            <div class="trusted_video_content d-flex flex-column justify-content-between gap-4 p-24">
+                                <p>"Qure has a fully customized mask which has 5 clinical-grade wavelength for aging and acne."</p>
+                                <div class="drs_rev">
+                                    <p>Dr. Prem Tripathi</p>
+                                    <p>Board-Certified Dermatologist</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="swiper-arrows-with-pagination d-flex align-items-center justify-content-center gap-4 mt-30">
                     <div class="qure-swiper-button-prev qure-swiper-arrow"><i class="fa-regular fa-angle-left"></i>
@@ -2181,6 +2187,8 @@
       document.addEventListener("DOMContentLoaded", function () {
          loadScriptOnce('main-slider', 'assets/js/main-slider.js');
          loadScriptOnce('youtube-popup', 'assets/js/yt-popup.js');
+         loadScriptOnce('video-slider', 'sections/isolated/trusted-video/wistia-video-popup.js');
+         loadScriptOnce('wistia-script', 'https://fast.wistia.com/assets/external/E-v1.js');
       });
    </script>
    <!-- Trusted video slider end -->

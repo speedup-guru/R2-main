@@ -73,7 +73,11 @@ input[type=number] {
 .product-remove {
     line-height: 1;
     cursor: pointer;
-    margin-left: 5px
+    margin-left: 5px;
+    background: transparent;
+    width: fit-content;
+    padding: 0;
+    border: none;
 }
 .product-remove svg {
     width: 18px;
