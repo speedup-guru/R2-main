@@ -1956,7 +1956,7 @@
 
     <!-- Banner with text -->
     <link href="sections/global/banner-with-text/banner-text.css" rel="stylesheet" type="text/css">
-    <div class="qure__section banner-with-text" style="--section-padding-top:80px; --section-padding-bottom:80px;">
+    <div class="qure__section banner-with-text" style="--section-padding-top:80px; --section-padding-bottom:30px; --section-padding-top-mob: 50px; --section-padding-bottom-mob: 16px;">
         <div class="container">
             <div class="row custom__grid align-items-center flex-column-reverse flex-md-row" style="--column-gap:60px; --column-gap-mobile:32px;">
                 <div class="col-md-6 custom__block">
@@ -1980,7 +1980,7 @@
 
     <!-- Banner with text -->
     <link href="sections/global/banner-with-text/banner-text.css" rel="stylesheet" type="text/css">
-    <div class="qure__section banner-with-text" style="--section-padding-top:80px; --section-padding-bottom:80px;">
+    <div class="qure__section banner-with-text" style="--section-padding-top:30px; --section-padding-bottom:40px;  --section-padding-top-mob: 16px; --section-padding-bottom-mob: 16px;">
         <div class="container">
             <div class="row custom__grid align-items-center" style="--column-gap:60px; --column-gap-mobile:32px;">
                <div class="col-md-6 custom__block">
@@ -2218,18 +2218,19 @@
                     </div>
                 </div>
             </div>
-            <div class="row">
-               <div class="col">
+            <div class="row align-items-center justify-content-between">
+               <div class="col-5">
                   <div class="patch-card-content">
-                            <div class="text-center my-30">
-                                <img src="sections/isolated/eye-patches/images/logo.webp" alt="" />
-                            </div>
-                        </div>
+                     <div class="text-center my-30">
+                        <img src="sections/isolated/eye-patches/images/logo.webp" alt=""  class="img-fluid"/>
+                     </div>
+                  </div>
                </div>
-               <div class="col">
+               <div class="col-5">
                   <div class="patch-card-content">
                         <div class="text-center my-30">
-                           <img src="sections/isolated/eye-patches/images/Title.webp" alt="" />
+                           <!-- <img src="sections/isolated/eye-patches/images/Title.webp" alt=""  class="img-fluid"/> -->
+                            <h4 class="color-grey text-break text-wrap">Derm/Clinic Treatments</h4>
                         </div>
                   </div>
                </div>
@@ -2285,6 +2286,7 @@
    <!-- Banner with content over -->
       <link rel="stylesheet" href="sections/isolated/content-over-image/content-over-image.css" />
     <div class="content-over-image-banner position-relative">
+      <div class=" ct-over-parent">
       <div class="ct-banner-img">
           <picture>
          <source media="(min-width:1920px)" srcset="sections/isolated/content-over-image/images/hero.webp" class="img-fluid"
@@ -2293,7 +2295,7 @@
             width="1440" height="557">
          <source media="(min-width:1100px)" srcset="sections/isolated/content-over-image/images/hero.webp" class="img-fluid"
             width="1440" height="557">
-         <source media="(min-width:767px)" srcset="sections/isolated/content-over-image/images/hero.webp" class="img-fluid"
+         <source media="(min-width:575px)" srcset="sections/isolated/content-over-image/images/hero.webp" class="img-fluid"
             width="1440" height="557">
          <source media="(min-width:540px)" srcset="sections/isolated/content-over-image/images/hero-mob-1.webp" class="img-fluid"
             width="1440" height="557">
@@ -2301,10 +2303,10 @@
             class="img-fluid w-100">
          </picture>
       </div>
-      <div class="align-items-start align-items-md-center ct-banner-content d-flex inset-0 position-absolute qure__section" style="--section-padding-top: 80px; --section-padding-bottom: 80px; --section-background: #F6F6F7; --section-padding-top-mob: 30px; --section-padding-bottom-mob: 30px;">
+      <div class="align-items-start align-items-sm-center ct-banner-content d-flex inset-0 position-absolute qure__section" style="--section-padding-top: 80px; --section-padding-bottom: 80px; --section-background: #F6F6F7; --section-padding-top-mob: 30px; --section-padding-bottom-mob: 30px;">
          <div class="container">
-            <div class="ct-banner-inner d-flex flex-column gap-4 bg-white p-30 rounded-10 ctm-width" roun="" style="--ctm-width: 580px;">
-               <div class="align-items-center ct-banner-rating d-flex fs-18 gap-3"><img src="sections/isolated/clean-water/images/cyan_blue_rating.svg" alt=""> <span><strong>97%</strong> customer satisfaction rate</span></div>
+            <div class="ct-over-child ct-banner-inner d-flex flex-column gap-3 bg-white p-16 p-md-30 rounded-10 ctm-width" roun="" style="--ctm-width: 580px;    --ctm-width-mob: 100%;">
+               <div class="align-items-center ct-banner-rating d-flex fs-16 gap-3"><img src="sections/isolated/clean-water/images/cyan_blue_rating.svg" alt="" height="16px"> <span><strong>97%</strong> customer satisfaction rate</span></div>
                <h2>Maximize Benefits with a FREE Neck & Décolletage LED Device</h2>
                <div class="ct-banner-price d-flex gap-3 text-uppercase"><span class="color-grey text-decoration-line-through">$299</span> Free <span class="qure__product-label text-uppercase px-14">Save $299</span></div>
                <ul class="qure__list-check d-flex flex-column gap-2">
@@ -2317,7 +2319,13 @@
             </div>
          </div>
       </div>
+      </div>
     </div>  
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+         loadScriptOnce('equal-height', 'assets/js/equal-height.js');
+      });
+   </script>
    <!-- Banner with content over -->
 <!-- Faq section Start -->
     <div class="faq_section qure__section color-background"
@@ -2381,7 +2389,7 @@
                                                    <span><strong>CERTIFICATES: </strong> FDA, TGA, CE, UKCA</span>
                                                 </div>
                                                 <div class="tmt-list">
-                                                   <i class="icon qure-cursor"></i> 
+                                                   <i class="icon qure-battery"></i> 
                                                    <span><strong>CHARGING TIME: </strong> 2 hours</span>
                                                 </div>
                                              </div>
@@ -2419,7 +2427,7 @@
                                                    <span><strong>LEDs: </strong> 55 dual core</span>
                                                 </div>
                                                 <div class="tmt-list">
-                                                   <i class="icon qure-cursor"></i> 
+                                                   <i class="icon qure-battery"></i> 
                                                    <span><strong>CHARGING TIME: </strong> 4 hours</span>
                                                 </div>
                                              </div>
@@ -2545,14 +2553,13 @@
    <div class="qure__sticky-atc">
       <div class="container">
          <div class="d-flex flex-wrap justify-content-between align-items-center py-16">
-            <h3 class="fs-20 m-0 d-none d-md-block">Transform dull looking skin with Micro-Infusion Facial System
-            </h3> <a href="#buy_box" class="text-uppercase btn btn--primary">buy now & SAVE UP TO 43% </a>
+            <h3 class="fs-20 m-0 d-none d-md-block">Q-Rejuvalight Pro + Neck & Décolletage LED Device</h3> 
+            <a href="#buy_box" class="text-uppercase btn btn--primary">Shop Now & Save $299</a>
          </div>
       </div>
       <div
          class="align-items-center bg-light d-flex fs-16 gap-4 justify-content-center py-6 qure__user-online text-center">
-         <div class="pulse"></div>1,293 purchased in last 48 hours
-      </div>
+         <div class="pulse"></div>1,893 purchased in last 48 hours</div>
    </div>
    <!-- Sticky CTA end -->
 

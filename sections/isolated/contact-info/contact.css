@@ -130,6 +130,31 @@ select.synced-select {
     max-width: 340px;
     padding-bottom: 10px;
 }
+.customer_info .nav-link.active {
+    border-width: 0 0 2px;
+    border-color: #91BAEC;
+    color: #212428;
+    font-weight: 600;
+}
+.customer_info .nav-link {
+    border-width: 0 0 1px;
+    border-color: #B5B6B7;
+    color: #212428;
+    padding: 5px 20px;
+}
+.customer_password span {
+    display: inline-block;
+    height: 10px;
+    width: 10px;
+    background: #212428;
+    border-radius: 50%;
+}
+
+.customer_password {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
 @media(max-width:767px) {
     .otp_block{
         margin: 0 auto;

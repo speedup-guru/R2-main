@@ -464,6 +464,7 @@ textarea.form-control {
 .bg-light{background:var(--bg-light) !important;}
 .bg-icemint{background:var(--base-color)}
 .color-grey{color:var(--input-color);}
+.color-charcoal{color:var(--qure-charcoal);}
 .color-green{color:var(--color-green);}
 .color-orange{color:var(--color-orange)}
 .color-ice{color:var(--color-ice);}
@@ -627,10 +628,17 @@ textarea.form-control {
     top: 5px;
 }
 .qure__accordion-item ul.list-number > li:before {
+    content: counter(listNumber)".";
     width: auto;
     border: none;
     min-width: unset;
-    top: 2px;
+    top: 0px;
+}
+.qure__accordion-item ul.list-number li{
+    gap: 0 5px;
+}
+.qure__accordion-item ul.list-number li + li {
+    margin-top: 2px;
 }
 .qure__accordion-content .accordion-body {padding-top: 0;padding-bottom: 20px;}
 
@@ -853,8 +861,9 @@ textarea.form-control {
     overflow: hidden;
     height: 100%;
 } */
-body{
-    padding-top:calc(var(--height-bar) + var(--height-header));
+body {
+    padding-top: calc(var(--height-bar) + var(--height-header));
+    padding-bottom: var(--sticky-cart);
 }
  /* .nav-open{overflow:hidden;}  */
 
@@ -1120,10 +1129,10 @@ body{
     padding: 10px 20px;
     align-items: center;
     gap: 10px;
-    background: #F6F6F7;
+    background: var(--crt-bg, #F6F6F7);
     border-radius: 5px;
     max-width: 415px;
-    margin: 0 auto;
+    /* margin: 0 auto; */
     font-size: 14px;
     line-height: 18px;
 }
