@@ -13,3 +13,6 @@
 .swiper-slide > div{
     height: auto !important;
 }
+.reward-section .reward-card img {
+    max-height: 61px;
+}

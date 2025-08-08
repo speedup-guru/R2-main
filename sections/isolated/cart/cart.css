@@ -18,7 +18,7 @@
     border: 1px solid #8B8C8E;
     padding: 3px;
     border-radius: 3px;
-    display: inline-block;
+    display: inline-flex;
     width: max-content;
 }
 .cart__qty .qty-btn {
@@ -55,6 +55,105 @@
     max-width: 760px;
     margin-left: auto;
     border-bottom: 1px solid #DFE0E0;
+}
+.empty-cart {
+    display: flex;
+    flex-direction: column;
+    gap: 25px 0px;
+    align-items: center;
+}
+.empty-cart h2{
+    line-height: unset;
+    margin: 0;
+}
+.empty-cart .cart-image {
+    max-width: 100px;
+}
+
+.insurance-wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 0 20px
+}
+
+.insurance__img-wrapper {
+    padding-right: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start
+}
+.insurance__img-wrapper .insurance__text--info {
+    margin-left: 8px;
+    width: 12px;
+    height: 12px;
+}
+.insurance-ship {
+    font-size: 12px;
+    line-height: 16px
+}
+
+.insurance-ship .insurance__cost {
+    font-weight: 600
+}
+
+.insurance-wrapper .switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 24px
+}
+
+.insurance-wrapper .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0
+}
+
+.insurance-wrapper .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s
+}
+
+.insurance-wrapper .slider:before {
+    position: absolute;
+    content: "";
+    height: 20.22px;
+    width: 20.22px;
+    left: 2px;
+    bottom: 2px;
+    -webkit-transition: .4s;
+    transition: .4s;
+    background: #FFF;
+    box-shadow: 0 0 0 .774px #0000000a 0 2.323px 6.194px 0 #00000026 0 2.323px .774px 0 #0000000f
+}
+
+.insurance-wrapper input:checked+.slider {
+    background-color: #34C759
+}
+
+.insurance-wrapper input:focus+.slider {
+    box-shadow: 0 0 1px #2196f3
+}
+
+.insurance-wrapper input:checked+.slider:before {
+    -webkit-transform: translateX(16px);
+    -ms-transform: translateX(16px);
+    transform: translateX(16px)
+}
+
+.insurance-wrapper .slider.round {
+    border-radius: 34px
+}
+
+.insurance-wrapper .slider.round:before {
+    border-radius: 50%
 }
 @media(max-width:991px){
     .cart--item, .cart--caption{
