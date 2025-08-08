@@ -14,16 +14,16 @@ const QureMainMenu = {
     },
 
     setHeaderHeights: function () {
-        const announcementBar = document.getElementById("announcement-bar");
-        const pageHeader = document.getElementById("page-header");
+        //const announcementBar = document.getElementById("announcement-bar");
+        //const pageHeader = document.getElementById("page-header");
         const stickyCart = document.querySelector('.qure__sticky-atc');
 
-        const d = announcementBar ? announcementBar.clientHeight : 0;
-        const p = pageHeader ? pageHeader.clientHeight : 0;
+        //const d = announcementBar ? announcementBar.clientHeight : 0;
+        //const p = pageHeader ? pageHeader.clientHeight : 0;
         const s = stickyCart ? stickyCart.clientHeight : 0;
 
-        document.body.style.setProperty("--height-bar", `${d}px`);
-        document.body.style.setProperty("--height-header", `${p}px`);
+        //document.body.style.setProperty("--height-bar", `${d}px`);
+        //document.body.style.setProperty("--height-header", `${p}px`);
         document.body.style.setProperty("--sticky-cart", `${s}px`);
     }
 };

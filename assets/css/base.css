@@ -1,4 +1,5 @@
 :root{
+    --height-bar: 50px; --height-header: 60px;
     --base-font-family: 'TT Commons';
     --heading-font-family: 'Canela';
     --heading-font-weight: 300;
