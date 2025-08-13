@@ -6,7 +6,7 @@
     width: max-content;
     color: #fff;
 }
-.articles .article_img .tag_name {
+.article_img .tag_name {
     position: absolute;
     top: 12px;
     left: 12px;
@@ -27,7 +27,7 @@
     line-height: 24px;
 }
 .article .article_content{
-    margin-top: -3px;
+    margin-top: -4px;
     border-radius: 0 0 10px 10px;
 }
 .popular_post_content .pop_post_tag{
@@ -88,7 +88,40 @@
 .qure_blogs .article{
     height: 100%;
 }
-
+/* css for single blog post  */
+.post p{
+    margin-bottom: 0;
+}
+.this_article strong{
+    font-size: 24px;
+}
+.post_details ul li {
+    list-style: disc;
+    margin-bottom: 15px;
+}
+.post_details ul li a {
+    color: #212428;
+    border-bottom: 2px solid #91BAEC;
+}
+.post_details ul{
+    padding-left: 20px;
+    padding-top: 20px;
+}
+.discover_best_seller {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    text-align: right;
+}
+.discover_best_seller p{
+    margin-bottom: 10px;
+}
+.benefits_of_led ul li{
+    list-style: disc;
+}
+.benefits_of_led ul{
+    padding-left: 20px;
+}
 @media(min-width:768px){
     .title_bt_wrap {
         min-height: 170px;
