@@ -144,3 +144,9 @@
     color: #91BAEC;
     display: contents;
 }
+.sec_img img {
+    max-width: 100px;
+}
+.sec_content p:first-child{
+    margin-bottom: 0;
+}

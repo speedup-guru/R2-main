@@ -145,9 +145,9 @@
 .qure__accordion-header, .qure__accordion-header:not(.collapsed){
     font-size: 16px;
 }
-.step_card-main .step_card{
+/* .step_card-main .step_card{
     height: 100%;
-}
+} */
 @media(max-width:991px){
     .tab-pane {
         border-bottom: 1.5px solid #DFE0E0;
@@ -175,5 +175,11 @@
 .mi_target-area {
     grid-template-columns: 1fr;
     gap: 20px;
+}
+.step_card-main .step_body {
+    min-height: 270px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
 }
 }

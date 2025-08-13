@@ -22,7 +22,7 @@ const QureMainMenu = {
         //const p = pageHeader ? pageHeader.clientHeight : 0;
         const s = stickyCart ? stickyCart.clientHeight : 0;
 
-        //document.body.style.setProperty("--height-bar", `${d}px`);
+        // document.body.style.setProperty("--height-bar", `${d}px`);
         //document.body.style.setProperty("--height-header", `${p}px`);
         document.body.style.setProperty("--sticky-cart", `${s}px`);
     }

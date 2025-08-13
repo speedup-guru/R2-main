@@ -1,5 +1,6 @@
 :root{
-    --height-bar: 50px; --height-header: 60px;
+    --height-bar: 50px; 
+    --height-header: 60px;
     --base-font-family: 'TT Commons';
     --heading-font-family: 'Canela';
     --heading-font-weight: 300;
@@ -36,6 +37,12 @@
     --btn-primary-bg-hover:#C8E6DC;
     --btn-primary-color-hover:#000;
 
+}
+@media(max-width:991px){
+    :root{
+        --height-header: 56px;
+        --height-bar: 34px; 
+    }
 }
 @media(max-width:767px){
     :root{
@@ -338,6 +345,9 @@ input[type=search]::placeholder, input[type=tel]::placeholder, input[type=text]:
 textarea.form-control {
     min-height: 160px;
 }
+textarea::placeholder {
+    white-space: pre-line;
+}
 .form-check-input {
     width: 24px;
     height: 24px;
@@ -488,6 +498,14 @@ textarea.form-control {
 .rounded-5{border-radius:5px !important;}
 .rounded-10{border-radius:10px !important;}
 .rounded-30{border-radius:30px}
+.rounded-top-0 {
+    border-top-left-radius: 0 !important;
+    border-top-right-radius: 0 !important;
+}
+.rounded-bottom-0 {
+    border-bottom-right-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
+}
 /* Custom grid spacing end */
 
 .hover-zoom img {transition: var(--qure-transition);}
@@ -495,9 +513,10 @@ textarea.form-control {
 .img-fluid{display: block;margin: 0 auto;}
 .max-w-450{max-width: 450px;}
 .list-dots li {
-    display: flex;
-    align-items: start;
-    gap: 0 9px;
+    padding-left: 15px;
+}
+ul.list-dots {
+    position: relative;
 }
 .list-dots li:before {
     content: '';
@@ -506,7 +525,9 @@ textarea.form-control {
     border-radius: 30px;
     background: var(--qure-charcoal);
     display: inline-block;
-    margin-top:10px
+    margin-top: 10px;
+    position: absolute;
+    left: 0;
 }
 .qure__info-block{
     background-color: var(--bg-color, #F6F6F7);
