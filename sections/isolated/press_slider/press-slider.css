@@ -38,7 +38,7 @@
     justify-content: center;
 }
 
-@media(min-width:991px) {
+@media(min-width:992px) {
     .qure__logo-slider .swiper-wrapper {
         justify-content: space-between;
         gap: 0 20px;
@@ -48,7 +48,11 @@
         width: auto !important;
     }
 }
-
+@media(max-width:991px) {
+ .qure__logo-slider .swiper-wrapper {
+        justify-content: center;
+    }
+}
 @media(max-width:767px) {
     .press_slider .ctm_cls_press_slider .swiper-slide {
         font-size: 22px;

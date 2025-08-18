@@ -621,12 +621,12 @@ ul.list-dots {
 .qure__accordion-header:not(.collapsed)::after{content:'\f068'}
 .qure__accordion-item .ctm_images_zz img {max-width: 78px;}
 .qure__accordion-item ul,
-.qure__accordion-item ol{margin-bottom: 20px;}
+.qure__accordion-item .check_list{margin-bottom: 20px;}
 .qure__accordion-item ul > li {display: flex;align-items: start;gap: 0 9px;margin-left: 10px;}
 .qure__accordion-item ul > li + li,
-.qure__accordion-item ol > li + li{margin-top: 5px;}
+.qure__accordion-item .check_list > li + li{margin-top: 5px;}
 .qure__accordion-item ul > li:before {position: relative;content: '';display: inline-block;height: 4px;min-width: 4px;background: var(--qure-charcoal);border-radius: 10px;top: 10px;}
-.qure__accordion-item ol > li:before {content: "\f058";display: inline-block;font-family: Font Awesome\ 6 Pro;font-weight: 400;font-size: 14px;margin-right: 10px;color: #91baec;}
+.qure__accordion-item .check_list > li:before {content: "\f058";display: inline-block;font-family: Font Awesome\ 6 Pro;font-weight: 400;font-size: 14px;margin-right: 10px;color: #91baec;}
 .qure__accordion-item ul.list-number, .qure__accordion-item ul.circle-number{
     counter-reset: listNumber;
 }

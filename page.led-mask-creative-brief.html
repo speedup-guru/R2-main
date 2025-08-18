@@ -82,6 +82,21 @@
     <div class="qure__section section-faucet-creative"
         style="--section-padding-top: 30px; --section-padding-top-mob: 15px;">
         <div class="container" style="--column-gap:60px; --column-gap-mobile:30px;">
+            <!-- Custom Dropdown -->
+            <div class="custom_dropdown-main d-md-none">
+                <div class="custom-dropdown" id="accordionDropdown">
+                    <div class="dropdown-selected">Product Information <span><img src="assets/images/arrow_down.svg" alt=""></span></div>
+                    <div class="dropdown-options">
+                        <div data-target="product-information">Product Information</div>
+                        <div data-target="usage_instructions">Installation Guide</div>
+                        <div data-target="product__claim">Product Claims & User Study</div>
+                        <div data-target="content__requirements">Content Requirements</div>
+                        <div data-target="creative__direction">Creative Direction</div>
+                        <div data-target="content__angel">Content Angles & Ideas</div>
+                        <div data-target="content__examples">Content Examples</div>
+                    </div>
+                </div>
+            </div>
             <div class="row custom__grid">
                 <div class="col-lg-4 d-none d-lg-block custom__block">
                     <h4 class="title_content">Contents</h4>
@@ -927,6 +942,7 @@
             loadScriptOnce('video-slider', 'sections/isolated/trusted-video/wistia-video-popup.js');
             loadScriptOnce('wistia-script', 'https://fast.wistia.com/assets/external/E-v1.js');
             loadScriptOnce('youtube-popup', 'assets/js/yt-popup.js');
+            loadScriptOnce('faq-dropdowns', 'sections/isolated/faucet-creative-brief/faucet-creative-brief.js');
         });
     </script>
     <!-- Section faucet creative brief end -->

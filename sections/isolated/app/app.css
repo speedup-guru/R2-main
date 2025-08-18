@@ -1,0 +1,13 @@
+.app-thumbs-container .swiper-slide .app__thumb {
+    scale: 0.8;
+    opacity: 0.5;
+    transition: 0.2s;
+}
+.app-thumbs-container .swiper-slide.swiper-slide-thumb-active .app__thumb {
+    scale: 1;
+    opacity: 1;
+}
+.app-thumbs-container .swiper-slide.swiper-slide-thumb-active .app__thumb img{
+    display: block;
+    margin:0 auto;
+}

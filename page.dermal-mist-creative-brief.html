@@ -67,7 +67,7 @@
     <!-- -- craetive guide banner -- -->
 
     <div class="qure__section"
-        style="--section-padding-top: 60px; --section-padding-bottom: 30px; --section-padding-top-mob: 30px; --section-padding-bottom-mob: 30px;">
+        style="--section-padding-top: 60px; --section-padding-bottom: 30px; --section-padding-top-mob: 30px; --section-padding-bottom-mob: 15px;">
         <div class="container">
             <div class="p-lg-30 rounded-10 qure__info-block">
                 <p class="fw-600">Discover how to make the most of the Qure Dermal Mist with our creative content guide.
@@ -80,63 +80,19 @@
     </div>
     <!-- Section faucet creative brief -->
     <link rel="stylesheet" href="sections/isolated/faucet-creative-brief/faucet-creative-brief.css" />
-    <div class="qure__section section-faucet-creative" style="--section-padding-top: 30px;">
+    <div class="qure__section section-faucet-creative" style="--section-padding-top: 30px; --section-padding-top-mob: 15px;">
         <div class="container" style="--column-gap:60px; --column-gap-mobile:30px;">
             <!-- Custom Dropdown -->
-            <div class="custom-tab-dropdown d-block d-md-none" id="customTabDropdown">
-                <div class="custom-tab-selected" id="customSelectedTab">
-                    <div class="qure__faqs-icon"><img src="sections/isolated/faqs/images/shipping-order-hvr.svg" alt="">
-                    </div>
-                    <span>Shipping & Orders</span>
-                </div>
-                <div class="custom-tab-options" id="customTabOptions">
-                    <div class="custom-tab-option" data-bs-target="#product-information"
-                        data-img="sections/isolated/faqs/images/shipping-order-hvr.svg">
-                        <div class="qure__faqs-icon"><img src="sections/isolated/faqs/images/shipping-order.svg" alt="">
-                        </div>
-                        <span>Shipping & Orders</span>
-                    </div>
-                    <div class="custom-tab-option" data-bs-target="#usage_instructions-tab"
-                        data-img="sections/isolated/faqs/images/rejuvalight-pro-facewear-hvr.svg">
-                        <div class="qure__faqs-icon"><img
-                                src="sections/isolated/faqs/images/rejuvalight-pro-facewear.svg" /></div>
-                        <span>Q-Rejuvalight Pro Facewear</span>
-                    </div>
-                    <div class="custom-tab-option" data-bs-target="#qure__tab-3"
-                        data-img="sections/isolated/faqs/images/micro-infusion-system-hvr.svg">
-                        <div class="qure__faqs-icon"><img
-                                src="sections/isolated/faqs/images/micro-infusion-system.svg" /></div>
-                        <span>Micro-Infusion System</span>
-                    </div>
-                    <div class="custom-tab-option" data-bs-target="#qure__tab-4"
-                        data-img="sections/isolated/faqs/images/returns-exchanges-hvr.svg">
-                        <div class="qure__faqs-icon"><img src="sections/isolated/faqs/images/returns-exchanges.svg" />
-                        </div>
-                        <span>Returns & Exchanges</span>
-                    </div>
-                    <div class="custom-tab-option" data-bs-target="#qure__tab-5"
-                        data-img="sections/isolated/faqs/images/billing-payment-hvr.svg">
-                        <div class="qure__faqs-icon"><img src="sections/isolated/faqs/images/billing-payment.svg" />
-                        </div>
-                        <span>Billing & Payments</span>
-                    </div>
-                    <div class="custom-tab-option" data-bs-target="#qure__tab-6"
-                        data-img="sections/isolated/faqs/images/warranty-hvr.svg">
-                        <div class="qure__faqs-icon"><img src="sections/isolated/faqs/images/warranty.svg" />
-                        </div>
-                        <span>Warranty</span>
-                    </div>
-                    <div class="custom-tab-option" data-bs-target="#qure__tab-7"
-                        data-img="sections/isolated/faqs/images/qure-app-hvr.svg">
-                        <div class="qure__faqs-icon"><img src="sections/isolated/faqs/images/qure-app.svg" />
-                        </div>
-                        <span>Qure Skincare App</span>
-                    </div>
-                    <div class="custom-tab-option" data-bs-target="#qure__tab-8"
-                        data-img="sections/isolated/faqs/images/trouble-hvr.svg">
-                        <div class="qure__faqs-icon"><img src="sections/isolated/faqs/images/trouble.svg" />
-                        </div>
-                        <span>Troubleshooting</span>
+            <div class="custom_dropdown-main d-md-none">
+                <div class="custom-dropdown" id="accordionDropdown">
+                    <div class="dropdown-selected">Product Information <span><img src="assets/images/arrow_down.svg" alt=""></span></div>
+                    <div class="dropdown-options">
+                        <div data-target="product-information">Product Information</div>
+                        <div data-target="usage_instructions">Usage Instructions</div>
+                        <div data-target="product__claim">Product Claims</div>
+                        <div data-target="creative__direction">Content Requirements <span class="qure__faucet-tag">MUST READ</span></div>
+                        <div data-target="content__angel">Creative Direction</div>
+                        <div data-target="content__examples">Content Examples</div>
                     </div>
                 </div>
             </div>
@@ -294,7 +250,7 @@
                             <button class="qure__faucet-button collapsed d-lg-none" type="button"
                                 data-bs-toggle="collapse" data-bs-target="#creative__direction" aria-expanded="false"
                                 aria-controls="creative__direction">
-                                Content Requirements
+                                Content Requirements <span class="qure__faucet-tag">MUST READ</span>
                             </button>
                             <div id="creative__direction" class="accordion-collapse collapse d-lg-block"
                                 aria-labelledby="creative__direction" data-bs-parent="#myTabContent">
@@ -623,8 +579,9 @@
             loadScriptOnce('video-slider', 'sections/isolated/trusted-video/wistia-video-popup.js');
             loadScriptOnce('wistia-script', 'https://fast.wistia.com/assets/external/E-v1.js');
             loadScriptOnce('youtube-popup', 'assets/js/yt-popup.js');
-            loadScriptOnce('faq-dropdowns', 'sections/isolated/faqs/faq-tab.js');
+            loadScriptOnce('faq-dropdowns', 'sections/isolated/faucet-creative-brief/faucet-creative-brief.js');
         });
+
     </script>
     <!-- Section faucet creative brief end -->
     <!-- Trusted Recommended section Start -->

@@ -29,50 +29,64 @@ class SlideImageWithThumbs extends HTMLElement {
     const useFraction = thumbsEl.dataset.paginationFraction === "true";
 
     const thumbSwiper = new Swiper(thumbsEl, {
-      spaceBetween: spacing,
-      slidesPerView: mobile,
-      autoplay: autoplay,
-      freeMode: true,
-      watchSlidesProgress: true,
-      navigation: {
-        nextEl: nextBtn,
-        prevEl: prevBtn
-      },
-      breakpoints: {
-        768: {
-          slidesPerView: tablet,
-          spaceBetween: spacing >= 30 ? 30 : spacing
-        },
-        1200: {
-          slidesPerView: desktop,
-          spaceBetween: spacing
-        }
-      }
-    });
+  spaceBetween: spacing,
+  slidesPerView: mobile,
+  loop: loop, // ✅ Match main slider
+  loopedSlides: parseInt(desktop), // Match slides count for correct cloning
+  autoplay: autoplay,
+  watchSlidesProgress: true,
+  navigation: {
+    nextEl: nextBtn,
+    prevEl: prevBtn
+  },
+  breakpoints: {
+    768: {
+      slidesPerView: tablet,
+      spaceBetween: spacing >= 30 ? 30 : spacing
+    },
+    1200: {
+      slidesPerView: desktop,
+      spaceBetween: spacing
+    }
+  }
+});
 
-    const mainSwiper = new Swiper(mainEl, {
-      loop: loop,
-      speed: 600,
-      autoplay: autoplay,
-      navigation: {
-        nextEl: nextBtn,
-        prevEl: prevBtn
-      },
-      pagination: {
-        el: paginationSelector,
-        clickable: true,
-        type: useFraction ? "fraction" : "bullets"
-      },
-      thumbs: {
-        swiper: thumbSwiper
-      }
-    });
+const mainSwiper = new Swiper(mainEl, {
+  loop: loop,
+  loopedSlides: parseInt(desktop),
+  speed: 600,
+  autoplay: autoplay,
+  navigation: {
+    nextEl: nextBtn,
+    prevEl: prevBtn
+  },
+  pagination: {
+    el: paginationSelector,
+    clickable: true,
+    type: useFraction ? "fraction" : "bullets"
+  },
+  thumbs: {
+    swiper: thumbSwiper
+  }
+});
 
-    // 🔁 Sync mainSwiper -> thumbSwiper
-    mainSwiper.on('slideChange', () => {
-      const activeIndex = mainSwiper.realIndex; // use realIndex for non-looped thumbs
-      thumbSwiper.slideTo(activeIndex);
-    });
+// 🔁 Sync both ways with loop-safe method
+mainSwiper.on('slideChange', () => {
+  thumbSwiper.slideToLoop(mainSwiper.realIndex, 300, false);
+});
+
+thumbSwiper.on('slideChange', () => {
+  mainSwiper.slideToLoop(thumbSwiper.realIndex, 300, false);
+});
+
+// ✅ Ensure correct alignment after load
+setTimeout(() => {
+  thumbSwiper.update();
+  mainSwiper.update();
+  thumbSwiper.slideToLoop(mainSwiper.realIndex, 0, false);
+}, 100);
+
+
     }
 }
 customElements.define('slide-with-thumbs', SlideImageWithThumbs);
@@ -107,52 +121,66 @@ var QureEventProductSlider = {
     const spacing = parseInt(thumbsEl.dataset.spacing || 0);
     const paginationSelector = thumbsEl.dataset.pagination || ".swiper-pagination";
     const useFraction = thumbsEl.dataset.paginationFraction === "true";
+    
+const thumbSwiper = new Swiper(thumbsEl, {
+  spaceBetween: spacing,
+  slidesPerView: mobile,
+  loop: loop, // ✅ Match main slider
+  loopedSlides: parseInt(desktop), // Match slides count for correct cloning
+  autoplay: autoplay,
+  watchSlidesProgress: true,
+  navigation: {
+    nextEl: nextBtn,
+    prevEl: prevBtn
+  },
+  breakpoints: {
+    768: {
+      slidesPerView: tablet,
+      spaceBetween: spacing >= 30 ? 30 : spacing
+    },
+    1200: {
+      slidesPerView: desktop,
+      spaceBetween: spacing
+    }
+  }
+});
 
-    const thumbSwiper = new Swiper(thumbsEl, {
-      spaceBetween: spacing,
-      slidesPerView: mobile,
-      autoplay: autoplay,
-      freeMode: true,
-      watchSlidesProgress: true,
-      navigation: {
-        nextEl: nextBtn,
-        prevEl: prevBtn
-      },
-      breakpoints: {
-        768: {
-          slidesPerView: tablet,
-          spaceBetween: spacing >= 30 ? 30 : spacing
-        },
-        1200: {
-          slidesPerView: desktop,
-          spaceBetween: spacing
-        }
-      }
-    });
+const mainSwiper = new Swiper(mainEl, {
+  loop: loop,
+  loopedSlides: parseInt(desktop),
+  speed: 600,
+  autoplay: autoplay,
+  navigation: {
+    nextEl: nextBtn,
+    prevEl: prevBtn
+  },
+  pagination: {
+    el: paginationSelector,
+    clickable: true,
+    type: useFraction ? "fraction" : "bullets"
+  },
+  thumbs: {
+    swiper: thumbSwiper
+  }
+});
 
-    const mainSwiper = new Swiper(mainEl, {
-      loop: loop,
-      speed: 600,
-      autoplay: autoplay,
-      navigation: {
-        nextEl: nextBtn,
-        prevEl: prevBtn
-      },
-      pagination: {
-        el: paginationSelector,
-        clickable: true,
-        type: useFraction ? "fraction" : "bullets"
-      },
-      thumbs: {
-        swiper: thumbSwiper
-      }
-    });
+// 🔁 Sync both ways with loop-safe method
+mainSwiper.on('slideChange', () => {
+  thumbSwiper.slideToLoop(mainSwiper.realIndex, 300, false);
+});
 
-    // 🔁 Sync mainSwiper -> thumbSwiper
-    mainSwiper.on('slideChange', () => {
-      const activeIndex = mainSwiper.realIndex; // use realIndex for non-looped thumbs
-      thumbSwiper.slideTo(activeIndex);
-    });
+thumbSwiper.on('slideChange', () => {
+  mainSwiper.slideToLoop(thumbSwiper.realIndex, 300, false);
+});
+
+// ✅ Ensure correct alignment after load
+setTimeout(() => {
+  thumbSwiper.update();
+  mainSwiper.update();
+  thumbSwiper.slideToLoop(mainSwiper.realIndex, 0, false);
+}, 100);
+
+    
   },
 };
 

@@ -1,0 +1,43 @@
+.qure-scroll-tabs {
+    display: flex;
+    justify-content: start;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    overflow: auto hidden;
+    gap: 0px 16px;
+    width: max-content;
+    max-width: 100%;
+    margin: 0 auto;
+}
+.qure-scroll-tabs li.qure-scroll-item {
+    color: #000 !important;
+}
+.qure-scroll-tabs .qure-scroll-link {
+    background: transparent;
+    border-radius: 100px;
+    border: 1px solid var(--qure-charcoal);
+    padding: 5px 46px;
+    transition: 0.3s;
+}
+.qure-scroll-tabs .qure-scroll-link.active, .qure-scroll-tabs .qure-scroll-link:hover {
+    background: var(--qure-charcoal);
+    color: var(--white-color);
+}
+.s_num{
+    position: absolute;
+    left: -12px;
+    top: -12px;
+    background: var(--Teal, #C7E5DB);
+    border-radius: 25px;
+    display: flex;
+    width: 50px;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    font-size: 33.333px;
+    font-weight: 400;
+}
+.g-6{
+    --bs-gutter-x: 6rem;
+    --bs-gutter-y: 6rem;
+}
