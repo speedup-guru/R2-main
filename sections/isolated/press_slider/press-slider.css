@@ -48,11 +48,7 @@
         width: auto !important;
     }
 }
-@media(max-width:991px) {
- .qure__logo-slider .swiper-wrapper {
-        justify-content: center;
-    }
-}
+
 @media(max-width:767px) {
     .press_slider .ctm_cls_press_slider .swiper-slide {
         font-size: 22px;

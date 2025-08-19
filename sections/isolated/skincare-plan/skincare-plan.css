@@ -41,3 +41,8 @@
     --bs-gutter-x: 6rem;
     --bs-gutter-y: 6rem;
 }
+.added{
+    background: #008763;
+    color: #fff;
+}
+

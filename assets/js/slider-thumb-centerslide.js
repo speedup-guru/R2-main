@@ -1,4 +1,3 @@
-
 // class CenterImageSlideThumbs extends HTMLElement {
 //     constructor() {
 //         super();
@@ -21,40 +20,41 @@
 
 //         const autoplay = thumbsEl.dataset.autoplay === "true";
 //         const loop = thumbsEl.dataset.loop === "true";
-//         const desktop = thumbsEl.dataset.desktop || 4;
-//         const tablet = thumbsEl.dataset.tablet || 2;
-//         const mobile = thumbsEl.dataset.mobile || 1;
 //         const spacing = parseInt(thumbsEl.dataset.spacing || 0);
 //         const paginationSelector = thumbsEl.dataset.pagination || ".swiper-pagination";
 //         const useFraction = thumbsEl.dataset.paginationFraction === "true";
-//         const centeredSlides = thumbsEl.dataset.centered === "true"; // ✅ fixed
-
+//         const desktop = thumbsEl.dataset.desktop || 4;
+//         const tablet = thumbsEl.dataset.tablet || 2;
+//         const mobile = thumbsEl.dataset.mobile || 1;
+//         const centeredSlides = thumbsEl.dataset.centered === "true";
+//         console.log(loop);
 //         const thumbSwiper = new Swiper(thumbsEl, {
 //             spaceBetween: spacing,
-//             slidesPerView: mobile,
-//             autoplay: autoplay,
-//             centeredSlides: centeredSlides,
-//             freeMode: true,
-//             watchSlidesProgress: true,
-//             slideToClickedSlide: true,
-//             navigation: {
-//                 nextEl: nextBtn,
-//                 prevEl: prevBtn
-//             },
-//             breakpoints: {
-//                 768: {
-//                     slidesPerView: tablet,
-//                     spaceBetween: spacing >= 30 ? 30 : spacing
-//                 },
-//                 1200: {
-//                     slidesPerView: desktop,
-//                     spaceBetween: spacing
-//                 }
-//             }
+//   slidesPerView: mobile,
+//   loop: loop, 
+//   loopedSlides: parseInt(desktop),
+//     centeredSlides: centeredSlides,
+//   autoplay: autoplay,
+//   watchSlidesProgress: true,
+//   navigation: {
+//     nextEl: nextBtn,
+//     prevEl: prevBtn
+//   },
+//   breakpoints: {
+//     768: {
+//       slidesPerView: tablet,
+//       spaceBetween: spacing >= 30 ? 30 : spacing
+//     },
+//     1200: {
+//       slidesPerView: desktop,
+//       spaceBetween: spacing
+//     }
+//   }
 //         });
 
 //         const mainSwiper = new Swiper(mainEl, {
 //             loop: loop,
+//             loopedSlides: 3,
 //             speed: 600,
 //             autoplay: autoplay,
 //             navigation: {
@@ -70,31 +70,11 @@
 //                 swiper: thumbSwiper
 //             }
 //         });
-
-//         // ✅ Keep active thumb centered when changing slides
-//         mainSwiper.on("slideChange", () => {
-//             const activeIndex = mainSwiper.realIndex;
-//             if (centeredSlides) {
-//                 thumbSwiper.slideToLoop(activeIndex, 300, false);
-//             } else {
-//                 thumbSwiper.slideToLoop(activeIndex, 300);
-//             }
-//         });
-
-//         // ✅ Keep centered when clicking thumb
-//         thumbSwiper.on("click", () => {
-//             if (centeredSlides) {
-//                 thumbSwiper.slideToLoop(thumbSwiper.clickedIndex, 300, false);
-//             }
-//         });
 //     }
 // }
 // customElements.define('center-slide-thumbs', CenterImageSlideThumbs);
 
 
-// // ===============================
-// // Same logic for QureEventProductSlider
-// // ===============================
 
 // var QureEventProductSlider = {
 //     init: function () {
@@ -117,41 +97,40 @@
 
 //         const autoplay = thumbsEl.dataset.autoplay === "true";
 //         const loop = thumbsEl.dataset.loop === "true";
-//         const desktop = thumbsEl.dataset.desktop || 4;
-//         const tablet = thumbsEl.dataset.tablet || 2;
-//         const mobile = thumbsEl.dataset.mobile || 1;
 //         const spacing = parseInt(thumbsEl.dataset.spacing || 0);
 //         const paginationSelector = thumbsEl.dataset.pagination || ".swiper-pagination";
 //         const useFraction = thumbsEl.dataset.paginationFraction === "true";
-//         const centeredSlides = thumbsEl.dataset.centered === "true"; // ✅ fixed
-
+//         const desktop = thumbsEl.dataset.desktop || 4;
+//         const tablet = thumbsEl.dataset.tablet || 2;
+//         const mobile = thumbsEl.dataset.mobile || 1;
+//         const centeredSlides = thumbsEl.dataset.centered === "true";
 //         const thumbSwiper = new Swiper(thumbsEl, {
 //             spaceBetween: spacing,
-//             slidesPerView: mobile,
-//             autoplay: autoplay,
-//             loop: loop,
-//             centeredSlides: centeredSlides,
-//             freeMode: true,
-//             watchSlidesProgress: true,
-//             slideToClickedSlide: true,
-//             navigation: {
-//                 nextEl: nextBtn,
-//                 prevEl: prevBtn
-//             },
-//             breakpoints: {
-//                 768: {
-//                     slidesPerView: tablet,
-//                     spaceBetween: spacing >= 30 ? 30 : spacing
-//                 },
-//                 1200: {
-//                     slidesPerView: desktop,
-//                     spaceBetween: spacing
-//                 }
-//             }
+//   slidesPerView: mobile,
+//   loop: loop,
+//   loopedSlides: parseInt(desktop),
+//   centeredSlides: centeredSlides,
+//   autoplay: autoplay,
+//   watchSlidesProgress: true,
+//   navigation: {
+//     nextEl: nextBtn,
+//     prevEl: prevBtn
+//   },
+//   breakpoints: {
+//     768: {
+//       slidesPerView: tablet,
+//       spaceBetween: spacing >= 30 ? 30 : spacing
+//     },
+//     1200: {
+//       slidesPerView: desktop,
+//       spaceBetween: spacing
+//     }
+//   }
 //         });
 
 //         const mainSwiper = new Swiper(mainEl, {
 //             loop: loop,
+//             loopedSlides: 3,
 //             speed: 600,
 //             autoplay: autoplay,
 //             navigation: {
@@ -168,211 +147,81 @@
 //             }
 //         });
 
-//         // ✅ Keep active thumb centered when changing slides
 //         mainSwiper.on("slideChange", () => {
-//             const activeIndex = mainSwiper.realIndex;
-//             if (centeredSlides) {
-//                 thumbSwiper.slideToLoop(activeIndex, 300, false);
-//             } else {
-//                 thumbSwiper.slideToLoop(activeIndex, 300);
-//             }
+//             thumbSwiper.slideToLoop(mainSwiper.realIndex, 300, false);
 //         });
 
-//         // ✅ Keep centered when clicking thumb
 //         thumbSwiper.on("click", () => {
-//             if (centeredSlides) {
-//                 thumbSwiper.slideToLoop(thumbSwiper.clickedIndex, 300, false);
-//             }
+//             thumbSwiper.slideToLoop(thumbSwiper.clickedIndex, 300, false);
 //         });
+
+//         setTimeout(() => {
+//             thumbSwiper.update();
+//             mainSwiper.update();
+//             thumbSwiper.slideToLoop(mainSwiper.realIndex, 0, false);
+//         }, 100);
 //     }
 // };
 
 // QureEventProductSlider.init();
+document.querySelectorAll(".qure_app-imgs").forEach((el) => {
+  const autoplay = el.dataset.autoplay === "true";
+  const loop = el.dataset.loop === "true";
+  const spacing = parseInt(el.dataset.spacing || 0);
 
+  const paginationSelector = el.dataset.pagination || ".swiper-pagination";
+  const useFraction = el.dataset.paginationFraction === "true";
 
+  const centeredSlides = el.dataset.centered === "true";
+  const thumbsSelector = el.dataset.thumbs || null;
 
-class CenterImageSlideThumbs extends HTMLElement {
-    constructor() {
-        super();
-        this.init();
-    }
+  // ✅ Breakpoint settings from HTML
+  const desktop = parseInt(el.dataset.desktop || 4);
+  const tablet  = parseInt(el.dataset.tablet || 2);
+  const mobile  = parseInt(el.dataset.mobile || 1);
 
-    init() {
-        this.querySelectorAll(".qure__center-wrapper").forEach((wrapper, index) => {
-            this.initGallerySlider(wrapper, index);
-        });
-    }
+  const navigationNext = el.dataset.navigationNext || ".swiper-button-next";
+  const navigationPrev = el.dataset.navigationPrev || ".swiper-button-prev";
 
-    initGallerySlider(wrapper, index) {
-        const thumbsEl = wrapper.querySelector(".qure__center-gallery-thumbnails");
-        const mainEl = wrapper.querySelector(".qure__center-gallery");
-        const nextBtn = wrapper.querySelector(".swiper-next");
-        const prevBtn = wrapper.querySelector(".swiper-prev");
-
-        if (!thumbsEl || !mainEl) return;
-
-        const autoplay = thumbsEl.dataset.autoplay === "true";
-        const loop = thumbsEl.dataset.loop === "true";
-        const spacing = parseInt(thumbsEl.dataset.spacing || 0);
-        const paginationSelector = thumbsEl.dataset.pagination || ".swiper-pagination";
-        const useFraction = thumbsEl.dataset.paginationFraction === "true";
-        const desktop = thumbsEl.dataset.desktop || 4;
-        const tablet = thumbsEl.dataset.tablet || 2;
-        const mobile = thumbsEl.dataset.mobile || 1;
-        const centeredSlides = thumbsEl.dataset.centered === "true"; // ✅ fixed
-        console.log(loop);
-        const thumbSwiper = new Swiper(thumbsEl, {
-            spaceBetween: spacing,
-  slidesPerView: mobile,
-  loop: loop, 
-  loopedSlides: parseInt(desktop), // Match slides count for correct cloning
-    centeredSlides: centeredSlides,
-  autoplay: autoplay,
-  watchSlidesProgress: true,
-  navigation: {
-    nextEl: nextBtn,
-    prevEl: prevBtn
-  },
-  breakpoints: {
-    768: {
-      slidesPerView: tablet,
-      spaceBetween: spacing >= 30 ? 30 : spacing
+  const swiperConfig = {
+    loop,
+    centeredSlides,
+    spaceBetween: spacing,
+    slidesPerView: mobile, // default for mobile
+    pagination: {
+      el: paginationSelector,
+      type: useFraction ? "fraction" : "bullets",
+      clickable: true,
     },
-    1200: {
-      slidesPerView: desktop,
-      spaceBetween: spacing
+    navigation: {
+      nextEl: navigationNext,
+      prevEl: navigationPrev,
+    },
+    breakpoints: {
+      768: {
+        slidesPerView: tablet,
+        spaceBetween: spacing >= 30 ? 30 : spacing,
+      },
+      1200: {
+        slidesPerView: desktop,
+        spaceBetween: spacing,
+      },
+    },
+  };
+
+  // ✅ Thumbs handling
+  if (thumbsSelector) {
+    const thumbsEl = document.querySelector(thumbsSelector);
+    if (thumbsEl) {
+      const thumbSwiper = new Swiper(thumbsEl, {
+        slidesPerView: 1,
+        freeMode: true,
+        watchSlidesProgress: true,
+      });
+      swiperConfig.thumbs = { swiper: thumbSwiper };
     }
   }
-        });
 
-        const mainSwiper = new Swiper(mainEl, {
-            loop: loop,
-            loopedSlides: 3,
-            speed: 600,
-            autoplay: autoplay,
-            navigation: {
-                nextEl: nextBtn,
-                prevEl: prevBtn
-            },
-            pagination: {
-                el: paginationSelector,
-                clickable: true,
-                type: useFraction ? "fraction" : "bullets"
-            },
-            thumbs: {
-                swiper: thumbSwiper
-            }
-        });
+  new Swiper(el, swiperConfig);
+});
 
-        // // Keep active thumb centered
-        // mainSwiper.on("slideChange", () => {
-        //     thumbSwiper.slideToLoop(mainSwiper.realIndex, 300, false);
-        // });
-
-        // thumbSwiper.on("click", () => {
-        //     thumbSwiper.slideToLoop(thumbSwiper.clickedIndex, 300, false);
-        // });
-
-        // // ✅ Ensure correct layout after Swiper has rendered
-        // setTimeout(() => {
-        //     thumbSwiper.update();
-        //     mainSwiper.update();
-        //     thumbSwiper.slideToLoop(mainSwiper.realIndex, 0, false); // force position
-        // }, 100);
-    }
-}
-customElements.define('center-slide-thumbs', CenterImageSlideThumbs);
-
-
-// ===============================
-// QureEventProductSlider
-// ===============================
-
-var QureEventProductSlider = {
-    init: function () {
-        this.initAllSliders();
-    },
-
-    initAllSliders: function () {
-        document.querySelectorAll(".qure__center-wrapper").forEach((wrapper, index) => {
-            this.initGallerySlider(wrapper, index);
-        });
-    },
-
-    initGallerySlider: function (wrapper, index) {
-        const thumbsEl = wrapper.querySelector(".qure__center-gallery-thumbnails");
-        const mainEl = wrapper.querySelector(".qure__center-gallery");
-        const nextBtn = wrapper.querySelector(".swiper-next");
-        const prevBtn = wrapper.querySelector(".swiper-prev");
-
-        if (!thumbsEl || !mainEl) return;
-
-        const autoplay = thumbsEl.dataset.autoplay === "true";
-        const loop = thumbsEl.dataset.loop === "true";
-        const spacing = parseInt(thumbsEl.dataset.spacing || 0);
-        const paginationSelector = thumbsEl.dataset.pagination || ".swiper-pagination";
-        const useFraction = thumbsEl.dataset.paginationFraction === "true";
-        const desktop = thumbsEl.dataset.desktop || 4;
-        const tablet = thumbsEl.dataset.tablet || 2;
-        const mobile = thumbsEl.dataset.mobile || 1;
-        const centeredSlides = thumbsEl.dataset.centered === "true"; // ✅ fixed
-        const thumbSwiper = new Swiper(thumbsEl, {
-            spaceBetween: spacing,
-  slidesPerView: mobile,
-  loop: loop, // ✅ Match main slider
-  loopedSlides: parseInt(desktop), // Match slides count for correct cloning
-  centeredSlides: centeredSlides,
-  autoplay: autoplay,
-  watchSlidesProgress: true,
-  navigation: {
-    nextEl: nextBtn,
-    prevEl: prevBtn
-  },
-  breakpoints: {
-    768: {
-      slidesPerView: tablet,
-      spaceBetween: spacing >= 30 ? 30 : spacing
-    },
-    1200: {
-      slidesPerView: desktop,
-      spaceBetween: spacing
-    }
-  }
-        });
-
-        const mainSwiper = new Swiper(mainEl, {
-            loop: loop,
-            loopedSlides: 3,
-            speed: 600,
-            autoplay: autoplay,
-            navigation: {
-                nextEl: nextBtn,
-                prevEl: prevBtn
-            },
-            pagination: {
-                el: paginationSelector,
-                clickable: true,
-                type: useFraction ? "fraction" : "bullets"
-            },
-            thumbs: {
-                swiper: thumbSwiper
-            }
-        });
-
-        mainSwiper.on("slideChange", () => {
-            thumbSwiper.slideToLoop(mainSwiper.realIndex, 300, false);
-        });
-
-        thumbSwiper.on("click", () => {
-            thumbSwiper.slideToLoop(thumbSwiper.clickedIndex, 300, false);
-        });
-
-        setTimeout(() => {
-            thumbSwiper.update();
-            mainSwiper.update();
-            thumbSwiper.slideToLoop(mainSwiper.realIndex, 0, false);
-        }, 100);
-    }
-};
-
-QureEventProductSlider.init();
