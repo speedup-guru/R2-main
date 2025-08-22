@@ -150,3 +150,15 @@
 .sec_content p:first-child{
     margin-bottom: 0;
 }
+.common_faq{
+    max-width: 1040px;
+    margin: 0 auto;
+}
+.faq_block-heading {
+    line-height: 40px;
+}
+@media (max-width: 767px) {
+   .faq_block-heading {
+    line-height: 30px;
+}
+}

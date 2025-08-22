@@ -1,23 +1,24 @@
 .qure-scroll-tabs {
     display: flex;
-    justify-content: start;
+    justify-content: center;
     flex-wrap: nowrap;
     white-space: nowrap;
     overflow: auto hidden;
     gap: 0px 16px;
-    width: max-content;
     max-width: 100%;
     margin: 0 auto;
 }
 .qure-scroll-tabs li.qure-scroll-item {
     color: #000 !important;
+    width: 100%;
 }
 .qure-scroll-tabs .qure-scroll-link {
     background: transparent;
     border-radius: 100px;
     border: 1px solid var(--qure-charcoal);
-    padding: 5px 46px;
+    padding: 5px;
     transition: 0.3s;
+    width: 100%;
 }
 .qure-scroll-tabs .qure-scroll-link.active, .qure-scroll-tabs .qure-scroll-link:hover {
     background: var(--qure-charcoal);
@@ -37,12 +38,35 @@
     font-size: 33.333px;
     font-weight: 400;
 }
-.g-6{
-    --bs-gutter-x: 6rem;
-    --bs-gutter-y: 6rem;
-}
 .added{
     background: #008763;
     color: #fff;
 }
+.product_wrapper:hover .tab-pane .first-img {
+    display: none;
+}
+.product_wrapper:hover .tab-pane .second-img {
+    display: block !important;
+}
+@media(min-width:992px){
+    .g-6{
+        --bs-gutter-x: 6rem;
+        --bs-gutter-y: 6rem;
+    }
+}
 
+@media(max-width:991px){
+    .star_text p {
+       font-size: 14px;
+    }
+    .s_num {
+        width: 40px;
+        height: 40px;
+        font-size: 26px;
+    }
+    .skincare_plan_tabs .product_wrapper .tab-pane.active{
+        display: flex;   
+        gap: 20px;
+        margin-bottom: 15px;
+    }
+}

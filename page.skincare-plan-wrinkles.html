@@ -14,7 +14,7 @@
     <script src="assets/js/fileloader.js"></script>
 </head>
 
-<body class="page.skincare-wrinkles">
+<body class="page.skincare-plan-wrinkles">
 
     <!-- PAGE HEADER -->
     <div id="site-header"></div>
@@ -35,15 +35,15 @@
         </div>
     </div>
 
-
+    <!-- banner section  -->
     <div class="qure__section"
-        style="--section-padding-top: 40px;--section-padding-bottom: 40px;--section-padding-top-mob: 30px;--section-padding-bottom-mob: 30px;">
+        style="--section-padding-top: 50px;--section-padding-bottom: 40px;--section-padding-top-mob: 30px;--section-padding-bottom-mob: 30px;">
         <div class="container">
-            <div class="row align-items-center g-5">
+            <div class="row align-items-center g-3">
                 <div class="col-md-6 pr-md-60 order-mob-2">
                     <div class="transform_aging">
                         <h1>[Name], your results are in.</h1>
-                        <p class="fs-22 my-30"><strong>Let’s transform your signs of aging!</strong></p>
+                        <p class="fs-22 my-15 my-md-30"><strong>Let’s transform your signs of aging!</strong></p>
                         <p>We put together a straightforward, no-nonsense program just for you and your skin. It’s aimed
                             to help you reduce the signs of aging, fine lines and wrinkles, keep your skin smooth, and
                             your confidence high.</p>
@@ -59,22 +59,29 @@
             </div>
         </div>
     </div>
+    <!-- banner section end   -->
 
     <!-- skincare plan tabs start -->
     <link rel="stylesheet" href="sections/isolated/skincare-plan/skincare-plan.css">
-    <div class="qure__section skincare_plan_tabs"
+    <div id="skincare_goals" class="qure__section skincare_plan_tabs"
         style="--section-padding-top: 40px;--section-padding-bottom: 80px;--section-padding-top-mob: 30px;--section-padding-bottom-mob: 50px;">
         <div class="container">
-            <h3 class="mb-50 text-center">Based on your goals, we suggest:</h3>
-            <div class="row g-6">
+            <h2 class="mb-50 text-center">Based on your goals, we suggest:</h2>
+            <div class="row g-5 g-6">
                 <div class="col-md-6">
-                    <div class="product_wrapper border py-30 px-24 position-relative rounded-10">
+                    <div class="product_wrapper border py-24 px-16 py-md-30 px-md-24 position-relative rounded-10">
                         <div class="s_num">1</div>
                         <div class="tab-content qure-scroll-tab-content" id="SkinPlanTabContent">
                             <div class="tab-pane fade show active" id="skincare-plan-tab-1" role="tabpanel"
                                 aria-labelledby="skincare-plan-tab-pane-1" tabindex="0">
                                 <img src="sections/isolated/skincare-plan/images/q-rej-product.webp" alt=""
-                                    class="img-fluid">
+                                    class="img-fluid mw first-img m-0 m-md-auto" style="--mw-mob:120px;">
+                                <img src="sections/isolated/skincare-plan/images/hov_img_1.webp" alt=""
+                                    class="img-fluid mw d-none second-img m-0 m-md-auto" style="--mw-mob:120px;">
+                                <div class="prod_tit_wrap mb-10 d-md-none">
+                                    <h3 style="--font-h3-mob:20px;">Q-Rejuvalight Pro Facewear</h3>
+                                    <p class="fs-16 mt-10">$399</p>
+                                </div>
                             </div> <!-- tab 1 end-->
                             <div class="tab-pane fade" id="skincare-plan-tab-2" role="tabpanel"
                                 aria-labelledby="skincare-plan-tab-pane-2" tabindex="0">
@@ -91,7 +98,7 @@
                                 </iframe>
                             </div>
                         </div>
-                        <ul class="nav qure-scroll-tabs my-30" id="SkinPlanTab" role="tablist">
+                        <ul class="nav qure-scroll-tabs my-30 d-none d-md-flex" id="SkinPlanTab" role="tablist">
                             <li class="qure-scroll-item" role="presentation">
                                 <button class="qure-scroll-link active" id="skincare-plan-tab-pane-1"
                                     data-bs-toggle="tab" data-bs-target="#skincare-plan-tab-1" type="button" role="tab"
@@ -109,21 +116,33 @@
                             </li>
                         </ul>
                         <div class="product_details">
-                            <h3>Q-Rejuvalight Pro Facewear</h3>
-                            <p class="fs-20 fw-600">$399</p>
-                            <p>A hands-free LED light therapy mask that uses clinically proven wavelengths to target
-                                multiple skin concerns.</p>
-                            <div class="qure__accordion-item">
-                                <ul class="check_list">
-                                    <li>FDA-cleared device that treats acne, fine lines, wrinkles and dark spots.</li>
-                                    <li>Customizable treatment on 5 facial areas for your specific skin concerns.</li>
-                                    <li>Quick 3 minute, wireless daily treatments with convenient hands-free operation.
-                                    </li>
-                                </ul>
+                            <div class="prod_tit_wrap mb-10 d-none d-md-block">
+                                <h3>Q-Rejuvalight Pro Facewear</h3>
+                                <p class="fs-20 fw-600">$399</p>
                             </div>
-                            <a href="#" class="btn border-0 w-100">Add to Bundle</a>
-                            <div class="text-center border-top mt-20 pt-20">
-                                <div class="d-flex justify-content-center align-items-center">
+                            <div class="show_more">
+                                <p>
+                                    A hands-free LED light therapy mask that uses clinically proven wavelengths to
+                                    target
+                                    multiple skin concerns.<a class="d-md-none text-black text-decoration-underline"
+                                        href="javascript:void();" data-bs-toggle="modal" data-bs-target="#bundle_modal_1"> Read
+                                        more</a>
+                                </p>
+
+                                <div class="qure__accordion-item mt-20 d-none d-md-block">
+                                    <ul class="check_list">
+                                        <li>FDA-cleared device that treats acne, fine lines, wrinkles and dark spots.
+                                        </li>
+                                        <li>Customizable treatment on 5 facial areas for your specific skin concerns.
+                                        </li>
+                                        <li>Quick 3 minute, wireless daily treatments with convenient hands-free
+                                            operation.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <a href="#" class="btn border-0 w-100 mt-20">Add to Bundle</a>
+                            <div class="text-center border-top mt-20 pt-20 star_text">
+                                <div class="d-flex justify-content-center align-items-center flex-wrap">
                                     <img src="sections/isolated/skincare-plan/images/review_stars.webp" alt="">
                                     <p><strong>“I noticed results straight away!</strong></p>
                                 </div>
@@ -131,19 +150,103 @@
                             </div>
                         </div>
                     </div>
+                    <!-- Modal 1 start here -->
+                    <div class="modal fade" id="bundle_modal_1" tabindex="-1" aria-labelledby="EthylLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered modal-xl">
+                            <div
+                                class="modal-content af-modal-content border-0 p-lg-60 px-20 py-30 rounded-0 position-relative">
+                                <button type="button" class="btn-close position-absolute fs-24 end-0 top-0"
+                                    data-bs-dismiss="modal" aria-label="Close"><i
+                                        class="fa-regular fa-xmark"></i></button>
+                                <div class="modal-body af-modal-body p-0">
+                                  <div class="product_wrapper border py-24 px-16 py-md-30 px-md-24 position-relative rounded-10">
+                        <div class="s_num">1</div>
+                        <div class="tab-content qure-scroll-tab-content" id="SkinPlanTabModalContent">
+                            <div class="tab-pane fade show active" id="skincare-plan-tab-1-modal" role="tabpanel"
+                                aria-labelledby="skincare-plan-tab-pane-1-modal" tabindex="0">
+                                <img src="sections/isolated/skincare-plan/images/q-rej-product.webp" alt=""
+                                    class="img-fluid">
+                      
+                               </div>
+                          <!-- tab 1 end-->
+                            <div class="tab-pane fade" id="skincare-plan-tab-2-modal" role="tabpanel"
+                                aria-labelledby="skincare-plan-tab-pane-2-modal" tabindex="0">
+                                <img src="sections/isolated/skincare-plan/images/transform_aging.webp" alt=""
+                                    class="img-fluid">
+                            </div>
+                            <div class="tab-pane fade" id="skincare-plan-tab-3-modal" role="tabpanel"
+                                aria-labelledby="skincare-plan-tab-pane-3-modal" tabindex="0">
+                                <iframe width="100%" height="315"
+                                    src="https://www.youtube.com/embed/jwKN4SH4yz8?autoplay=1&mute=1"
+                                    title="YouTube video player" frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen>
+                                </iframe>
+                            </div>
+                            </div>
+                        <ul class="nav qure-scroll-tabs my-30" id="SkinPlanTabModal" role="tablist">
+                            <li class="qure-scroll-item" role="presentation">
+                                <button class="qure-scroll-link active" id="skincare-plan-tab-pane-1-modal"
+                                    data-bs-toggle="tab" data-bs-target="#skincare-plan-tab-1-modal" type="button" role="tab"
+                                    aria-controls="skincare-plan-tab-1-modal" aria-selected="true">Product</button>
+                            </li>
+                            <li class="qure-scroll-item" role="presentation">
+                                <button class="qure-scroll-link" id="skincare-plan-tab-pane-2-modal" data-bs-toggle="tab"
+                                    data-bs-target="#skincare-plan-tab-2-modal" type="button" role="tab"
+                                    aria-controls="skincare-plan-tab-2-modal" aria-selected="false">Results</button>
+                            </li>
+                            <li class="qure-scroll-item" role="presentation">
+                                <button class="qure-scroll-link" id="skincare-plan-tab-pane-3-modal" data-bs-toggle="tab"
+                                    data-bs-target="#skincare-plan-tab-3-modal" type="button" role="tab"
+                                    aria-controls="skincare-plan-tab-3-modal" aria-selected="false">Review</button>
+                            </li>
+                        </ul>
+                            <div class="prod_tit_wrap mb-10 d-md-none">
+                                <h3 style="--font-h3-mob:20px;">Q-Rejuvalight Pro Facewear</h3>
+                                <p class="fs-16 mt-10">$399</p>
+                            </div>
+                        <div class="product_details">
+                            <div class="prod_tit_wrap mb-10 d-none d-md-block">
+                                <h3>Q-Rejuvalight Pro Facewear</h3>
+                                <p class="fs-20 fw-600">$399</p>
+                            </div>
+                            <div class="qure__accordion-item mt-20">
+                                <ul class="check_list">
+                                    <li>FDA-cleared device that treats acne, fine lines, wrinkles and dark spots.
+                                    </li>
+                                    <li>Customizable treatment on 5 facial areas for your specific skin concerns.
+                                    </li>
+                                    <li>Quick 3 minute, wireless daily treatments with convenient hands-free
+                                        operation.</li>
+                                </ul>
+                            </div>
+                            <a href="#" class="btn border-0 w-100 mt-10">Add to Bundle</a>
+                        </div>
+                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Modal 1 end here -->
                 </div>
                 <div class="col-md-6">
-                    <div class="product_wrapper border py-30 px-24 position-relative rounded-10">
+                    <div class="product_wrapper border py-24 px-16 py-md-30 px-md-24 position-relative rounded-10">
                         <div class="s_num">2</div>
                         <div class="tab-content qure-scroll-tab-content" id="SkinPlanTab3Content">
                             <div class="tab-pane fade show active" id="skincare-plan2-tab-1" role="tabpanel"
                                 aria-labelledby="skincare-plan2-tab-pane-1" tabindex="0">
-                                <img src="sections/isolated/skincare-plan/images/q-rej-product.webp" alt=""
-                                    class="img-fluid">
+                                <img src="sections/isolated/skincare-plan/images/mi-prod.webp" alt=""
+                                    class="img-fluid mw first-img m-0 m-md-auto" style="--mw-mob:120px;">
+                                <img src="sections/isolated/skincare-plan/images/hov_img_2.webp" alt=""
+                                    class="img-fluid mw d-none second-img m-0 m-md-auto" style="--mw-mob:120px;">
+                                <div class="prod_tit_wrap mb-10 d-md-none">
+                                    <h3 style="--font-h3-mob:20px;">Micro-Infusion 3 Month Bundle (For Wrinkles)</h3>
+                                    <p class="fs-16 mt-10">$149</p>
+                                </div>
                             </div> <!-- tab 1 end-->
                             <div class="tab-pane fade" id="skincare-plan2-tab-2" role="tabpanel"
                                 aria-labelledby="skincare-plan2-tab-pane-2" tabindex="0">
-                                <img src="sections/isolated/skincare-plan/images/transform_aging.webp" alt=""
+                                <img src="sections/isolated/skincare-plan/images/mi-result.webp" alt=""
                                     class="img-fluid">
                             </div>
                             <div class="tab-pane fade" id="skincare-plan2-tab-3" role="tabpanel"
@@ -157,7 +260,7 @@
                             </div>
                         </div>
 
-                        <ul class="nav qure-scroll-tabs my-30" id="SkinPlanTab3" role="tablist">
+                        <ul class="nav qure-scroll-tabs my-30 d-none d-md-flex" id="SkinPlanTab3" role="tablist">
                             <li class="qure-scroll-item" role="presentation">
                                 <button class="qure-scroll-link active" id="skincare-plan2-tab-pane-1"
                                     data-bs-toggle="tab" data-bs-target="#skincare-plan2-tab-1" type="button" role="tab"
@@ -176,41 +279,132 @@
                         </ul>
 
                         <div class="product_details">
-                            <h3>Q-Rejuvalight Pro Facewear</h3>
-                            <p class="fs-20 fw-600">$399</p>
-                            <p>A hands-free LED light therapy mask that uses clinically proven wavelengths to target
-                                multiple skin concerns.</p>
-                            <div class="qure__accordion-item">
-                                <ul class="check_list">
-                                    <li>FDA-cleared device that treats acne, fine lines, wrinkles and dark spots.</li>
-                                    <li>Customizable treatment on 5 facial areas for your specific skin concerns.</li>
-                                    <li>Quick 3 minute, wireless daily treatments with convenient hands-free operation.
-                                    </li>
-                                </ul>
+                            <div class="prod_tit_wrap mb-10">
+                                <h3>Micro-Infusion 3 Month Bundle (For Wrinkles)</h3>
+                                <p class="fs-20 fw-600">$149</p>
                             </div>
-                            <a href="#" class="btn border-0 w-100">Add to Bundle</a>
-                            <div class="text-center border-top mt-20 pt-20">
-                                <div class="d-flex justify-content-center align-items-center">
-                                    <img src="sections/isolated/skincare-plan/images/review_stars.webp" alt="">
-                                    <p><strong>“I noticed results straight away!</strong></p>
+                            <div class="show_more">
+                                <p>Inspired by in-clinic microneedling for results you can see and feel—with minimal to
+                                    no downtime.
+                                    <a class="d-md-none text-black text-decoration-underline" href="javascript:void();"
+                                        data-bs-toggle="modal" data-bs-target="#bundle_modal_2"> Read more</a>
+                                </p>
+
+                                <div class="qure__accordion-item mt-20 d-none d-md-block">
+                                    <ul class="check_list">
+                                        <li>Smooths fine lines and softens wrinkles.</li>
+                                        <li>Improves tone and texture through gentle skin renewal and deep hydration
+                                        </li>
+                                        <li>Clinically backed and easy to use at home</li>
+                                    </ul>
                                 </div>
-                                <p>Now I can’t go a day without the Q-Rejuvalight Mask.”</p>
+                            </div>
+                            <a href="#" class="btn border-0 w-100 mt-20">Add to Bundle</a>
+                            <div class="text-center border-top mt-20 pt-20 star_text">
+                                <div class="d-flex justify-content-center align-items-center flex-wrap">
+                                    <img src="sections/isolated/skincare-plan/images/review_stars.webp" alt="">
+                                    <p><strong>“Even my esthetician is hooked!</strong></p>
+                                </div>
+                                <p>And I can now visit beauty clinics less often.”</p>
                             </div>
                         </div>
                     </div>
+                   <!-- Modal 2 start here -->
+                    <div class="modal fade" id="bundle_modal_2" tabindex="-1" aria-labelledby="EthylLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered modal-xl">
+                            <div
+                                class="modal-content af-modal-content border-0 p-lg-60 px-20 py-30 rounded-0 position-relative">
+                                <button type="button" class="btn-close position-absolute fs-24 end-0 top-0"
+                                    data-bs-dismiss="modal" aria-label="Close"><i
+                                        class="fa-regular fa-xmark"></i></button>
+                                <div class="modal-body af-modal-body p-0">
+                                  <div class="product_wrapper border py-24 px-16 py-md-30 px-md-24 position-relative rounded-10">
+                        <div class="s_num">1</div>
+                        <div class="tab-content qure-scroll-tab-content" id="SkinPlanTabModal2Content">
+                            <div class="tab-pane fade show active" id="skincare-plan-tab-1-modal2" role="tabpanel"
+                                aria-labelledby="skincare-plan-tab-pane-1-modal2" tabindex="0">
+                                <img src="sections/isolated/skincare-plan/images/mi-prod.webp" alt=""
+                                    class="img-fluid">
+                      
+                               </div>
+                          <!-- tab 1 end-->
+                            <div class="tab-pane fade" id="skincare-plan-tab-2-modal2" role="tabpanel"
+                                aria-labelledby="skincare-plan-tab-pane-2-modal2" tabindex="0">
+                                <img src="sections/isolated/skincare-plan/images/mi-result.webp" alt=""
+                                    class="img-fluid">
+                            </div>
+                            <div class="tab-pane fade" id="skincare-plan-tab-3-modal2" role="tabpanel"
+                                aria-labelledby="skincare-plan-tab-pane-3-modal2" tabindex="0">
+                                <iframe width="100%" height="315"
+                                    src="https://www.youtube.com/embed/mVdncsTAXiA?autoplay=1&mute=1"
+                                    title="YouTube video player" frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen>
+                                </iframe>
+                            </div>
+                            </div>
+                        <ul class="nav qure-scroll-tabs my-30" id="SkinPlanTabModal2" role="tablist">
+                            <li class="qure-scroll-item" role="presentation">
+                                <button class="qure-scroll-link active" id="skincare-plan-tab-pane-1-modal2"
+                                    data-bs-toggle="tab" data-bs-target="#skincare-plan-tab-1-modal2" type="button" role="tab"
+                                    aria-controls="skincare-plan-tab-1-modal2" aria-selected="true">Product</button>
+                            </li>
+                            <li class="qure-scroll-item" role="presentation">
+                                <button class="qure-scroll-link" id="skincare-plan-tab-pane-2-modal2" data-bs-toggle="tab"
+                                    data-bs-target="#skincare-plan-tab-2-modal2" type="button" role="tab"
+                                    aria-controls="skincare-plan-tab-2-modal2" aria-selected="false">Results</button>
+                            </li>
+                            <li class="qure-scroll-item" role="presentation">
+                                <button class="qure-scroll-link" id="skincare-plan-tab-pane-3-modal2" data-bs-toggle="tab"
+                                    data-bs-target="#skincare-plan-tab-3-modal2" type="button" role="tab"
+                                    aria-controls="skincare-plan-tab-3-modal2" aria-selected="false">Review</button>
+                            </li>
+                        </ul>
+                            <div class="prod_tit_wrap mb-10 d-md-none">
+                                <h3 style="--font-h3-mob:20px;">Micro-Infusion 3 Month Bundle (For Wrinkles)</h3>
+                                <p class="fs-16 mt-10">$149</p>
+                            </div>
+                        <div class="product_details">
+                            <div class="prod_tit_wrap mb-10 d-none d-md-block">
+                                <h3>Micro-Infusion 3 Month Bundle (For Wrinkles)</h3>
+                                <p class="fs-20 fw-600">$149</p>
+                            </div>
+                            <div class="qure__accordion-item mt-20">
+                                <ul class="check_list">
+                                    <li>Smooths fine lines and softens wrinkles.
+                                    </li>
+                                    <li>Improves tone and texture through gentle skin renewal and deep hydration
+                                    </li>
+                                    <li>Clinically backed and easy to use at home</li>
+                                </ul>
+                            </div>
+                            <a href="#" class="btn border-0 w-100 mt-10">Add to Bundle</a>
+                        </div>
+                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Modal 2 end here -->
                 </div>
                 <div class="col-md-6">
-                    <div class="product_wrapper border py-30 px-24 position-relative rounded-10">
+                    <div class="product_wrapper border py-24 px-16 py-md-30 px-md-24 position-relative rounded-10">
                         <div class="s_num">3</div>
                         <div class="tab-content qure-scroll-tab-content" id="SkinPlanTab4Content">
                             <div class="tab-pane fade show active" id="skincare-plan4-tab-1" role="tabpanel"
                                 aria-labelledby="skincare-plan4-tab-pane-1" tabindex="0">
-                                <img src="sections/isolated/skincare-plan/images/q-rej-product.webp" alt=""
-                                    class="img-fluid">
+                                <img src="sections/isolated/skincare-plan/images/all-in-prod.webp" alt=""
+                                    class="img-fluid mw first-img m-0 m-md-auto" style="--mw-mob:120px;">
+                                <img src="sections/isolated/skincare-plan/images/hov_img_3.webp" alt=""
+                                    class="img-fluid mw d-none second-img m-0 m-md-auto" style="--mw-mob:120px;">
+                                <div class="prod_tit_wrap mb-10 d-md-none">
+                                    <h3 style="--font-h3-mob:20px;">All-In-One Face Serum</h3>
+                                    <p class="fs-16 mt-10">$79</p>
+                                </div>
                             </div> <!-- tab 1 end-->
                             <div class="tab-pane fade" id="skincare-plan4-tab-2" role="tabpanel"
                                 aria-labelledby="skincare-plan4-tab-pane-2" tabindex="0">
-                                <img src="sections/isolated/skincare-plan/images/transform_aging.webp" alt=""
+                                <img src="sections/isolated/skincare-plan/images/all-in-result.webp" alt=""
                                     class="img-fluid">
                             </div>
                             <div class="tab-pane fade" id="skincare-plan4-tab-3" role="tabpanel"
@@ -224,7 +418,7 @@
                             </div>
                         </div>
 
-                        <ul class="nav qure-scroll-tabs my-30" id="SkinPlanTab4" role="tablist">
+                        <ul class="nav qure-scroll-tabs my-30 d-none d-md-flex" id="SkinPlanTab4" role="tablist">
                             <li class="qure-scroll-item" role="presentation">
                                 <button class="qure-scroll-link active" id="skincare-plan4-tab-pane-1"
                                     data-bs-toggle="tab" data-bs-target="#skincare-plan4-tab-1" type="button" role="tab"
@@ -243,41 +437,129 @@
                         </ul>
 
                         <div class="product_details">
-                            <h3>Q-Rejuvalight Pro Facewear</h3>
-                            <p class="fs-20 fw-600">$399</p>
-                            <p>A hands-free LED light therapy mask that uses clinically proven wavelengths to target
-                                multiple skin concerns.</p>
-                            <div class="qure__accordion-item">
-                                <ul class="check_list">
-                                    <li>FDA-cleared device that treats acne, fine lines, wrinkles and dark spots.</li>
-                                    <li>Customizable treatment on 5 facial areas for your specific skin concerns.</li>
-                                    <li>Quick 3 minute, wireless daily treatments with convenient hands-free operation.
-                                    </li>
-                                </ul>
+                            <div class="prod_tit_wrap mb-10">
+                                <h3>All-In-One Face Serum</h3>
+                                <p class="fs-20 fw-600">$79</p>
                             </div>
-                            <a href="#" class="btn border-0 w-100">Add to Bundle</a>
-                            <div class="text-center border-top mt-20 pt-20">
-                                <div class="d-flex justify-content-center align-items-center">
-                                    <img src="sections/isolated/skincare-plan/images/review_stars.webp" alt="">
-                                    <p><strong>“I noticed results straight away!</strong></p>
+                            <div class="show_more">
+                                <p>A multi-tasking formula designed to hydrate, brighten, and strengthen skin barrier in
+                                    one step. <a class="d-md-none text-black text-decoration-underline"
+                                        href="javascript:void();" data-bs-toggle="modal" data-bs-target="#bundle_modal_3"> Read
+                                        more</a> </p>
+
+                                <div class="qure__accordion-item mt-20 d-none d-md-block">
+                                    <ul class="check_list">
+                                        <li>Hydrates and plumps with hyaluronic acid and soothing ingredients.</li>
+                                        <li>Deeply hydrates and evens tone with gentle, skin-renewing actives.</li>
+                                        <li>Lightweight, non-sticky formula that absorbs quickly and layers well.</li>
+                                    </ul>
                                 </div>
-                                <p>Now I can’t go a day without the Q-Rejuvalight Mask.”</p>
+                            </div>
+
+                            <a href="#" class="btn border-0 w-100 mt-20">Add to Bundle</a>
+                            <div class="text-center border-top mt-20 pt-20 star_text">
+                                <div class="d-flex justify-content-center align-items-center flex-wrap">
+                                    <img src="sections/isolated/skincare-plan/images/review_stars.webp" alt="">
+                                    <p><strong>“This product is a keeper. </strong></p>
+                                </div>
+                                <p>My skin looks better than ever after just 2 weeks.”</p>
                             </div>
                         </div>
                     </div>
+                    <!-- Modal 3 start here -->
+                    <div class="modal fade" id="bundle_modal_3" tabindex="-1" aria-labelledby="EthylLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered modal-xl">
+                            <div
+                                class="modal-content af-modal-content border-0 p-lg-60 px-20 py-30 rounded-0 position-relative">
+                                <button type="button" class="btn-close position-absolute fs-24 end-0 top-0"
+                                    data-bs-dismiss="modal" aria-label="Close"><i
+                                        class="fa-regular fa-xmark"></i></button>
+                                <div class="modal-body af-modal-body p-0">
+                                  <div class="product_wrapper border py-24 px-16 py-md-30 px-md-24 position-relative rounded-10">
+                        <div class="s_num">1</div>
+                        <div class="tab-content qure-scroll-tab-content" id="SkinPlanTabModal3Content">
+                            <div class="tab-pane fade show active" id="skincare-plan-tab-1-modal3" role="tabpanel"
+                                aria-labelledby="skincare-plan-tab-pane-1-modal3" tabindex="0">
+                                <img src="sections/isolated/skincare-plan/images/all-in-prod.webp" alt=""
+                                    class="img-fluid">
+                      
+                               </div>
+                          <!-- tab 1 end-->
+                            <div class="tab-pane fade" id="skincare-plan-tab-2-modal3" role="tabpanel"
+                                aria-labelledby="skincare-plan-tab-pane-2-modal3" tabindex="0">
+                                <img src="sections/isolated/skincare-plan/images/all-in-result.webp" alt=""
+                                    class="img-fluid">
+                            </div>
+                            <div class="tab-pane fade" id="skincare-plan-tab-3-modal3" role="tabpanel"
+                                aria-labelledby="skincare-plan-tab-pane-3-modal3" tabindex="0">
+                                <iframe width="100%" height="315"
+                                    src="https://www.youtube.com/embed/PJt57LcFEQk?autoplay=1&mute=1"
+                                    title="YouTube video player" frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen>
+                                </iframe>
+                            </div>
+                            </div>
+                        <ul class="nav qure-scroll-tabs my-30" id="SkinPlanTabModal3" role="tablist">
+                            <li class="qure-scroll-item" role="presentation">
+                                <button class="qure-scroll-link active" id="skincare-plan-tab-pane-1-modal3"
+                                    data-bs-toggle="tab" data-bs-target="#skincare-plan-tab-1-modal3" type="button" role="tab"
+                                    aria-controls="skincare-plan-tab-1-modal3" aria-selected="true">Product</button>
+                            </li>
+                            <li class="qure-scroll-item" role="presentation">
+                                <button class="qure-scroll-link" id="skincare-plan-tab-pane-2-modal3" data-bs-toggle="tab"
+                                    data-bs-target="#skincare-plan-tab-2-modal3" type="button" role="tab"
+                                    aria-controls="skincare-plan-tab-2-modal3" aria-selected="false">Results</button>
+                            </li>
+                            <li class="qure-scroll-item" role="presentation">
+                                <button class="qure-scroll-link" id="skincare-plan-tab-pane-3-modal3" data-bs-toggle="tab"
+                                    data-bs-target="#skincare-plan-tab-3-modal3" type="button" role="tab"
+                                    aria-controls="skincare-plan-tab-3-modal3" aria-selected="false">Review</button>
+                            </li>
+                        </ul>
+                            <div class="prod_tit_wrap mb-10 d-md-none">
+                                <h3 style="--font-h3-mob:20px;">All-In-One Face Serum</h3>
+                                <p class="fs-16 mt-10">$79</p>
+                            </div>
+                        <div class="product_details">
+                            <div class="prod_tit_wrap mb-10 d-none d-md-block">
+                                <h3>All-In-One Face Serum</h3>
+                                <p class="fs-20 fw-600">$79</p>
+                            </div>
+                            <div class="qure__accordion-item mt-20">
+                                <ul class="check_list">
+                                    <li>Hydrates and plumps with hyaluronic acid and soothing ingredients.</li>
+                                    <li>Deeply hydrates and evens tone with gentle, skin-renewing actives.</li>
+                                    <li>Lightweight, non-sticky formula that absorbs quickly and layers well.</li>
+                                </ul>
+                            </div>
+                            <a href="#" class="btn border-0 w-100 mt-10">Add to Bundle</a>
+                        </div>
+                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Modal 3 end here -->
                 </div>
                 <div class="col-md-6">
-                    <div class="product_wrapper border py-30 px-24 position-relative rounded-10">
+                    <div class="product_wrapper border py-24 px-16 py-md-30 px-md-24 position-relative rounded-10">
                         <div class="s_num">4</div>
                         <div class="tab-content qure-scroll-tab-content" id="SkinPlanTab5Content">
                             <div class="tab-pane fade show active" id="skincare-plan5-tab-1" role="tabpanel"
                                 aria-labelledby="skincare-plan5-tab-pane-1" tabindex="0">
-                                <img src="sections/isolated/skincare-plan/images/q-rej-product.webp" alt=""
-                                    class="img-fluid">
+                                <img src="sections/isolated/skincare-plan/images/neck-prod.webp" alt=""
+                                    class="img-fluid mw first-img m-0 m-md-auto" style="--mw-mob:120px;">
+                                <img src="sections/isolated/skincare-plan/images/hov_img_4.webp" alt=""
+                                    class="img-fluid mw d-none second-img m-0 m-md-auto" style="--mw-mob:120px;">
+                                <div class="prod_tit_wrap mb-10 d-md-none">
+                                    <h3 style="--font-h3-mob:20px;">Neck & Décolletage LED Device</h3>
+                                    <p class="fs-16 mt-10">$299</p>
+                                </div>
                             </div> <!-- tab 1 end-->
                             <div class="tab-pane fade" id="skincare-plan5-tab-2" role="tabpanel"
                                 aria-labelledby="skincare-plan5-tab-pane-2" tabindex="0">
-                                <img src="sections/isolated/skincare-plan/images/transform_aging.webp" alt=""
+                                <img src="sections/isolated/skincare-plan/images/neck-result.webp" alt=""
                                     class="img-fluid">
                             </div>
                             <div class="tab-pane fade" id="skincare-plan5-tab-3" role="tabpanel"
@@ -291,7 +573,7 @@
                             </div>
                         </div>
 
-                        <ul class="nav qure-scroll-tabs my-30" id="SkinPlanTab5" role="tablist">
+                        <ul class="nav qure-scroll-tabs my-30 d-none d-md-flex" id="SkinPlanTab5" role="tablist">
                             <li class="qure-scroll-item" role="presentation">
                                 <button class="qure-scroll-link active" id="skincare-plan5-tab-pane-1"
                                     data-bs-toggle="tab" data-bs-target="#skincare-plan5-tab-1" type="button" role="tab"
@@ -310,33 +592,118 @@
                         </ul>
 
                         <div class="product_details">
-                            <h3>Q-Rejuvalight Pro Facewear</h3>
-                            <p class="fs-20 fw-600">$399</p>
-                            <p>A hands-free LED light therapy mask that uses clinically proven wavelengths to target
-                                multiple skin concerns.</p>
-                            <div class="qure__accordion-item">
-                                <ul class="check_list">
-                                    <li>FDA-cleared device that treats acne, fine lines, wrinkles and dark spots.</li>
-                                    <li>Customizable treatment on 5 facial areas for your specific skin concerns.</li>
-                                    <li>Quick 3 minute, wireless daily treatments with convenient hands-free operation.
-                                    </li>
-                                </ul>
+                            <div class="prod_tit_wrap mb-10">
+                                <h3>Neck & Décolletage LED Device</h3>
+                                <p class="fs-20 fw-600">$299</p>
                             </div>
-                            <a href="#" class="btn border-0 w-100">Add to Bundle</a>
-                            <div class="text-center border-top mt-20 pt-20">
-                                <div class="d-flex justify-content-center align-items-center">
-                                    <img src="sections/isolated/skincare-plan/images/review_stars.webp" alt="">
-                                    <p><strong>“I noticed results straight away!</strong></p>
+                            <div class="show_more">
+                                <p>A targeted LED light therapy device designed specifically for the delicate skin on
+                                    your neck and chest.<a class="d-md-none text-black text-decoration-underline"
+                                        href="javascript:void();" data-bs-toggle="modal" data-bs-target="#bundle_modal_4"> Read
+                                        more</a> </p>
+
+                                <div class="qure__accordion-item mt-20 d-none d-md-block">
+                                    <ul class="check_list">
+                                        <li>Uses wavelengths of LED light that have been clinically proven to support
+                                            skin clarity and repair.</li>
+                                        <li>Helps even skin tone and improve the feel of firmness.</li>
+                                        <li>Pairs seamlessly with Qure’s Micro-Infusion for enhanced results.</li>
+                                    </ul>
                                 </div>
-                                <p>Now I can’t go a day without the Q-Rejuvalight Mask.”</p>
+                            </div>
+                            <a href="#" class="btn border-0 w-100 mt-20">Add to Bundle</a>
+                            <div class="text-center border-top mt-20 pt-20 star_text">
+                                <div class="d-flex justify-content-center align-items-center flex-wrap">
+                                    <img src="sections/isolated/skincare-plan/images/review_stars.webp" alt="">
+                                    <p><strong>“I’m surprised how much younger my neck looks</strong></p>
+                                </div>
+                                <p>and my skin looks and feels more rejuvenated.”</p>
                             </div>
                         </div>
                     </div>
+                    <!-- Modal 4 start here -->
+                    <div class="modal fade" id="bundle_modal_4" tabindex="-1" aria-labelledby="EthylLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered modal-xl">
+                            <div
+                                class="modal-content af-modal-content border-0 p-lg-60 px-20 py-30 rounded-0 position-relative">
+                                <button type="button" class="btn-close position-absolute fs-24 end-0 top-0"
+                                    data-bs-dismiss="modal" aria-label="Close"><i
+                                        class="fa-regular fa-xmark"></i></button>
+                                <div class="modal-body af-modal-body p-0">
+                                  <div class="product_wrapper border py-24 px-16 py-md-30 px-md-24 position-relative rounded-10">
+                        <div class="s_num">1</div>
+                        <div class="tab-content qure-scroll-tab-content" id="SkinPlanTabModal4Content">
+                            <div class="tab-pane fade show active" id="skincare-plan-tab-1-modal4" role="tabpanel"
+                                aria-labelledby="skincare-plan-tab-pane-1-modal4" tabindex="0">
+                                <img src="sections/isolated/skincare-plan/images/neck-prod.webp" alt=""
+                                    class="img-fluid">
+                      
+                               </div>
+                          <!-- tab 1 end-->
+                            <div class="tab-pane fade" id="skincare-plan-tab-2-modal4" role="tabpanel"
+                                aria-labelledby="skincare-plan-tab-pane-2-modal4" tabindex="0">
+                                <img src="sections/isolated/skincare-plan/images/neck-result.webp" alt=""
+                                    class="img-fluid">
+                            </div>
+                            <div class="tab-pane fade" id="skincare-plan-tab-3-modal4" role="tabpanel"
+                                aria-labelledby="skincare-plan-tab-pane-3-modal4" tabindex="0">
+                                <iframe width="100%" height="315"
+                                    src="https://www.youtube.com/embed/W9KXAimjHCE?autoplay=1&mute=1"
+                                    title="YouTube video player" frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen>
+                                </iframe>
+                            </div>
+                            </div>
+                        <ul class="nav qure-scroll-tabs my-30" id="SkinPlanTabModal4" role="tablist">
+                            <li class="qure-scroll-item" role="presentation">
+                                <button class="qure-scroll-link active" id="skincare-plan-tab-pane-1-modal4"
+                                    data-bs-toggle="tab" data-bs-target="#skincare-plan-tab-1-modal4" type="button" role="tab"
+                                    aria-controls="skincare-plan-tab-1-modal4" aria-selected="true">Product</button>
+                            </li>
+                            <li class="qure-scroll-item" role="presentation">
+                                <button class="qure-scroll-link" id="skincare-plan-tab-pane-2-modal4" data-bs-toggle="tab"
+                                    data-bs-target="#skincare-plan-tab-2-modal4" type="button" role="tab"
+                                    aria-controls="skincare-plan-tab-2-modal4" aria-selected="false">Results</button>
+                            </li>
+                            <li class="qure-scroll-item" role="presentation">
+                                <button class="qure-scroll-link" id="skincare-plan-tab-pane-3-modal4" data-bs-toggle="tab"
+                                    data-bs-target="#skincare-plan-tab-3-modal4" type="button" role="tab"
+                                    aria-controls="skincare-plan-tab-3-modal4" aria-selected="false">Review</button>
+                            </li>
+                        </ul>
+                            <div class="prod_tit_wrap mb-10 d-md-none">
+                                <h3 style="--font-h3-mob:20px;">Neck & Décolletage LED Device</h3>
+                                <p class="fs-16 mt-10">$299</p>
+                            </div>
+                        <div class="product_details">
+                            <div class="prod_tit_wrap mb-10 d-none d-md-block">
+                                <h3>Neck & Décolletage LED Device</h3>
+                                <p class="fs-20 fw-600">$299</p>
+                            </div>
+                            <div class="qure__accordion-item mt-20">
+                                <ul class="check_list">
+                                    <li>Uses wavelengths of LED light that have been clinically proven to support skin clarity and repair.
+                                    </li>
+                                    <li>Helps even skin tone and improve the feel of firmness.</li>
+                                    <li>Pairs seamlessly with Qure’s Micro-Infusion for enhanced results.</li>
+                                </ul>
+                            </div>
+                            <a href="#" class="btn border-0 w-100 mt-10">Add to Bundle</a>
+                        </div>
+                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Modal 4 end here -->
                 </div>
             </div>
-            <a href="#" class="btn mt-60 mx-auto d-flex mw" style="--mw:345px">Add Complete Bundle To Cart</a>
+            <a href="#" class="btn mt-60 mx-auto d-flex justify-content-center mw" style="--mw:345px">Add Complete
+                Bundle To Cart</a>
         </div>
     </div>
+
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             loadScriptOnce('move-tabs-position', 'sections/isolated/move-tabs-position/move-tabs-position.js');
@@ -386,9 +753,9 @@
     <!-- skincare routine -->
     <link rel="stylesheet" href="sections/isolated/skincare-routine/skincare-routine.css">
     <div class="qure__section skincare-routine"
-        style="--padding-top:80px;--padding-bottom:80px;--padding-top-mob:50px;--padding-bottom-mob:50px;">
+        style="--padding-top:80px;--padding-bottom:60px;--padding-top-mob:50px;--padding-bottom-mob:30px;">
         <div class="container">
-            <h3 class="mb-50 text-center">Meet your new skincare routine</h3>
+            <h2 class="mb-32 mb-md-50 text-md-center">Meet your new skincare routine</h2>
             <div class="row">
                 <div class="col-md-7 pr-md-100 order-mob-2">
                     <div class="product-wrapper p-3 position-relative">
@@ -474,8 +841,14 @@
                 </div>
                 <div class="col-md-5">
                     <div class="skincare_routine_img">
-                        <img src="sections/isolated/skincare-routine/images/daily.webp" alt=""
-                            class="img-fluid routine-img daily">
+                       
+                        <div class="wistia_responsive_padding routine-img daily" style="padding:56.25% 0 0 0;position:relative;">
+                            <div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;">
+                                <div class="wistia_embed wistia_async_j7op01weqs autoPlay=true" style="height:100%;width:100%">&nbsp;</div>
+                            </div>
+                        </div>
+                        <!-- <img src="sections/isolated/skincare-routine/images/daily.webp" alt=""
+                            class="img-fluid routine-img daily"> -->
                         <img src="sections/isolated/skincare-routine/images/weekly.webp" alt=""
                             class="img-fluid routine-img weekly d-none">
                         <img src="sections/isolated/skincare-routine/images/biweekly.webp" alt=""
@@ -496,10 +869,10 @@
     <!-- Trusted reviews -->
     <link rel="stylesheet" href="sections/isolated/review-slider/card-slide.css" />
     <div class="qure__trusted-reviews qure__section"
-        style="--section-padding-top: 60px;--section-padding-bottom: 40px;--section-padding-top-mob: 50px;--section-padding-bottom-mob: 30px;">
+        style="--section-padding-top: 60px;--section-padding-bottom: 60px;--section-padding-top-mob: 30px;--section-padding-bottom-mob: 30px;">
         <div class="container offset-container-mobile">
             <div class="qure__section-header text-center mb-30 mb-md-60">
-                <h2 class="qure__section-heading pr-15 pr-md-0">Results you’ll see with your own eyes</h2>
+                <h2 class="qure__section-heading pr-15 pr-md-0">No promises, just proof</h2>
             </div>
             <div class="swiper qure__swiper" id="qure__swiper-trusted-slider" data-section-id="trusted-slider"
                 data-autoplay="false" data-loop="false" data-mobile="1.1" data-tablet="2" data-desktop="3"
@@ -613,7 +986,7 @@
                                         My skin looks better than it has in years.”
                                     </p>
                                 </div>
-                                <a href="#" class="d-flex bg-light p-12 rounded-10 rev_slide-prd gap-3">
+                                <a href="#skincare_goals" class="d-flex bg-light p-12 rounded-10 rev_slide-prd gap-3">
                                     <div class="rev-prd-img">
                                         <img src="sections/isolated/review-slider/images/micro-infusion-facial-system.webp"
                                             alt="q-rejuvalight-pro-led-mask" />
@@ -943,12 +1316,17 @@
 
     <!-- skincare lifestyle start  -->
     <link rel="stylesheet" href="sections/isolated/skincare-lifestyle/skincare-lifestyle.css">
-    <div class="qure__section skincare_lifestyle"
+    <div class="qure__section bg-light skincare_lifestyle"
         style="--padding-top:30px;--padding-bottom:40px;--padding-top-mob:30px;--padding-bottom-mob:30px;">
         <div class="container">
-            <div class="row">
+            <div class="qure__section-header text-md-center mw mx-auto" style="--mw:740px;">
+                <h2 class="qure__section-heading">Skincare is a lifestyle</h2>
+                <p class="mt-20 mt-lg-30 pb-0">Caring for your skin goes beyond the products you use. It’s about adopting habits that support your skin’s health every day. Our dermatologists recommend these expert tips to help you reach your skin goals even faster.
+                </p>
+            </div>
+            <div class="row align-items-center">
                 <div class="col-md-6">
-                    <div class="d-flex align-items-start">
+                    <div class="d-flex align-items-center">
                         <div class="tab-content d-none d-md-block" id="v-pills-tabContent">
                             <div class="tab-pane fade active show" id="v-pills-step1" role="tabpanel"
                                 aria-labelledby="v-pills-step1-tab">
@@ -983,8 +1361,8 @@
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <div class="skin_life_content mt-10 mb-40">
-                        <div class="d-flex gap-3 mb-30">
+                    <div class="skin_life_content mt-20 mb-40">
+                        <div class="d-flex gap-3">
                             <button class="nav-link step d-md-none" id="v-pills-step1-tab" data-bs-toggle="pill"
                                 data-bs-target="#v-pills-step1" type="button" role="tab" aria-controls="v-pills-step1"
                                 aria-selected="true">1</button>
@@ -995,35 +1373,35 @@
                             </div>
                         </div>
                         <img src="sections/isolated/skincare-lifestyle/images/sk_life_1.webp" alt=""
-                            class="img-fluid d-md-none">
+                            class="img-fluid d-md-none mt-20">
                     </div>
-                    <div class="skin_life_content mt-10 mb-40">
-                        <div class="d-flex gap-3 mb-30">
+                    <div class="skin_life_content mt-20 mb-40">
+                        <div class="d-flex gap-3">
                             <button class="nav-link step d-md-none" id="v-pills-step2-tab" data-bs-toggle="pill"
                                 data-bs-target="#v-pills-step2" type="button" role="tab" aria-controls="v-pills-step2"
                                 aria-selected="false" tabindex="-1">2</button>
                             <div>
-                                <p><strong>Exfoliate 1-2 times per week</strong></p>
-                                <p>With an at-home peel that contains Alpha-Hydroxy Acids (AHAs) to remove dead skin and
-                                    make fine lines less visible.</p>
+                                <p><strong>Reduce sugar intake</strong></p>
+                                <p>High blood sugar triggers glycation, which damages collagen and makes skin lose
+                                    elasticity, leading to wrinkles and sagging.</p>
                             </div>
                         </div>
                         <img src="sections/isolated/skincare-lifestyle/images/sk_life_2.webp" alt=""
-                            class="img-fluid d-md-none">
+                            class="img-fluid d-md-none mt-20">
                     </div>
-                    <div class="skin_life_content mt-10">
-                        <div class="d-flex gap-3 mb-30">
-                            <button class="nav-link step d-md-none" id="v-pills-step3-tab" data-bs-toggle="pill"
-                                data-bs-target="#v-pills-step3" type="button" role="tab" aria-controls="v-pills-step3"
-                                aria-selected="false" tabindex="-1">3</button>
+                    <div class="skin_life_content mt-20">
+                        <div class="d-flex gap-3">
+                            <button class="nav-link step d-md-none active_mob" id="v-pills-step3-tab"
+                                data-bs-toggle="pill" data-bs-target="#v-pills-step3" type="button" role="tab"
+                                aria-controls="v-pills-step3" aria-selected="false" tabindex="-1">3</button>
                             <div>
-                                <p><strong>Exfoliate 1-2 times per week</strong></p>
-                                <p>With an at-home peel that contains Alpha-Hydroxy Acids (AHAs) to remove dead skin and
-                                    make fine lines less visible.</p>
+                                <p><strong>Sleep on your back</strong></p>
+                                <p>Sleeping on your back on a Silk Pillowcase reduces friction on the skin and helps
+                                    prevent wrinkles caused by excess pressure.</p>
                             </div>
                         </div>
                         <img src="sections/isolated/skincare-lifestyle/images/sk_life_3.webp" alt=""
-                            class="img-fluid d-md-none">
+                            class="img-fluid d-md-none mt-20">
                     </div>
                 </div>
             </div>
@@ -1037,159 +1415,166 @@
     <!-- skincare lifestyle end -->
 
 
-       <!-- Skin Deserve section Start -->
-<div class="skin_deserve qure__section" style="--section-padding-top: 40px; --section-padding-bottom: 40px; --section-padding-top-mob: 30px; --section-padding-bottom-mob: 30px;">
-      <div class="container container-small" style="--container-width:880px">
-         <div class="qure__section-header text-center">
-            <h2 class="qure__section-heading">Your skin deserves Qure</h2>
-            <p class="mt-20 mt-lg-30 pb-0">Skincare isn’t a numbers game. More products won’t help if your skin can’t use them effectively. Qure gives you the right treatment, in the right way, for results you can actually see.
-            </p>
-         </div>
-         <div class="row justify-content-between pb-25 align-items-center">
-            <div class="col-5">
-               <div class="text-center">
-                  <img src="assets/images/qure_logo..svg" alt="">
-               </div>
+    <!-- Skin Deserve section Start -->
+    <div class="skin_deserve qure__section"
+        style="--section-padding-top: 80px; --section-padding-bottom: 80px; --section-padding-top-mob: 40px; --section-padding-bottom-mob: 40px;">
+        <div class="container container-small" style="--container-width:880px">
+            <div class="qure__section-header text-center">
+                <h2 class="qure__section-heading">Your skin deserves Qure</h2>
+                <p class="mt-20 mt-lg-30 pb-0">Skincare isn’t a numbers game. More products won’t help if your skin
+                    can’t use them effectively. Qure gives you the right treatment, in the right way, for results you
+                    can actually see.
+                </p>
             </div>
-            <div class="col-5">
-               <h6 class="fm-body text-center fw-400">Other Products<p></p>
-            </h6></div>
-         </div>
-         <!--row start -->
-         <div class="row text-center align-items-center py-20 bg-light">
-            <div class="col-5">
-               <p>Effective and proven formulas</p>
-            </div>
-            <div class="col-2">
-               <div class="d-flex align-items-center col-gap justify-content-center">
-                  <div class=""><img src="assets/images/tick.svg" alt=""></div>
-                  <div class=""><img src="assets/images/cross.svg" alt=""></div>
-               </div>
-            </div>
-            <div class="col-5">
-               <p>Show minimal improvement or change</p>
-            </div>
-         </div>
-         <!--row end -->
-         <!--row start -->
-         <div class="row text-center align-items-center py-20">
-            <div class="col-5">
-               <p>Penetrates deep for better results</p>
-            </div>
-            <div class="col-2">
-               <div class="d-flex align-items-center col-gap justify-content-center">
-                  <div class=""><img src="assets/images/tick.svg" alt=""></div>
-                  <div class=""><img src="assets/images/cross.svg" alt=""></div>
-               </div>
-            </div>
-            <div class="col-5">
-               <p>Topical products stay on the surface</p>
-            </div>
-         </div>
-         <!--row end -->
-         <!--row start -->
-         <div class="row text-center align-items-center py-20 bg-light">
-            <div class="col-5">
-               <p>Gentle on skin with no downtime</p>
-            </div>
-            <div class="col-2">
-               <div class="d-flex align-items-center col-gap justify-content-center">
-                  <div class=""><img src="assets/images/tick.svg" alt=""></div>
-                  <div class=""><img src="assets/images/cross.svg" alt=""></div>
-               </div>
-            </div>
-            <div class="col-5">
-               <p>Can cause irritation and peeling</p>
-            </div>
-         </div>
-         <!--row end -->
-         <!--row start -->
-         <div class="row text-center align-items-center py-20">
-            <div class="col-5">
-               <p>Safe to use at-home</p>
-            </div>
-            <div class="col-2">
-               <div class="d-flex align-items-center col-gap justify-content-center">
-                  <div class=""><img src="assets/images/tick.svg" alt=""></div>
-                  <div class=""><img src="assets/images/cross.svg" alt=""></div>
-               </div>
-            </div>
-            <div class="col-5">
-               <p>Often requires clinic visits and downtime</p>
-            </div>
-         </div>
-         <!--row end -->
-         <!--row start -->
-         <div class="row text-center align-items-center py-20 bg-light">
-            <div class="col-5">
-               <p>Backed by dermatologists</p>
-            </div>
-            <div class="col-2">
-               <div class="d-flex align-items-center col-gap justify-content-center">
-                  <div class=""><img src="assets/images/tick.svg" alt=""></div>
-                  <div class=""><img src="assets/images/cross.svg" alt=""></div>
-               </div>
-            </div>
-            <div class="col-5">
-               <p>Not always tested or recommended</p>
-            </div>
-         </div>
-      </div>
-   </div>
-   <!-- Skin Deserve section End -->
-
-
-<!-- bundle routine start -->
- <link rel="stylesheet" href="sections/isolated/bundle-routine/bundle-routine.css">
- <div class=" qure__section bundle_routine bg-light" style="--padding-top:80px;--padding-bottom:80px;--padding-top-mob:40px;--padding-top-mob:40px;">
-    <div class="container">
-        <div class="row g-4">
-            <div class="col-6 col-md-3">
-                <div class="bndl_routine p-16 p-md-24">
-                    <div class="d-flex flex-wrap gap-4 mb-4">
-                        <img src="sections/isolated/bundle-routine/images/bndl_routine_1.webp" alt="">
-                        <p>Q-Rejuvalight Pro Facewear</p>
+            <div class="row justify-content-between pb-25 align-items-center">
+                <div class="col-5">
+                    <div class="text-center">
+                        <img src="assets/images/qure_logo..svg" alt="">
                     </div>
-                    <a href="#" class="btn border-0 w-100 px-10" style="--btn-font-mob:16px;">Add to Bundle</a>
+                </div>
+                <div class="col-5">
+                    <h6 class="fm-body text-center fw-400">Other Products<p></p>
+                    </h6>
                 </div>
             </div>
-            <div class="col-6 col-md-3">
-                <div class="bndl_routine p-16 p-md-24">
-                    <div class="d-flex flex-wrap gap-4 mb-4">
-                        <img src="sections/isolated/bundle-routine/images/bndl_routine_2.webp" alt="">
-                        <p>Q-Rejuvalight Pro Facewear</p>
+            <!--row start -->
+            <div class="row text-center align-items-center py-20 bg-light">
+                <div class="col-5">
+                    <p>Effective and proven formulas</p>
+                </div>
+                <div class="col-2">
+                    <div class="d-flex align-items-center col-gap justify-content-center">
+                        <div class=""><img src="assets/images/tick.svg" alt=""></div>
+                        <div class=""><img src="assets/images/cross.svg" alt=""></div>
                     </div>
-                    <a href="#" class="btn border-0 w-100 px-10" style="--btn-font-mob:16px;">Add to Bundle</a>
+                </div>
+                <div class="col-5">
+                    <p>Show minimal improvement or change</p>
                 </div>
             </div>
-            <div class="col-6 col-md-3">
-                <div class="bndl_routine p-16 p-md-24">
-                    <div class="d-flex flex-wrap gap-4 mb-4">
-                        <img src="sections/isolated/bundle-routine/images/bndl_routine_3.webp" alt="">
-                        <p>Q-Rejuvalight Pro Facewear</p>
+            <!--row end -->
+            <!--row start -->
+            <div class="row text-center align-items-center py-20">
+                <div class="col-5">
+                    <p>Penetrates deep for better results</p>
+                </div>
+                <div class="col-2">
+                    <div class="d-flex align-items-center col-gap justify-content-center">
+                        <div class=""><img src="assets/images/tick.svg" alt=""></div>
+                        <div class=""><img src="assets/images/cross.svg" alt=""></div>
                     </div>
-                    <a href="#" class="btn border-0 w-100 px-10" style="--btn-font-mob:16px;">Add to Bundle</a>
+                </div>
+                <div class="col-5">
+                    <p>Topical products stay on the surface</p>
                 </div>
             </div>
-            <div class="col-6 col-md-3">
-                <div class="bndl_routine p-16 p-md-24">
-                    <div class="d-flex flex-wrap gap-4 mb-4">
-                        <img src="sections/isolated/bundle-routine/images/bndl_routine_4.webp" alt="">
-                        <p>Q-Rejuvalight Pro Facewear</p>
+            <!--row end -->
+            <!--row start -->
+            <div class="row text-center align-items-center py-20 bg-light">
+                <div class="col-5">
+                    <p>Gentle on skin with no downtime</p>
+                </div>
+                <div class="col-2">
+                    <div class="d-flex align-items-center col-gap justify-content-center">
+                        <div class=""><img src="assets/images/tick.svg" alt=""></div>
+                        <div class=""><img src="assets/images/cross.svg" alt=""></div>
                     </div>
-                    <a href="#" class="btn border-0 w-100 px-10" style="--btn-font-mob:16px;">Add to Bundle</a>
+                </div>
+                <div class="col-5">
+                    <p>Can cause irritation and peeling</p>
+                </div>
+            </div>
+            <!--row end -->
+            <!--row start -->
+            <div class="row text-center align-items-center py-20">
+                <div class="col-5">
+                    <p>Safe to use at-home</p>
+                </div>
+                <div class="col-2">
+                    <div class="d-flex align-items-center col-gap justify-content-center">
+                        <div class=""><img src="assets/images/tick.svg" alt=""></div>
+                        <div class=""><img src="assets/images/cross.svg" alt=""></div>
+                    </div>
+                </div>
+                <div class="col-5">
+                    <p>Often requires clinic visits and downtime</p>
+                </div>
+            </div>
+            <!--row end -->
+            <!--row start -->
+            <div class="row text-center align-items-center py-20 bg-light">
+                <div class="col-5">
+                    <p>Backed by dermatologists</p>
+                </div>
+                <div class="col-2">
+                    <div class="d-flex align-items-center col-gap justify-content-center">
+                        <div class=""><img src="assets/images/tick.svg" alt=""></div>
+                        <div class=""><img src="assets/images/cross.svg" alt=""></div>
+                    </div>
+                </div>
+                <div class="col-5">
+                    <p>Not always tested or recommended</p>
                 </div>
             </div>
         </div>
     </div>
- </div>
-<!-- bundle routine end -->
+    <!-- Skin Deserve section End -->
 
 
-
-
-
-
+    <!-- bundle routine start -->
+    <div class=" qure__section bundle_routine bg-light"
+        style="--padding-top:80px;--padding-bottom:80px;--padding-top-mob:40px;--padding-top-mob:40px;">
+        <div class="container">
+              <div class="qure__section-header text-md-center mw mx-auto" style="--mw:740px;">
+                <h2 class="qure__section-heading">Bundle your new routine</h2>
+                <p class="mt-20 mt-lg-30 pb-0">Mix and match our targeted treatments to create a high-performance routine that fits your skin goals.
+                </p>
+            </div>
+            <div class="row g-4">
+                <div class="col-6 col-lg-3">
+                    <div
+                        class="bndl_routine bg-white rounded-10 p-16 p-md-24 d-flex flex-column justify-content-between h-100">
+                        <div class="d-flex flex-md-nowrap gap-4 mb-4 align-items-md-center flex-column flex-md-row">
+                            <img src="sections/isolated/bundle-routine/images/bndl_routine_1.webp" alt="">
+                            <p>Q-Rejuvalight Pro Facewear</p>
+                        </div>
+                        <a href="#" class="btn border-0 w-100 px-10" style="--btn-font-mob:16px;">Add to Bundle</a>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-3">
+                    <div
+                        class="bndl_routine bg-white rounded-10 p-16 p-md-24 d-flex flex-column justify-content-between h-100">
+                        <div class="d-flex flex-md-nowrap gap-4 mb-4 align-items-md-center flex-column flex-md-row">
+                            <img src="sections/isolated/bundle-routine/images/bndl_routine_2.webp" alt="">
+                            <p>Micro-Infusion 3 Month Bundle (For Wrinkles)</p>
+                        </div>
+                        <a href="#" class="btn border-0 w-100 px-10" style="--btn-font-mob:16px;">Add to Bundle</a>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-3">
+                    <div
+                        class="bndl_routine bg-white rounded-10 p-16 p-md-24 d-flex flex-column justify-content-between h-100">
+                        <div class="d-flex flex-md-nowrap gap-4 mb-4 align-items-md-center flex-column flex-md-row">
+                            <img src="sections/isolated/bundle-routine/images/bndl_routine_3.webp" alt="">
+                            <p>All-In-One Face Serum</p>
+                        </div>
+                        <a href="#" class="btn border-0 w-100 px-10" style="--btn-font-mob:16px;">Add to Bundle</a>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-3">
+                    <div
+                        class="bndl_routine bg-white rounded-10 p-16 p-md-24 d-flex flex-column justify-content-between h-100">
+                        <div class="d-flex flex-md-nowrap gap-4 mb-4 align-items-md-center flex-column flex-md-row">
+                            <img src="sections/isolated/bundle-routine/images/bndl_routine_4.webp" alt="">
+                            <p>Neck & Décolletage LED Device</p>
+                        </div>
+                        <a href="#" class="btn border-0 w-100 px-10" style="--btn-font-mob:16px;">Add to Bundle</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- bundle routine end -->
 
 
 

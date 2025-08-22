@@ -20,3 +20,12 @@
 .skincare-routine .nav-link{
     color: #212428;
 }
+.benefits_ul{
+    padding-left: 20px;
+}
+.benefits_ul li {
+    list-style: disc;
+}
+.benefits_ul li::marker {
+    color: #91BAEC;
+}

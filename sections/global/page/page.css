@@ -157,7 +157,7 @@
         margin-bottom: 22px;
     }
 
-    /* .qure__policies .cancel_section {
-        padding: 18px 0;
-    } */
+    .cancel_section ul li{
+    font-size: 18px;
+}
 }
