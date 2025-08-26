@@ -91,7 +91,16 @@
   .dropdown-button img {
     height: 30px;
 }
+.qure__sticky-atc{
+  opacity: 0;
+  transition: all 0.4s ease-in;
+}
+.show_cta{
+  opacity: 1;
+}
 /* product-mi-patches cta  */
+
+
 @media(max-width:991px){
     .qure__sticky-atc .btn {
         font-size: 18px;

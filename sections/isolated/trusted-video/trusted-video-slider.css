@@ -9,6 +9,7 @@
 }
 .trusted_video_content{
     position: relative;
+    min-height: 200px;
 }
 
 .trusted_video_content p:last-child {
@@ -40,4 +41,7 @@
     font-style: normal;
     font-weight: 400;
     line-height: 20px;
+}
+.trusted_video_content p{
+    font-size: 20px;
 }

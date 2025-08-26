@@ -585,7 +585,13 @@ ul.list-dots {
 .ctm-background{
     background-color: var(--ctm-background, #FF5429);
 }
+.line-height{
+    line-height: var(--line-height, normal);
+}
 @media(max-width:767px){
+    .line-height{
+        line-height: var(--line-height-mob, normal);
+    }
     .qure__info-block{
         background-color: var(--bg-color-mob, transparent);
     }
@@ -884,6 +890,7 @@ ul.list-dots {
 .qure__section{padding-top:var(--section-padding-top,60px);padding-bottom:var(--section-padding-bottom,60px)}
 @media(max-width:991px) {
 .qure__section{padding-top:var(--section-padding-top-mob,40px);padding-bottom:var(--section-padding-bottom-mob,40px)}
+.color-background{background:var(--section-background-mob, var(--section-background))}
 }
 .swiper-slide{height:auto}
 .swiper-slide > div{height:100%}

@@ -59,6 +59,11 @@
 .card-body.skin-card-body .icon-with-text img {
     height: auto;
 }
+.page\.micro-infusion-faq-page-second .card.skin-card {
+    border: 1px solid #DFE0E0;
+    border-radius: 12px;
+    overflow: hidden;
+}
 @media(max-width:767px){
     .centered_scale .swiper-slide .skin-card {
     transform: scale(0.94);

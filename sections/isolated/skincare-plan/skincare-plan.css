@@ -48,10 +48,21 @@
 .product_wrapper:hover .tab-pane .second-img {
     display: block !important;
 }
+  .star_text p {
+       font-size: 14px;
+    }
+    .tab-pane iframe {
+    border-radius: 10px;
+}
+
+
 @media(min-width:992px){
     .g-6{
         --bs-gutter-x: 6rem;
         --bs-gutter-y: 6rem;
+    }
+    .prod_tit_wrap h3{
+        font-size: 26px;
     }
 }
 
@@ -69,4 +80,13 @@
         gap: 20px;
         margin-bottom: 15px;
     }
+    .show_more p {
+    font-size: 16px;
+}
+.qure-scroll-link{
+    font-size: 14px;
+}
+.qure__accordion-item ul > li{
+    font-size: 16px;
+}
 }
