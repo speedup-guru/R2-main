@@ -1641,21 +1641,21 @@
                                     <div class="tab-content pt-25" id="myTabContent">
                                         <div class="tab-pane fade show active" id="included_tab_block-5" role="tabpanel"
                                             aria-labelledby="whats_included_block-5" tabindex="0">
-                                            <div class="included_product">
-                                                <img src="sections/isolated/offer-bundle/images/b_1-p-6.webp"
-                                                    class="img-fluid" alt="">
+                                            <div class="included_product variant_block">
+                                                <img class="productImage img-fluid" src="sections/isolated/offer-bundle/images/faucet_black.webp" alt="">
+                                                
                                                 <div class="d-flex align-items-center gap-3">
-                                                    <p>Faucet Filter <span class="d-block color-orange">Low Stock</span>
-                                                    </p>
+                                                    <p>Faucet Filter <span class="d-block color-orange">Low Stock</span></p>
+                                                    
                                                     <div class="product-variant">
-                                                        <label for="color-select" class="visually-hidden">Color</label>
-                                                        <select id="color-select" class="custom-dropdown">
-                                                            <option value="black">Black</option>
-                                                            <option value="white">White</option>
-                                                            <option value="silver">Silver</option>
+                                                        <label class="visually-hidden">Color</label>
+                                                        <select class="custom-dropdown color-select">
+                                                            <option value="black" variant="faucet_black">Black</option>
+                                                            <option value="white" variant="faucet_white">White</option>
                                                         </select>
                                                     </div>
                                                 </div>
+
                                                 <a data-bs-target="#faucet_filter" data-bs-toggle="modal">
                                                     <img src="assets/images/line_i.svg" alt="">
                                                 </a>
@@ -2083,21 +2083,21 @@
                                                     <img src="assets/images/line_i.svg" alt="">
                                                 </a>
                                             </div>
-                                            <div class="included_product">
-                                                <img src="sections/isolated/offer-bundle/images/b_1-p-6.webp"
-                                                    class="img-fluid" alt="">
+                                            <div class="included_product variant_block">
+                                                <img class="productImage img-fluid" src="sections/isolated/offer-bundle/images/faucet_black.webp" alt="">
+                                                
                                                 <div class="d-flex align-items-center gap-3">
-                                                    <p>Faucet Filter <span class="d-block color-orange">Low Stock</span>
-                                                    </p>
+                                                    <p>Faucet Filter <span class="d-block color-orange">Low Stock</span></p>
+                                                    
                                                     <div class="product-variant">
-                                                        <label for="color-select" class="visually-hidden">Color</label>
-                                                        <select id="color-select" class="custom-dropdown">
-                                                            <option value="black">Black</option>
-                                                            <option value="white">White</option>
-                                                            <option value="silver">Silver</option>
+                                                        <label class="visually-hidden">Color</label>
+                                                        <select class="custom-dropdown color-select">
+                                                            <option value="black" variant="faucet_black">Black</option>
+                                                            <option value="white" variant="faucet_white">White</option>
                                                         </select>
                                                     </div>
                                                 </div>
+
                                                 <a data-bs-target="#faucet_filter" data-bs-toggle="modal">
                                                     <img src="assets/images/line_i.svg" alt="">
                                                 </a>
@@ -2797,6 +2797,7 @@
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             loadScriptOnce('slider-script', 'assets/js/slider-with-thumb.js');
+            loadScriptOnce('variant', 'sections/isolated/offer-bundle/section-offer-bundle.js');
         });
     </script>
     <!-- Offer Bundle start-->
