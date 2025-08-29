@@ -292,7 +292,6 @@
     border-radius: 10px;
     border: 2px solid var(--charcoal, #DFE0E0);
     transition: 0.3s;
-    padding: 18px;
 }
 
 .qure__subscription-item+.qure__subscription-item {
@@ -309,11 +308,12 @@
     border: none;
     background: none;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: start;
     width: 100%;
     gap: 0 12px;
-    padding: 0;
+    padding: 18px;
 }
 
 .qure__subscription-body {
