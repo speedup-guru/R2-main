@@ -122,6 +122,9 @@
 .benefits_of_led ul{
     padding-left: 20px;
 }
+.blogs li.breadcrumb-item a {
+    color: #000;
+}
 @media(min-width:768px){
     .title_bt_wrap {
         min-height: 170px;

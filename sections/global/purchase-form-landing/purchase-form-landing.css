@@ -93,7 +93,7 @@
     right: 0;
     height: 1px;
     background-color: currentColor;
-    top: 55%;
+    top: 50%;
 }
 
 .qure__single-shortdes li {
@@ -235,14 +235,15 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 15px;
-    padding: 18px;
+    gap: 10px;
+    padding: 18px 0;
     position: relative;
     border-radius: 10px;
-    overflow: hidden;
+    /* overflow: hidden; */
     border: 1px solid #DFE0E0;
     cursor: pointer;
     transition: border-color .4s ease;
+    text-align: center;
 }
 
 .qure__variant-item>input {
@@ -477,6 +478,72 @@
     max-height: inherit;
     width: inherit;
 }
+.vp-best-value {
+    background: var(--qure-charcoal);
+    color: var(--white-color);
+    font-size: 14px;
+    border-radius: 7px 7px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0 10px;
+    padding-bottom: 2px;
+    width: calc(100% + 1px);
+}
+.vp-price .vp-price-reg {
+    color: var(--color-orange);
+}
+.vp-price .vp-price-sale {
+    color: var(--charcoal-light);
+    text-decoration: line-through;
+}
+.vp-price {
+    display: flex;
+    gap: 0 6px;
+    justify-content: center;
+}
+.vp-best-value i {
+    font-size: 9px;
+    margin-top: 1px;
+}
+.vp-badge {
+    background: #FFEEEA;
+    color: var(--color-orange);
+    font-size: 14px;
+    padding: 1px 8px;
+    display: inline-block;
+    border-radius: 40px;
+    position: absolute;
+    width: max-content;
+    bottom: -12px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    font-weight: 600;
+}
+.qure__variant-item > input:checked + .qure__variant-box .vp-badge {
+    background: var(--color-orange);
+    color: var(--white-color);
+}
+/* ================ Best Value Flag ================ */ 
+.best__value .qure__variant-box{
+    padding: 12px 0 24px;
+}
+
+.best__value .qure__variant-box .qv-img {
+    max-height: 50px;
+}
+.best__value .qure__variant-item:nth-child(1) .qure__variant-box {
+    padding-top: 0;
+}
+.qure__variant-label+div {
+    align-items: end;
+}
+/* ================ Best Value Flag ================ */
+.page\.sunil-micro-infusion-pdp .qure__variant-box .qv-img {
+    max-height: 60px;
+}
+
 @media(max-width: 991px) {
     .product_shower-bundle {
         gap: 0 6px;
@@ -505,6 +572,9 @@
     }
     .qure__featured-product-bundle .qure__accordion-header{
     font-size: 16px;
+}
+.page\.sunil-micro-infusion-pdp .qure__variant-box .qv-img {
+    max-width: 70px;
 }
 }
 
