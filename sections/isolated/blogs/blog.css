@@ -129,7 +129,12 @@
     color: #000;
 }
 @media(min-width:768px){
-    .title_bt_wrap {
-        min-height: 190px;
+    .article_title {
+        min-height: 72px;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 3;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
 }
