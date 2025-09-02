@@ -48,6 +48,9 @@
 }
 .popular_post_img img {
     max-width: 60px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 5px;
 }
 
 
@@ -127,6 +130,6 @@
 }
 @media(min-width:768px){
     .title_bt_wrap {
-        min-height: 170px;
+        min-height: 190px;
     }
 }

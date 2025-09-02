@@ -193,7 +193,7 @@
                     <div class="col-6 col-md-3 custom__block project" data-filter="all">
                         <a href="">
                             <div class="pd_review-card">
-                                <img src="sections/isolated/top-products/images/pd-review.webp" class="img-fluid" alt="">
+                                <img src="sections/isolated/top-products/images/pd-review.webp" class="img-fluid w-100" alt="">
                                 <div class="pd_review-inner">
                                     <p class="d-md-block d-none">“I’m shocked at the results after just one treatment! My skin looks so clear, glowy, and healthy.”</p>
                                     <p class="d-md-none">“I’m shocked at the results after just one treatment!”</p>
@@ -224,9 +224,19 @@
                                 <h3 class="fm-body mb-0 qure__product-name">
                                     <a class="limited-line capitalize d-block" href="#">Q-Rejuvalight Pro Facewear </a>
                                 </h3>
-                                <div class="qure__product-price">{$dyn}</div>
+                                <div class="d-flex gap-2">
+                                    <div class="bef_price text-decoration-line-through text-black-50">{$dyn}</div>
+                                    <div class="qure__product-price">{$dyn}</div>
+                                </div>
                             </div>
-                            <a href="" class="btn btn--primary w-100">Buy Now</a>
+                            <div class="qure__product-action-inner">
+                              <form method="post" action="/cart/add" enctype="multipart/form-data">
+                                 <button type="submit" class="add-cart-button product-form__submit btn btn--primary w-100">Buy Now</button>
+                                 <input type="hidden" name="quantity" id="quantity" value="1">
+                                 <input type="hidden" name="selling_plan" id="selling_plan" value="">
+                                 <input type="hidden" name="id" value="37390541553813">
+                              </form>
+                           </div>
                         </div>
                     </div>
                     <div class="col-6 col-md-3 custom__block project" data-filter="fine_lines dark_spots breakouts">
@@ -245,9 +255,19 @@
                                 <h3 class="fm-body mb-0 qure__product-name">
                                     <a class="limited-line capitalize d-block" href="#">All-In-One Face Serum</a>
                                 </h3>
-                                <div class="qure__product-price">{$dyn}</div>
+                                <div class="d-flex gap-2">
+                                    <div class="bef_price text-decoration-line-through text-black-50">{$dyn}</div>
+                                    <div class="qure__product-price">{$dyn}</div>
+                                </div>
                             </div>
-                            <a href="" class="btn btn--primary w-100">Buy Now</a>
+                            <div class="qure__product-action-inner">
+                              <form method="post" action="/cart/add" enctype="multipart/form-data">
+                                 <button type="submit" class="add-cart-button product-form__submit btn btn--primary w-100">Buy Now</button>
+                                 <input type="hidden" name="quantity" id="quantity" value="1">
+                                 <input type="hidden" name="selling_plan" id="selling_plan" value="">
+                                 <input type="hidden" name="id" value="37390541553813">
+                              </form>
+                           </div>
                         </div>
                     </div>
                     <div class="col-6 col-md-3 custom__block project" data-filter="fine_lines dark_spots">
@@ -268,9 +288,19 @@
                                 <h3 class="fm-body mb-0 qure__product-name">
                                     <a class="limited-line capitalize d-block" href="#">Micro-Infusion Facial System</a>
                                 </h3>
-                                <div class="qure__product-price">{$dyn}</div>
+                                <div class="d-flex gap-2">
+                                    <div class="bef_price text-decoration-line-through text-black-50">{$dyn}</div>
+                                    <div class="qure__product-price">{$dyn}</div>
+                                </div>
                             </div>
-                            <a href="" class="btn btn--primary w-100">Buy Now</a>
+                            <div class="qure__product-action-inner">
+                              <form method="post" action="/cart/add" enctype="multipart/form-data">
+                                 <button type="submit" class="add-cart-button product-form__submit btn btn--primary w-100">Buy Now</button>
+                                 <input type="hidden" name="quantity" id="quantity" value="1">
+                                 <input type="hidden" name="selling_plan" id="selling_plan" value="">
+                                 <input type="hidden" name="id" value="37390541553813">
+                              </form>
+                           </div>
                         </div>
                     </div>
                     <div class="col-6 col-md-3 custom__block project" data-filter="fine_lines all">
@@ -292,9 +322,19 @@
                                 <h3 class="fm-body mb-0 qure__product-name">
                                     <a class="limited-line capitalize d-block" href="#">Micro-Infusion Targeted Patches</a>
                                 </h3>
-                                <div class="qure__product-price">{$dyn}</div>
+                                <div class="d-flex gap-2">
+                                    <div class="bef_price text-decoration-line-through text-black-50">{$dyn}</div>
+                                    <div class="qure__product-price">{$dyn}</div>
+                                </div>
                             </div>
-                            <a href="" class="btn btn--primary w-100">Buy Now</a>
+                            <div class="qure__product-action-inner">
+                              <form method="post" action="/cart/add" enctype="multipart/form-data">
+                                 <button type="submit" class="add-cart-button product-form__submit btn btn--primary w-100">Buy Now</button>
+                                 <input type="hidden" name="quantity" id="quantity" value="1">
+                                 <input type="hidden" name="selling_plan" id="selling_plan" value="">
+                                 <input type="hidden" name="id" value="37390541553813">
+                              </form>
+                           </div>
                         </div>
                     </div>
                     <div class="col-6 col-md-3 custom__block project" data-filter="fine_lines dark_spots">
@@ -314,9 +354,19 @@
                                 <h3 class="fm-body mb-0 qure__product-name">
                                     <a class="limited-line capitalize d-block" href="#">Neck & Décolletage LED Device</a>
                                 </h3>
-                                <div class="qure__product-price">{$dyn}</div>
+                                <div class="d-flex gap-2">
+                                    <div class="bef_price text-decoration-line-through text-black-50">{$dyn}</div>
+                                    <div class="qure__product-price">{$dyn}</div>
+                                </div>
                             </div>
-                            <a href="" class="btn btn--primary w-100">Buy Now</a>
+                            <div class="qure__product-action-inner">
+                              <form method="post" action="/cart/add" enctype="multipart/form-data">
+                                 <button type="submit" class="add-cart-button product-form__submit btn btn--primary w-100">Buy Now</button>
+                                 <input type="hidden" name="quantity" id="quantity" value="1">
+                                 <input type="hidden" name="selling_plan" id="selling_plan" value="">
+                                 <input type="hidden" name="id" value="37390541553813">
+                              </form>
+                           </div>
                         </div>
                     </div>
                     <div class="col-6 col-md-3 custom__block project" data-filter="all">
@@ -343,9 +393,19 @@
                                 <h3 class="fm-body mb-0 qure__product-name">
                                     <a class="limited-line capitalize d-block" href="#">Dermal Mist</a>
                                 </h3>
-                                <div class="qure__product-price">{$dyn}</div>
+                                <div class="d-flex gap-2">
+                                    <div class="bef_price text-decoration-line-through text-black-50">{$dyn}</div>
+                                    <div class="qure__product-price">{$dyn}</div>
+                                </div>
                             </div>
-                            <a href="" class="btn btn--primary w-100">Buy Now</a>
+                            <div class="qure__product-action-inner">
+                              <form method="post" action="/cart/add" enctype="multipart/form-data">
+                                 <button type="submit" class="add-cart-button product-form__submit btn btn--primary w-100">Buy Now</button>
+                                 <input type="hidden" name="quantity" id="quantity" value="1">
+                                 <input type="hidden" name="selling_plan" id="selling_plan" value="">
+                                 <input type="hidden" name="id" value="37390541553813">
+                              </form>
+                           </div>
                         </div>
                     </div>
                     <div class="col-6 col-md-3 custom__block project" data-filter="all">
@@ -367,9 +427,19 @@
                                 <h3 class="fm-body mb-0 qure__product-name">
                                     <a class="limited-line capitalize d-block" href="#">Shower Filter</a>
                                 </h3>
-                                <div class="qure__product-price">{$dyn}</div>
+                                <div class="d-flex gap-2">
+                                    <div class="bef_price text-decoration-line-through text-black-50">{$dyn}</div>
+                                    <div class="qure__product-price">{$dyn}</div>
+                                </div>
                             </div>
-                            <a href="" class="btn btn--primary w-100">Buy Now</a>
+                            <div class="qure__product-action-inner">
+                              <form method="post" action="/cart/add" enctype="multipart/form-data">
+                                 <button type="submit" class="add-cart-button product-form__submit btn btn--primary w-100">Buy Now</button>
+                                 <input type="hidden" name="quantity" id="quantity" value="1">
+                                 <input type="hidden" name="selling_plan" id="selling_plan" value="">
+                                 <input type="hidden" name="id" value="37390541553813">
+                              </form>
+                           </div>
                         </div>
                     </div>
                     <div class="col-6 col-md-3 custom__block project" data-filter="breakouts">
@@ -391,9 +461,19 @@
                                 <h3 class="fm-body mb-0 qure__product-name">
                                     <a class="limited-line capitalize d-block" href="#">Faucet Filter</a>
                                 </h3>
-                                <div class="qure__product-price">{$dyn}</div>
+                                <div class="d-flex gap-2">
+                                    <div class="bef_price text-decoration-line-through text-black-50">{$dyn}</div>
+                                    <div class="qure__product-price">{$dyn}</div>
+                                </div>
                             </div>
-                            <a href="" class="btn btn--primary w-100">Buy Now</a>
+                            <div class="qure__product-action-inner">
+                              <form method="post" action="/cart/add" enctype="multipart/form-data">
+                                 <button type="submit" class="add-cart-button product-form__submit btn btn--primary w-100">Buy Now</button>
+                                 <input type="hidden" name="quantity" id="quantity" value="1">
+                                 <input type="hidden" name="selling_plan" id="selling_plan" value="">
+                                 <input type="hidden" name="id" value="37390541553813">
+                              </form>
+                           </div>
                         </div>
                     </div>
                 </div>

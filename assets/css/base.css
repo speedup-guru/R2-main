@@ -1602,3 +1602,8 @@ html, body{
 [class^=fa-]:before {
     font-family: Font Awesome\ 6 Pro;
 }
+.patch__result-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
