@@ -50,7 +50,8 @@
 .qure__policies .cancel_section:last-child{
     padding-bottom: 0;
 }
-.qure__policies .cancel_section h6 {
+.qure__policies .cancel_section h2, .qure__policies .cancel_section h3, .qure__policies .cancel_section h4, 
+.qure__policies .cancel_section h5, .qure__policies .cancel_section h6 { 
     font-size: 20px;
     line-height: 26px;
     font-weight: 600;
@@ -87,7 +88,7 @@
     list-style: none;
     padding-left: 12px;
     position: relative;
-    margin-bottom:4px;
+    margin-bottom:10px;
     font-family: var(--base-font-family);
 }
 .qure__policies ul li:before, .qure__policies ol li:before {
@@ -104,6 +105,12 @@
 }
 .qure__policies .header_content {
     font-weight: bold;
+}
+p:not(:only-of-type){
+    margin-bottom: 1.5;
+}
+body.page .cancel_section{
+    margin-bottom: 1.5rem;
 }
 
 @media screen and (max-width: 768px) {
