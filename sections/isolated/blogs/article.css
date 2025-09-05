@@ -1,11 +1,3 @@
-.choose_blog_topic h6 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: max-content;
-    color: #fff;
-}
 .article_img .tag_name {
     position: absolute;
     top: 12px;
@@ -52,40 +44,6 @@
     object-fit: cover;
     border-radius: 5px;
 }
-
-.blog_pagination {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 15px;
-  margin-top: 30px;
-}
-.blog_pagination button {
-    width: 40px;
-    height: 40px;
-    border: 1px solid #000;
-    border-radius: 50%;
-    background: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 17px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-.blog_pagination button:disabled {
-  border-color: #ddd;
-  color: #ddd;
-  cursor: not-allowed;
-}
-.blog_pagination button:hover:not(:disabled) {
-  background: #C8E6DC;
-  color: #000;
-  border: 1px solid #C8E6DC;
-}
-.page-info {
-  font-size: 18px;
-}
 .qure_blogs .article{
     height: 100%;
 }
@@ -109,7 +67,7 @@
     padding-top: 20px;
 }
 .discover_best_seller {
-    position: absolute;
+    position: absolute; 
     right: 0;
     bottom: 0;
     text-align: right;
@@ -126,11 +84,6 @@
 .blogs li.breadcrumb-item a {
     color: #000;
 }
-.article_content>div {
-    flex-direction: column;
-    gap: 3px !important;
-}
-
 @media(min-width:768px){
     .article_title {
         min-height: 72px;
@@ -143,18 +96,92 @@
 }
 
 
-/* css for blog page for live fixes  */
-body.blog .article img {
-    border-radius: 10px 10px 0 0;
-    object-fit: cover;
+/* article css for live start */
+body.article .cancel_section a {
+    color: #000;
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+    text-decoration-thickness: 2px;
 }
-body.blog .article a.btn {
+body.article ul li a{
+    text-decoration: none !important;
+}
+body.article a.btn{
+    text-decoration: none !important;
+}
+body.article h2, body.article h3, body.article h4, body.article h5, body.article h6 {
+    font-family: 'TT Commons';
+    font-weight: 600;
+    margin: 40px 0 10px;
+    font-size: 24px;
+}
+.article_content>div {
+    flex-direction: column;
+    gap: 3px !important;
+}
+body.article .post a {
+    color: #000;
+}
+body.article .post_details_wrapper img {
+    width: 100%;
     margin-top: 20px;
 }
-@media(min-width:768px){
-    body.blog .article img {
-        max-width: 240px;
-        min-height: 178px;
-    }
+body.article .qure_blog_wrapper{
+    padding-bottom: 30px;
 }
-/* css for blog page for live fixes  */
+body.article .qure__trusted-reviews{
+    padding-top: 30px;
+}
+body.article .post_details_wrapper a {
+    color: #000;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-decoration-skip-ink: none;
+}
+/* article css for live end */
+
+/* subscription email form  */
+.subscribe_qure{
+    max-width: 680px;
+    width: 100%;
+    margin: 60px 0;
+    border-radius: 10px;
+    border: 1px solid var(--Charcoal-10, #DFE0E0);
+    background: #FFF;
+    padding: 24px;
+} 
+.sub_form {
+    position: relative;
+}
+
+.sub_form button {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    border: 0;
+    background: transparent;
+    z-index: 2;
+    height: 100%;
+    width: 50px;
+    border-radius: 0 28px 28px 0;
+    padding-right: 15px;
+}
+
+.sub_form input {
+    width: 100%;
+    border-radius: 50px;
+    border-color: #212428;
+    padding-right: 40px;
+}
+.sub_form input::placeholder{
+    color: #8B8C8E;
+    font-size: 20px;
+    font-weight: 400;
+}
+.sub_form button img {
+    width: 20px !important;
+    margin-top: 0 !important;
+}
+/* subscription email form  */
+
