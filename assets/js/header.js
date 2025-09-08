@@ -30,3 +30,9 @@ const QureMainMenu = {
 document.addEventListener("DOMContentLoaded", function () {
     QureMainMenu.init();
 });
+
+
+// js for announcement shift issue  
+    document.fonts.load('1em "TT Commons"').then(() => {
+    document.querySelector('.announcement-bar').style.visibility = 'visible';
+});

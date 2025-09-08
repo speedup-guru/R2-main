@@ -1607,3 +1607,7 @@ html, body{
     flex-direction: column;
     justify-content: space-between;
 }
+.col-header-center {
+    width: 74px;
+    height: 40px;
+}
