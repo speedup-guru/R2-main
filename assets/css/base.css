@@ -1611,3 +1611,6 @@ html, body{
     width: 74px;
     height: 40px;
 }
+.shopify-challenge__container{
+    padding: 20px 0 20px 0;
+}
