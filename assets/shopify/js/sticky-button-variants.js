@@ -14,10 +14,11 @@ const sticky_button_click = () => {
   document.querySelectorAll('input.sticky__input[type="radio"]').forEach((input) => {
     input.addEventListener('click', function () {
         const selectedId = this.dataset.id;
+
         const target = document.querySelector('.planBlock input[type="radio"][id="' + selectedId + '"]');
 
         if (target) {
-            target.click();
+            target.closest('.planBlock').click();
             if(__section_landing) {
               purchase_form_landing_event(__section_landing, target.closest('.planBlock'), target.closest('.planBlock')?.dataset.product_variant_id);
             }
@@ -33,7 +34,7 @@ const sticky_button_mobile_click = () => {
         const target = document.querySelector('.planBlock input[type="radio"][id="' + selectedId + '"]');
 
         if (target) {
-            target.click();
+            target.closest('.planBlock').click();
             if(__section_landing) {
               purchase_form_landing_event(__section_landing, target.closest('.planBlock'), target.closest('.planBlock')?.dataset.product_variant_id);
             }
