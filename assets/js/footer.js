@@ -50,33 +50,32 @@ const slideAnime = (() => {
         }
     })();
 // Slide Toggle
-var QureEvents = {
-    init: function() {
-        this.setupEventListeners();
+// var QureEvents = {
+//     init: function() {
+//         this.setupEventListeners();
         
-    },
-    setupEventListeners: function() {
-        document.querySelectorAll(".qure__footer-title").forEach((e => {
-            e.addEventListener("click", (e => {
-                const t = e.currentTarget,
-                    n = t.parentElement.querySelector(".qure__footer-content");
-                slideAnime({
-                    target: n,
-                    animeType: "slideToggle"
-                });
-                const o = t.closest(".qure__footer_block");
-                o.classList.contains("active") ? o.classList.remove("active") : o.classList.add("active")
-            }))
-        }));
-        const n = document.getElementById("qure_cookie");
-        n && (n.classList.remove("d-none"), document.querySelectorAll("#qure_cookie .cookie-dismiss").forEach((e => {
-            e.addEventListener("click", (e => {
-                e.preventDefault(), e.currentTarget.closest("#qure_cookie").remove()
-            }), !1)
-        })));
-        
-    }
-};
+//     },
+//     setupEventListeners: function() {
+//         document.querySelectorAll(".qure__footer-title").forEach((e => {
+//             e.addEventListener("click", (e => {
+//                 const t = e.currentTarget,
+//                     n = t.parentElement.querySelector(".qure__footer-content");
+//                 slideAnime({
+//                     target: n,
+//                     animeType: "slideToggle"
+//                 });
+//                 const o = t.closest(".qure__footer_block");
+//                 o.classList.contains("active") ? o.classList.remove("active") : o.classList.add("active")
+//             }))
+//         }));
+//         const n = document.getElementById("qure_cookie_preferences");
+//         n && (n.classList.remove("d-none"), document.querySelectorAll("#qure_cookie_preferences .cookie-dismiss").forEach((e => {
+//             e.addEventListener("click", (e => {
+//                 e.preventDefault(), e.currentTarget.closest("#qure_cookie_preferences").remove()
+//             }), !1)
+//         })));
+//         }
+// };
 
 const observer = new MutationObserver(() => {
     if (document.querySelector(".qure__footer-title")) {
@@ -87,4 +86,48 @@ const observer = new MutationObserver(() => {
 observer.observe(document.body, {
     childList: true,
     subtree: true
+});
+
+
+
+
+
+
+
+
+// new js for cookies main and pref banner 
+
+document.addEventListener("DOMContentLoaded", function () {
+  const main = document.getElementById("qure_cookie_main");
+  const pref = document.getElementById("qure_cookie_preferences");
+
+  // --- Close Main Banner
+  if (main) {
+    main.querySelectorAll(".cookie-dismiss").forEach(btn => {
+      btn.addEventListener("click", e => {
+        e.preventDefault();
+        main.classList.add("d-none");
+      });
+    });
+  }
+
+  // --- Show Preferences when "Manage preferences" is clicked
+  const manageBtn = document.querySelector(".manage_pref");
+  if (manageBtn && pref && main) {
+    manageBtn.addEventListener("click", e => {
+      e.preventDefault();
+      main.classList.add("d-none");     // hide main banner
+      pref.classList.remove("d-none");  // show preferences
+    });
+  }
+
+  // --- Close Preferences Banner
+  if (pref) {
+    pref.querySelectorAll(".cookie-dismiss").forEach(btn => {
+      btn.addEventListener("click", e => {
+        e.preventDefault();
+        pref.classList.add("d-none");
+      });
+    });
+  }
 });

@@ -21,6 +21,8 @@
 .cookies-button-header .cookies-button:after{content:'';background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='8' viewBox='0 0 16 8' fill='none'%3E%3Cpath d='M15 7L8 1L1 7' stroke='%23212428' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat no-repeat;background-position:center center;background-size:contain;width:14px;display:block;position:absolute;right:0;top:0;bottom:0;height:100%;transition:.3s}
 .cookies-button-header .cookies-button[aria-expanded="true"]:after{transform:rotate(180deg)}
 .cookies-body{padding-bottom:12px;font-size:14px;line-height:18px}
+.manage_pref{text-decoration-skip-ink: none;}
+    
 @media(max-width:991px) {
 .qure_cookie-inner .cookie-btn{right:16px;top:16px}
 .qure_cookie-inner{padding:16px 16px 16px 0}
