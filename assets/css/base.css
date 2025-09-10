@@ -1624,3 +1624,17 @@ html, body{
     height: 200px;
     object-fit: cover;
 } 
+.decline_cookies{
+    background: #fff;
+    color: #212428;
+    border: 1px solid #DFE0E0;
+}
+.decline_cookies:hover{
+    background: #212428;
+    color: #fff;
+    border: 0;
+}
+.accept_cookies, .decline_cookies{
+    line-height: 20px;
+    padding: 10px;
+}
