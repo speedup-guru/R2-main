@@ -10,7 +10,7 @@ const checkboxes = [
   'advertising-cookies'
 ].map(el);
 
-const [strictly, performance, functional, advertising] = checkboxes;
+const [strictly, performance_cookies, functional, advertising] = checkboxes;
 
 const cookieBanner = el('qure_cookie_main');
 const cookiePrefs = el('qure_cookie_preferences');
@@ -43,7 +43,7 @@ function loadStates() {
     try {
       const s = JSON.parse(saved);
       strictly && (strictly.checked = !!s.strictlyNecessary);
-      performance && (performance.checked = !!s.performance);
+      performance_cookies && (performance_cookies.checked = !!s.performance_cookies);
       functional && (functional.checked = !!s.functional);
       advertising && (advertising.checked = !!s.advertising);
     } catch {}
@@ -55,7 +55,7 @@ function loadStates() {
 function saveStates() {
   const s = {
     strictlyNecessary: strictly ? strictly.checked : false,
-    performance: performance ? performance.checked : false,
+    performance_cookies: performance_cookies ? performance_cookies.checked : false,
     functional: functional ? functional.checked : false,
     advertising: advertising ? advertising.checked : false
   };
