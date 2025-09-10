@@ -16,8 +16,13 @@ document.addEventListener('cart.requestComplete', (event) => {
 });
 
 const reloadDrawer = (array) => {
+    const cart = array.detail.cart;
     const source = array.detail.source;
     const input = array.detail.input;
+    const insurance = array.detail.insurance;
+    const gift = array.detail.gift;
+
+    document.querySelector('.cart-count').textContent = cart.item_count;
 
     updateSection('footer-cart-drawer', 'cart-dynamic-content')
     .then(() => {
@@ -32,11 +37,19 @@ const reloadDrawer = (array) => {
             }
         }
 
-        getCartState().then(cart => {
-            document.querySelector('.cart-count').textContent = cart.item_count;
-        });
-
         bindForms();
+
+        //to avoid calling the function second time after adding the item
+        if (typeof gift === 'undefined') {
+            toogleGift(cart);
+        }
+
+        //to avoid calling the function second time after adding the item
+        // if (typeof insurance === 'undefined') {
+        //     if (typeof gift === 'undefined') {
+        //         __reloadInsurance(cart)
+        //     }
+        // }
 
         //reload upsell carousel
         document.querySelectorAll('slide-carousel').forEach((el) => {
@@ -121,6 +134,34 @@ const showCart = () => {
     }
 };
 
+const toogleGift = async (cart) => {
+    const forms = document.querySelectorAll('form.footer-cart-drawer-gift[action$="/cart/add"]');
+
+    for (const form of forms) {
+        const formData = new FormData(form);
+        const price_limit = formData.get('properties[_price_limit]');
+
+        const giftItem = cart.items.find(item => 
+            item.id === +(formData.get('id')) && 
+            item.properties && 
+            item.properties['_required_validation']
+        );
+
+        if (!giftItem) {
+            if (cart.total_price >= price_limit) {
+                await addToCart(formData, undefined, true);
+            }
+        } else {
+            if (cart.total_price < price_limit) {
+                formData.set('quantity', 0);
+                await changeCart(formData, undefined, true);
+            }
+        }
+
+        await new Promise(resolve => setTimeout(resolve, 100));;
+    }
+};
+
 const toogleInsurance = () => {
     document.querySelectorAll('form[action$="/cart/add"]:has(input[type="checkbox"]#insurance)').forEach((form) => {
         const checkbox = form.querySelector('input[type="checkbox"]#insurance');
@@ -200,6 +241,14 @@ const addToCartJson = (input, insurance = undefined, gift = undefined) => {
                 source: 'addToCart'
             };
 
+            if (typeof insurance !== 'undefined') {
+                eventDetail.insurance = insurance;
+            }
+
+            if (typeof gift !== 'undefined') {
+                eventDetail.gift = gift;
+            }
+
             const event = new CustomEvent('cart.requestComplete', { detail: eventDetail });
             document.dispatchEvent(event);
             //console.log('The product was added to the cart:', addedItem);
@@ -219,13 +268,21 @@ const addToCart = (input, insurance = undefined, gift = undefined) => {
     .then(response => response.json())
     .then((addedItem) => {
         return getCartState().then(cart => {
-            if (typeof gift === 'undefined') {
-                toogleGift(cart).then(() => {
-                    const event = new CustomEvent('cart.requestComplete', { detail: { source: 'addToCart'} });
-                    document.dispatchEvent(event);
-                });
+            const eventDetail = {
+                cart: cart,
+                source: 'addToCart'
+            };
+
+            if (typeof insurance !== 'undefined') {
+                eventDetail.insurance = insurance;
             }
 
+            if (typeof gift !== 'undefined') {
+                eventDetail.gift = gift;
+            }
+
+            const event = new CustomEvent('cart.requestComplete', { detail: eventDetail });
+            document.dispatchEvent(event);
             //console.log('The product was added to the cart:', addedItem);
             return cart;
         });
@@ -242,8 +299,16 @@ const updateCart = (input) => {
     })
     .then(response => response.json())
     .then(cart => {
-        const event = new CustomEvent('cart.requestComplete', { detail: { source: 'updateCart', input: input } });
+
+        const eventDetail = {
+            cart: cart,
+            source: 'updateCart',
+            input: input
+        };
+
+        const event = new CustomEvent('cart.requestComplete', { detail: eventDetail });
         document.dispatchEvent(event);
+
         return cart;
     })
     .catch((error) => {
@@ -259,18 +324,23 @@ const changeCart = (input, insurance = undefined, gift = undefined) => {
     })
     .then(response => response.json())
     .then(cart => {
-        if (typeof gift === 'undefined') {
-            toogleGift(cart).then(() => {
-                const eventDetail = {
-                    cart: cart,
-                    source: 'changeCart',
-                    input: input
-                };
-                const event = new CustomEvent('cart.requestComplete', { detail: eventDetail });
-                document.dispatchEvent(event);
-            });
+
+        const eventDetail = {
+            cart: cart,
+            source: 'changeCart',
+            input: input
+        };
+
+        if (typeof insurance !== 'undefined') {
+            eventDetail.insurance = insurance;
         }
 
+        if (typeof gift !== 'undefined') {
+            eventDetail.gift = gift;
+        }
+
+        const event = new CustomEvent('cart.requestComplete', { detail: eventDetail });
+        document.dispatchEvent(event);
         //console.log('The cart was changed:', cart);
         return cart;
     })
@@ -289,7 +359,7 @@ const clearCart = () => {
     })
         .then(response => response.json())
         .then(cart => {
-            const event = new CustomEvent('cart.requestComplete', { detail: { source: 'clearCart' } });
+            const event = new CustomEvent('cart.requestComplete', { detail: { cart: cart, source: 'clearCart' } });
             document.dispatchEvent(event);
             //console.log('Cart cleared:', cart);
         })
@@ -310,33 +380,3 @@ const getCartState = () => {
                 return null;
             });
 }
-
-const toogleGift = async (cart) => {
-    const forms = document.querySelectorAll('form.footer-cart-drawer-gift[action$="/cart/add"]');
-
-    if (forms.length === 0) return false;
-
-    for (const form of forms) {
-        const formData = new FormData(form);
-        const price_limit = formData.get('properties[_price_limit]');
-
-        const giftItem = cart.items.find(item => 
-            item.id === +(formData.get('id')) && 
-            item.properties && 
-            item.properties['_required_validation']
-        );
-
-        if (!giftItem) {
-            if (cart.total_price >= price_limit) {
-                await addToCart(formData, undefined, true);
-            }
-        } else {
-            if (cart.total_price < price_limit) {
-                formData.set('quantity', 0);
-                await changeCart(formData, undefined, true);
-            }
-        }
-
-        await new Promise(resolve => setTimeout(resolve, 100));
-    }
-};
