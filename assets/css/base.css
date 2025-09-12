@@ -153,6 +153,7 @@ html {
 }
 
 body {
+    overflow: hidden;
 	margin: 0;
 	font-size: var(--base-font-size);
 	color: rgb(var(--base-color));
@@ -938,8 +939,9 @@ body {
 .col-header-left,.col-header-right{-webkit-box-flex:1;-webkit-flex:1 1 0;-ms-flex:1 1 0;flex:1 1 0}
 .col-header-right{padding-right:5px}
 .navigation .level0>a{white-space:nowrap;padding:var(--spacing-menu,19px 15px);position:relative;font-family:var(--menu-font);font-weight:var(--navigation-font-weight,400);font-size:var(--navigation-font-size,18px);line-height:var(--navigation-line-height,22px);color:var(--menu-color,#fff);cursor:pointer;text-transform:var(--navigation-uppercase,capitalize);text-decoration:none;display:block}
-.quer__menu-parent .submenu{background-color:var(--header-bg,#000);box-shadow:var(--navigation-box-shadow);border-radius:0 0;padding:40px 0;transform:translateY(15px);-webkit-transform:translateY(15px);min-width:var(--dropdown-width,25rem);opacity:0;visibility:hidden;z-index:3;pointer-events:none;transition:opacity .2s,visibility .2s,transform .2s,-webkit-transform .2s}
+.quer__menu-parent .submenu{background-color:var(--header-bg,#212428);box-shadow:var(--navigation-box-shadow);border-radius:0 0;padding:40px 0;transform:translateY(15px);-webkit-transform:translateY(15px);min-width:var(--dropdown-width,25rem);opacity:0;visibility:hidden;z-index:3;pointer-events:none;transition:opacity .2s,visibility .2s,transform .2s,-webkit-transform .2s}
 .navigation .level0:hover>a + .submenu{opacity:1;visibility:visible;z-index:3;pointer-events:auto;transition:opacity .2s,visibility .2s,transform .2s,-webkit-transform .2s;transform:translateY(0px);-webkit-transform:translateY(0px)}
+.navigation .level0:hover>a{font-weight:600}
 .quer-menu-inner{display:flex;gap:0 40px}
 .quer-menu-inner .sub-column{display:grid;grid-template-columns:repeat(1,1fr);gap:20px 40px;list-style-type:none}
 .quer-menu-inner .sub-column.mob__submenu {grid-template-columns: repeat(2, 1fr);}
@@ -1451,6 +1453,18 @@ body {
 }
 .lvideo-active .lvideo-wrap:after {
   opacity: 0.5;
+}
+.qure__product-img {
+    border-radius: 10px;
+}
+.qure__product-img img {
+    height: 100%;
+}
+.qure__product-reviews img{
+    max-width: 75px;
+}
+.qure__product-reviews{
+    flex-wrap: wrap;
 }
 /* Label  */
 .qure__product-label {

@@ -29,10 +29,10 @@ input[type=number] {
 .offcanvas {
     --bs-offcanvas-width: 450px
 }
-.offcanvas-dynamic-content{
+.offcanvas-dynamic-content {
     display: flex;
     flex-direction: column;
-    height: 100%;
+    height: calc(100% - 30px);
 }
 .offcanvas-header {
     display: flex;

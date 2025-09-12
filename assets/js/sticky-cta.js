@@ -45,23 +45,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // const dropdown = document.getElementById("dropdownContainer");
 // const button = document.getElementById("dropdownBtn");
 // const hiddenInput = document.getElementById("selectedDuration");
@@ -112,7 +95,6 @@
 
 
 
-
 // // js for show sticky cta when user scrolls down 
 
 // document.addEventListener("scroll", function () {
@@ -146,7 +128,7 @@ function toggleDropdown() {
           const wrapper = button.closest(".dropdown-wrapper"); wrapper && wrapper.classList.remove("open") } } document.addEventListener("DOMContentLoaded", function () { 
               selectOption("3 Months") }), document.addEventListener("scroll", function () { 
                 const stickyElement = document.querySelector(".qure__sticky-atc"); 
-                stickyElement && (window.scrollY > 400 ? stickyElement.classList.add("show_cta") : stickyElement.classList.remove("show_cta")) });
+                stickyElement && (window.scrollY > 600 ? stickyElement.classList.add("show_cta") : stickyElement.classList.remove("show_cta")) });
 //# sourceMappingURL=/cdn/shop/t/1028/assets/sticky-cta.js.map
 
 
