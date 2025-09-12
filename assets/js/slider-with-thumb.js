@@ -136,10 +136,6 @@ var QureEventProductSlider = {
       loopedSlides: parseInt(desktop), // Match slides count for correct cloning
       autoplay: autoplay,
       watchSlidesProgress: true,
-      navigation: {
-        nextEl: nextBtn,
-        prevEl: prevBtn
-      },
       breakpoints: {
         768: {
           slidesPerView: tablet,
