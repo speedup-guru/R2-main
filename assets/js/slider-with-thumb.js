@@ -35,10 +35,10 @@ class SlideImageWithThumbs extends HTMLElement {
       loopedSlides: parseInt(desktop), // Match slides count for correct cloning
       autoplay: autoplay,
       watchSlidesProgress: true,
-      navigation: {
-        nextEl: nextBtn,
-        prevEl: prevBtn
-      },
+      // navigation: {
+      //   nextEl: nextBtn,
+      //   prevEl: prevBtn
+      // },
       breakpoints: {
         768: {
           slidesPerView: tablet,
@@ -48,7 +48,8 @@ class SlideImageWithThumbs extends HTMLElement {
           slidesPerView: desktop,
           spaceBetween: spacing
         }
-      }
+      },
+      slideToClickedSlide: true
     });
 
     const mainSwiper = new Swiper(mainEl, {
@@ -70,10 +71,10 @@ class SlideImageWithThumbs extends HTMLElement {
       },
       on: {
         slideChangeTransitionStart: function () {
-          this.allowTouchMove = false; // disable during transition
+          this.allowTouchMove = false; 
         },
         slideChangeTransitionEnd: function () {
-          this.allowTouchMove = true; // enable after transition
+          this.allowTouchMove = true; 
         },
       }
     });
@@ -92,8 +93,6 @@ class SlideImageWithThumbs extends HTMLElement {
       mainSwiper.update();
       thumbSwiper.slideToLoop(mainSwiper.realIndex, 0, false);
     }, 100);
-
-
   }
 }
 customElements.define('slide-with-thumbs', SlideImageWithThumbs);
@@ -136,6 +135,10 @@ var QureEventProductSlider = {
       loopedSlides: parseInt(desktop), // Match slides count for correct cloning
       autoplay: autoplay,
       watchSlidesProgress: true,
+      // navigation: {
+      //   nextEl: nextBtn,
+      //   prevEl: prevBtn
+      // },
       breakpoints: {
         768: {
           slidesPerView: tablet,
@@ -167,14 +170,14 @@ var QureEventProductSlider = {
       }
     });
 
-    mainSwiper.on("slideChange", () => {
-      thumbSwiper.slideToLoop(mainSwiper.realIndex, 300, false);
-    });
-    thumbSwiper.on("click", (swiper) => {
-      if (typeof swiper.clickedIndex !== "undefined") {
-        mainSwiper.slideToLoop(swiper.clickedIndex, 300, false);
-      }
-    });
+    // mainSwiper.on("slideChange", () => {
+    //   thumbSwiper.slideToLoop(mainSwiper.realIndex, 300, false);
+    // });
+    // thumbSwiper.on("click", (swiper) => {
+    //   if (typeof swiper.clickedIndex !== "undefined") {
+    //     mainSwiper.slideToLoop(swiper.clickedIndex, 300, false);
+    //   }
+    // });
 
     setTimeout(() => {
       thumbSwiper.update();

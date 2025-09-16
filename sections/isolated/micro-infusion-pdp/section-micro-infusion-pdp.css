@@ -11,7 +11,7 @@
     align-items: flex-end;
 }.patch__value-pack{text-align:center}
 .patch__value-pack > input{display:none}
-.patch__value-pack .vp-pack{padding:12px 0 24px;border:1px solid #DFE0E0;width:100%;border-radius:10px;position:relative;cursor:pointer}
+.patch__value-pack .vp-pack{padding:12px 5px 24px;border:1px solid #DFE0E0;width:100%;border-radius:10px;position:relative;cursor:pointer}
 .vp-price{display:flex;gap:0 6px;justify-content:center}
 .vp-price .vp-price-sale{color:var(--charcoal-light);text-decoration:line-through}
 .vp-price .vp-price-reg{color:var(--color-orange)}

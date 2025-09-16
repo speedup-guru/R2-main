@@ -918,7 +918,8 @@
                 <div class="col-md-6 custom__block">
                     <div class="swiper qure__swiper" id="qure__swiper-evidence-slider" data-section-id="evidence-slider"
                         data-autoplay="false" data-loop="false" data-mobile="1" data-tablet="1" data-desktop="1"
-                        data-spacing="0" data-pagination-fraction="true">
+                        data-spacing="0" data-pagination-fraction="true" data-arrowright="evidence-arrow-right"
+                        data-arrowleft="evidence-arrow-left">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
                                 <div class="clinic_prvn p-16 p-md-24 m-1 border rounded-2"
@@ -963,11 +964,11 @@
                         </div>
                         <div
                             class="swiper-arrows-with-pagination d-flex align-items-center justify-content-center gap-4 mt-30">
-                            <div class="qure-swiper-button-prev qure-swiper-arrow"><i
+                            <div class="evidence-arrow-left qure-swiper-arrow"><i
                                     class="fa-regular fa-angle-left"></i>
                             </div>
                             <div class="swiper-pagination position-relative bottom-0 w-auto"></div>
-                            <div class="qure-swiper-button-next qure-swiper-arrow"><i
+                            <div class="evidence-arrow-right qure-swiper-arrow"><i
                                     class="fa-regular fa-angle-right"></i>
                             </div>
                         </div>
@@ -994,7 +995,8 @@
             </div>
             <div class="swiper qure__swiper" id="qure__swiper-trusted-slider" data-section-id="trusted-slider"
                 data-autoplay="false" data-loop="false" data-mobile="1.1" data-tablet="2" data-desktop="3"
-                data-spacing="30" data-pagination-fraction="true">
+                data-spacing="30" data-pagination-fraction="true" data-arrowright="qure-trusted-arrow-right"
+                data-arrowleft="qure-trusted-arrow-left">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <div class="card skin-card">
@@ -1341,13 +1343,13 @@
                     </div>
                 </div>
                 <div class="swiper-arrows-with-pagination d-flex align-items-center justify-content-center gap-4 mt-30">
-                    <div class="qure-swiper-button-prev qure-swiper-arrow"><i class="fa-regular fa-angle-left"></i>
+                    <div class="qure-trusted-arrow-left qure-swiper-arrow"><i class="fa-regular fa-angle-left"></i>
                     </div>
                     <div class="swiper-pagination position-relative bottom-0 w-auto"></div>
-                    <div class="qure-swiper-button-next qure-swiper-arrow"><i class="fa-regular fa-angle-right"></i>
+                    <div class="qure-trusted-arrow-right qure-swiper-arrow"><i class="fa-regular fa-angle-right"></i>
                     </div>
                 </div>
-            </div>
+            </div> 
         </div>
     </div>
     <script>
@@ -1419,9 +1421,10 @@
     <div class="trusted_video_slider qure__section"
         style="--section-padding-top: 40px; --section-padding-bottom: 80px; --section-padding-top-mob: 20px; --section-padding-bottom-mob: 40px;">
         <div class="container">
-            <div class="swiper qure__swiper" id="qure__swiper-trusted-slider" data-section-id="trusted-slider"
+            <div class="swiper qure__swiper" id="qure__swiper-videoTrusted-slider" data-section-id="videoTrusted-slider"
                 data-autoplay="false" data-loop="false" data-mobile="1.1" data-tablet="2" data-desktop="3"
-                data-spacing="30" data-pagination-fraction="true">
+                data-spacing="30" data-pagination-fraction="true" data-arrowright="videoTrusted-arrow-right" 
+                        data-arrowleft="videoTrusted-arrow-left">
                 <div class="swiper-wrapper">
                     <!-- Repeat this block for each video -->
                     <div class="swiper-slide">
@@ -1563,10 +1566,10 @@
                     </div>
                 </div>
                 <div class="swiper-arrows-with-pagination d-flex align-items-center justify-content-center gap-4 mt-30">
-                    <div class="qure-swiper-button-prev qure-swiper-arrow"><i class="fa-regular fa-angle-left"></i>
+                    <div class="videoTrusted-arrow-left qure-swiper-arrow"><i class="fa-regular fa-angle-left"></i>
                     </div>
                     <div class="swiper-pagination position-relative bottom-0 w-auto"></div>
-                    <div class="qure-swiper-button-next qure-swiper-arrow"><i class="fa-regular fa-angle-right"></i>
+                    <div class="videoTrusted-arrow-right qure-swiper-arrow"><i class="fa-regular fa-angle-right"></i>
                     </div>
                 </div>
             </div>
@@ -1812,7 +1815,8 @@
             </div>
             <div class="swiper qure__swiper" id="qure__swiper-video-slider" data-section-id="video-slider"
                 data-autoplay="false" data-loop="false" data-mobile="1.3" data-tablet="3" data-desktop="4"
-                data-spacing="32" data-pagination-fraction="true">
+                data-spacing="32" data-pagination-fraction="true" data-arrowright="video-arrow-right"
+                        data-arrowleft="video-arrow-left" data-pagination="video-pagination">
 
 
                 <div class="swiper-wrapper">
@@ -2016,14 +2020,14 @@
                     </div>
                 </div>
                 <div class="swiper-arrows-with-pagination d-flex align-items-center justify-content-center gap-4 mt-30">
-                    <div class="qure-swiper-button-prev qure-swiper-arrow"><i class="fa-regular fa-angle-left"></i>
+                    <div class=" qure-swiper-arrow video-arrow-left"><i class="fa-regular fa-angle-left"></i>
                     </div>
-                    <div class="swiper-pagination position-relative bottom-0 w-auto"></div>
-                    <div class="qure-swiper-button-next qure-swiper-arrow"><i class="fa-regular fa-angle-right"></i>
+                    <div class="swiper-pagination position-relative bottom-0 w-auto video-pagination"></div>
+                    <div class="qure-swiper-arrow video-arrow-right"><i class="fa-regular fa-angle-right"></i>
                     </div>
                 </div>
             </div>
-        </div>
+        </div> 
     </div>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
@@ -2352,10 +2356,10 @@
                 </div>
             </div>
             <div class="swiper-arrows-with-pagination d-flex align-items-center justify-content-center gap-4">
-                <div class="qure-swiper-button-prev qure-swiper-arrow compare-arrow-left mt-30"><i
+                <div class="qure-swiper-arrow compare-arrow-left mt-30"><i
                         class="fa-regular fa-angle-left"></i></div>
                 <div class="swiper-pagination compare-pagination position-relative bottom-0 w-auto mt-30"></div>
-                <div class="qure-swiper-button-next qure-swiper-arrow compare-arrow-right mt-30"><i
+                <div class="qure-swiper-arrow compare-arrow-right mt-30"><i
                         class="fa-regular fa-angle-right"></i></div>
             </div>
         </div>

@@ -1578,6 +1578,10 @@ ul.tick_blue li:before{
         width: 100%;
         text-align: center;
     }
+    .product_klarna-dtls {
+        max-width: 280px;
+        margin: 0 auto; 
+    }
 }
 
 
