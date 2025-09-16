@@ -1584,7 +1584,10 @@ ul.tick_blue li:before{
     }
 }
 
-
+.swiper-thumbnail-with-arrow .swiper-slide {
+    border-radius: 10px !important;
+    overflow: hidden;
+}
 .default_list li {
     list-style: auto;
 }
