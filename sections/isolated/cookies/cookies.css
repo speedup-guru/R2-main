@@ -1,6 +1,6 @@
 .qure_cookie{position:fixed;top:0;bottom:0;width:100%;height:auto;background:hsl(0deg 0% 0% / 40%);z-index:999;display:flex;align-items:flex-end}
-.qure_cookie-inner{padding:24px 48px 16px 16px;background-color:#fff;width:100%;position:relative}
-.cookie-message-card{font-size:14px;line-height:18px}
+.qure_cookie-inner{padding:24px 48px 32px 16px;background-color:#fff;width:100%;position:relative} 
+.cookie-message-card{font-size:14px;line-height:18px} 
 .cookie-message-card a{text-decoration:underline;color:inherit}
 .qure_cookie-inner .cookie-btn{position:absolute;right:32px;top:24px;font-size:22px}
 .cookies__input .switch{position:relative;display:inline-block;width:40px;height:24px}
@@ -22,7 +22,6 @@
 .cookies-button-header .cookies-button[aria-expanded="true"]:after{transform:rotate(180deg)}
 .cookies-body{padding-bottom:12px;font-size:14px;line-height:18px}
 .manage_pref{text-decoration-skip-ink: none;}
-    
 @media(max-width:991px) {
 .qure_cookie-inner .cookie-btn{right:16px;top:16px}
 .qure_cookie-inner{padding:16px 16px 16px 0}

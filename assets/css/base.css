@@ -1660,3 +1660,4 @@ html, body{
     line-height: 20px;
     padding: 10px;
 }
+button#gdpr-accept-button, button#gdpr-decline-button {padding: 11px;}
