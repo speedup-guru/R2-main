@@ -82,6 +82,11 @@ input[type=number] {
 .product-remove svg {
     width: 18px;
     height: 18px;
+    border-radius: 50rem;
+    transition: all 0.3s ease;
+}
+.product-remove svg:hover {
+    fill:#91baec; 
 }
 .minicart-item .mini-img-wrapper {
     overflow: hidden;

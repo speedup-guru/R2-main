@@ -136,6 +136,10 @@
     border-radius: 10px;
     background: var(--Mist, #F6F6F7);
 }
+.banner-with-text a{
+    text-decoration: underline;
+    color: #212428;
+}
 @media(max-width:767px){
     .banner-text--heading {
         font-size: var(--text-heading-font-size-mob, 28px);
