@@ -86,7 +86,9 @@
     background: var(--bg-white, #FFF);
     border: 1px solid var(--Charcoal-10, #DFE0E0);
     position: relative;
-    min-height: 40px;
+    min-height: 66px;
+    display: flex;
+    align-items: center;
 }
 .cp__compare-item + .cp__compare-item {
     margin-top: 10px;
@@ -94,7 +96,7 @@
 .cp__compare-item::before {
     position: absolute;
     left: 12px;
-    top: 12px;
+    top: 21px;
 }
 .compare-check:before {
     content: "\f058";
