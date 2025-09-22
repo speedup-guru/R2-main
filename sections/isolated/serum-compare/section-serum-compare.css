@@ -86,7 +86,7 @@
     background: var(--bg-white, #FFF);
     border: 1px solid var(--Charcoal-10, #DFE0E0);
     position: relative;
-    min-height: 66px;
+    min-height: 40px;
 }
 .cp__compare-item + .cp__compare-item {
     margin-top: 10px;
