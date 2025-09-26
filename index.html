@@ -102,7 +102,7 @@
    <!-- mobile category slider -->
    <!-- Page banner -->
    <link rel="stylesheet" href="sections/isolated/page-banner/page-banner.css" />
-   <div class="page__banner position-relative">
+   <!-- <div class="page__banner position-relative d-none">
       <picture>
          <source media="(min-width:1920px)" srcset="sections/isolated/page-banner/images/hero.webp" class="img-fluid"
             width="1440" height="557">
@@ -136,7 +136,57 @@
             </div>
          </div>
       </div>
+   </div> -->
+   
+   <!-- promotional banner  -->
+       <div class="page__banner position-relative">
+      <picture>
+         <source media="(min-width:1920px)" srcset="sections/isolated/page-banner/images/promo-banner.webp" class="img-fluid"
+            width="1440" height="557">
+         <source media="(min-width:1600px)" srcset="sections/isolated/page-banner/images/promo-banner.webp" class="img-fluid"
+            width="1440" height="557">
+         <source media="(min-width:1100px)" srcset="sections/isolated/page-banner/images/promo-banner.webp" class="img-fluid"
+            width="1440" height="557">
+         <source media="(min-width:767px)" srcset="sections/isolated/page-banner/images/promo-banner.webp" class="img-fluid"
+            width="1440" height="557">
+         <source media="(min-width:540px)" srcset="sections/isolated/page-banner/images/promo-banner-mob.webp" class="img-fluid"
+            width="1440" height="557">
+         <img src="sections/isolated/page-banner/images/promo-banner-mob.webp" width="225" height="281" alt=""
+            class="img-fluid w-100">
+      </picture>
+      <div
+         class="page__banner-wrapper position-absolute d-flex align-items-md-center justify-content-end top-0 start-0 end-0 pt-md-50">
+         <div class="container">
+            <div class="d-flex justify-content-end align-items-start">
+               <div class="ctm-width ctm-color text-center text-md-center offset-md-6"
+                  style="--ctm-width:500px; --txt-color-mob:#000;">
+                  <h1 class="page-banner-title pt-20 pt-md-0" style="--pg-title-mob:#000;">Get clinic-level results from home – minus the ‘clinical’ costs.
+                  </h1>
+                  <a href="#" class="btn mt-20 text-center d-md-none">Shop Best Sellers</a>
+                  <div class="ctm-width d-none d-md-block mx-auto" style="--ctm-width:450px">
+                     <a href="#" class="btn btn--primary mt-20 mt-lg-30 mb-5 w-100 text-center mw" style="--mw:400px;">Shop All Best
+                        Sellers</a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
    </div>
+      <div class="container">
+         <div class="d-flex justify-content-center flex-row-reverse flex-md-row px-md-10 pb-md-30 stronger_together">
+            <div class="stronger_together_patch">
+                  <img src="sections/isolated/page-banner/images/promo-patch.webp" alt="">
+            </div>
+            <div class="stronger_together_content">
+                  <img src="sections/isolated/page-banner/images/stronger_together.svg" alt="">
+                  <p class="pink_headband">Get a <strong>FREE</strong> pink headband and cosmetic pouch <strong>with every purchase*</strong></p>
+                  <p class="prevent_breast_cancer d-none d-md-block">*To support breast cancer research to prevent, detect, stop and treat breast cancer, Qure will donate $2 from every order to the National Breast Cancer Foundation.</p>
+            </div>
+         </div>
+         <p class="prevent_breast_cancer d-md-none pb-30 text-center">*To support breast cancer research to prevent, detect, stop and treat breast cancer, Qure will donate $2 from every order to the National Breast Cancer Foundation.</p>
+      </div>
+   <!-- promotional banner end -->
+   
    <!-- Page banner end -->
    <!-- Bundle banner -->
    <link rel="stylesheet" href="sections/isolated/bundle-banner/bundle-banner.css" />
@@ -1427,16 +1477,15 @@
 
    <!-- Value Props -->
    <link rel="stylesheet" href="sections/global/value-props/value-props.css">
-   <div class="qure__section value_props" 
-      style="--padding-top:50px;--padding-bottom:50px;--padding-top-mob:40px;--padding-bottom-mob:40px;">
+   <div class="qure__section value_props" style="--section-padding-top:50px;--section-padding-bottom:50px;--section-padding-top-mob:30px;--section-padding-bottom-mob:30px;">
       <div class="container">
          <div class="swiper qure__swiper" id="qure__swiper-value-props" data-section-id="value-props"
             data-autoplay="true" data-loop="true" data-mobile="1" data-tablet="3" data-desktop="4" data-spacing="20"
-            data-pagination-fraction="true" data-stylemode="true">
+            data-pagination-fraction="true">
             <div class="swiper-wrapper">
                <div class="swiper-slide">
                   <div class="text-md-start text-center pe-md-20">
-                     <img src="sections/global/value-props/images/box.svg" alt="">
+                     <img src="sections/global/value-props/images/box.svg" alt=""> 
                      <p class="fs-20 my-15">Free Worldwide Shipping </p>
                      <p class="d-md-block d-none">Enjoy free delivery when you spend $100 USD or more.</p>
                      <p class="d-md-none">Free shipping on orders over $100 USD.</p>

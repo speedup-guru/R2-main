@@ -1,6 +1,6 @@
 .qure__product-img img{
-            width:100%;
-        }
+    width:100%;
+}
 .qure__product-img .qure__product-hover-img {
     opacity: 0;
     transition: .5s;
@@ -19,6 +19,9 @@
     color: var(--color-ice);
     text-decoration: underline;
 }
+.qure__product-img {
+    max-height: 300px;
+} 
 @media (min-width: 768px) {
     .qure__product-main-img img {
         aspect-ratio: 1 / 1;
@@ -26,3 +29,4 @@
         border-radius: 10px;
     }
 }
+
