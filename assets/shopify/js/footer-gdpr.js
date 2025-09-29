@@ -3,6 +3,28 @@ const SETTINGS_KEY = 'qure_cookie_settings';
 
 const el = id => document.getElementById(id);
 
+// Cookie utility functions
+function setCookie(name, value, days = 365) {
+  const expires = new Date();
+  expires.setTime(expires.getTime() + (days * 24 * 60 * 60 * 1000));
+  document.cookie = `${name}=${encodeURIComponent(value)};expires=${expires.toUTCString()};path=/;SameSite=Lax`;
+}
+
+function getCookie(name) {
+  const nameEQ = name + "=";
+  const ca = document.cookie.split(';');
+  for (let i = 0; i < ca.length; i++) {
+    let c = ca[i];
+    while (c.charAt(0) === ' ') c = c.substring(1, c.length);
+    if (c.indexOf(nameEQ) === 0) return decodeURIComponent(c.substring(nameEQ.length, c.length));
+  }
+  return null;
+}
+
+function deleteCookie(name) {
+  document.cookie = `${name}=;expires=Thu, 01 Jan 1970 00:00:00 UTC;path=/;`;
+}
+
 const checkboxes = [
   'strictly-necessary-cookies',
   'performance-cookies',
@@ -38,7 +60,7 @@ function hideAll() {
 }
 
 function loadStates() {
-  const saved = sessionStorage.getItem(SETTINGS_KEY);
+  const saved = getCookie(SETTINGS_KEY);
   if (saved) {
     try {
       const s = JSON.parse(saved);
@@ -59,18 +81,18 @@ function saveStates() {
     functional: functional ? functional.checked : false,
     advertising: advertising ? advertising.checked : false
   };
-  sessionStorage.setItem(SETTINGS_KEY, JSON.stringify(s));
+  setCookie(SETTINGS_KEY, JSON.stringify(s));
 }
 
 function acceptAll() {
   checkboxes.forEach(cb => cb && (cb.checked = true));
   saveStates();
-  sessionStorage.setItem(CONSENT_KEY, 'true');
+  setCookie(CONSENT_KEY, 'true');
   hideAll();
 }
 
 function declineAll() {
-  sessionStorage.setItem(CONSENT_KEY, 'false');
+  setCookie(CONSENT_KEY, 'false');
   hideAll();
 }
 
@@ -85,7 +107,7 @@ function addListeners() {
 }
 
 (function init() {
-  const consent = sessionStorage.getItem(CONSENT_KEY);
+  const consent = getCookie(CONSENT_KEY);
   if (!consent || consent === 'false') showBanner();
   loadStates();
   addListeners();
