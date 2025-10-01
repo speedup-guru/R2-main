@@ -97,9 +97,9 @@
  .skincare_plan_cta .qure__accordion-header::after{
     content: '\f106';
 } 
-.qure__accordion-header:not(.collapsed)::after{
+/* .qure__accordion-header:not(.collapsed)::after{
     content: '\f107';
-}
+} */
 
 .bundle-progress {
   position: relative;
@@ -206,11 +206,11 @@
 
   @media (min-width: 992px) {
     /* disable toggle button */
-    .accordion-button {
+    /* .accordion-button {
       pointer-events: none;
-    }
+    } */
     /* keep accordion always expanded */
-    .accordion-collapse {
+    .skincare_plan_cta .accordion-collapse { 
       display: block !important;
       visibility: visible !important;
       height: auto !important;
@@ -231,6 +231,66 @@
 }
 
 
+/* countdown timer css  */
+.qure__sticky-atc .countdown {
+    display: flex;
+    gap: 12px;
+    font-size: 2em;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+.qure__sticky-atc .countdown div {
+    display: flex;
+    color: var(--White, #FFF);
+    text-align: center;
+    text-shadow: 0 0 9.836px #0586FF;
+    font-family: "TT Commons";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 44.709px;
+    flex-direction: row;
+    align-items: center;
+    gap: 3px;
+}
+.qure__sticky-atc .countdown div span {
+    color: var(--White, #FFF);
+    text-align: center;
+    font-family: "TT Commons";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 46px;
+    text-shadow: none;
+  }
+  .qure__sticky-atc .extra_entries{
+    color: var(--White, #FFF);
+    text-align: center;
+    text-shadow: 0 0 8px #0586FF;
+    font-family: "TT Commons";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 28px;
+    text-transform: uppercase;
+    margin-bottom: 0;
+  }
+  @media(max-width:767px){
+    .qure__sticky-atc .countdown{
+        gap: 10px;
+    }
+   .qure__sticky-atc .countdown div {
+        font-size: 16px;
+    }
+   .qure__sticky-atc .countdown div span{
+        font-size: 16px;
+    }
+  .qure__sticky-atc .extra_entries {
+      font-size: 16px; 
+  }
+}
+/* countdown timer css end */
 
 
 

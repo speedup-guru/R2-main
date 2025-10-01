@@ -104,7 +104,7 @@ strong{font-weight: 600;}
 }
 @media(max-width:991px){
     .h1, h1 {
-        font-size: var(--font-h1, 32px);
+        font-size: var(--font-h1-mob, 32px);
         list-style: var(--font-h1-lh, 36px);
     }
     .h2,h2{

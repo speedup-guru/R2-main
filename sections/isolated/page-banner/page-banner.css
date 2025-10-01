@@ -64,3 +64,18 @@
 }
 }
 /* promotional banner css end */
+
+
+/* banner car giveaway  */
+.qure_logo_title{
+    margin:0 5px -8px;
+}
+@media(max-width:767px){
+    .enter_now_btn{
+        position:absolute;
+        left: 0;
+        right: 0;
+        bottom: 15px;
+    }
+}
+/* banner car giveaway end */
