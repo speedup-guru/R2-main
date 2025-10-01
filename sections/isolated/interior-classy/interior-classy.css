@@ -30,12 +30,18 @@ h3.classy{
     font-weight: 400;
     line-height: 22px;
 }
-
+.interior_img, .interior_img img {
+    height: 100%;
+}
 @media(max-width:767px){
     h3.classy {
         font-size: 28px;
     }
     p.interior {
         margin-bottom: 10px; 
+}
+.interior_img img {
+    height: 300px;
+    object-fit: cover;
 }
 }

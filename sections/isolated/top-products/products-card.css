@@ -50,6 +50,7 @@ body.page\.car-giveaway .qure__product-img img {
     grid-template-columns: repeat(4, 1fr);
     gap: 32px;
 }
+
 @media (min-width: 768px) {
     .qure__product-main-img img {
         aspect-ratio: 1 / 1;
@@ -61,5 +62,11 @@ body.page\.car-giveaway .qure__product-img img {
     .recieve_entries_grid{
         grid-template-columns: repeat(2, 1fr);
         gap: 15px;
+    }
+    .recieve_entries_grid .qure__product-main-img {
+        height: 163px;
+    }
+    .recieve_entries_grid .limited-line {
+        height: 43px;
     }
 }
