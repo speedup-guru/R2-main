@@ -76,16 +76,29 @@ document.addEventListener('DOMContentLoaded', function() {
 
                 const form = block.querySelector('form[action="/cart/add"]') || block.querySelector('form');
                 const hiddenId = form?.querySelector('input[type="hidden"][name="id"]');
-                const img = (block.querySelector('.included_product') || block).querySelector('.variantImage');
-                const variantTextEl = block.querySelector('.variantText');
+                const includedProduct = select.closest('.included_product');
+                const img = includedProduct ? includedProduct.querySelector('.variantImage') : null;
+                const variantTextEl = select.querySelector('.variantText');
 
                 const imgUrl = opt.dataset.image;
                 if (img && imgUrl) img.src = imgUrl;
 
-                const vid = opt.dataset.variantId;
-                if (hiddenId && vid) {
-                    hiddenId.value = vid;
-                    hiddenId.setAttribute('value', vid);
+                if (hiddenId) {
+                    if (opt.dataset.bundleVariantTitle && opt.dataset.bundleVariantTitle.trim() !== "") {
+                        const selectedOptions = block.querySelectorAll('.variant-select option:checked');
+                        const bundleTitles = Array.from(selectedOptions).map(opt => opt.dataset.bundleVariantTitle).filter(title => title && title.trim() !== "");
+                        const allTitles = bundleTitles.join(' / ');
+                        const bundleConfig = window.get_products_data?.['purchase-form-bundle-products-items-' + handle];
+                        if (bundleConfig && bundleConfig['variants'][allTitles]) {
+                            const vid = bundleConfig['variants'][allTitles];
+                            hiddenId.value = vid;
+                            hiddenId.setAttribute('value', vid);
+                        }
+                    } else {
+                        const vid = opt.dataset.variantId;
+                        hiddenId.value = vid;
+                        hiddenId.setAttribute('value', vid);
+                    }
                 }
 
                 const vText = opt.dataset.variantText;
