@@ -33,25 +33,27 @@ function updateStickyButton(variant_title) {
     }
 }
 
-const syncCart = (input) => {
-    getCartState().then(cart => {
+const syncCart = async (input) => {
+    const cart = await getCartState();
+    const isSubscribe = document.getElementById('subscribe_and_save')?.classList.contains('show');
+
+    if(isSubscribe) {
         const is_exist = cart.items.some(item => item.key == input.get('id'));
 
-        if(!is_exist)
-        {
+        if(!is_exist) {
             const formData = new FormData();
             const variant = document.querySelector('.qure__variant-item input[type="radio"]:checked').id
-
+    
             if(variant == 'white') {
                 formData.append('updates[' + faucet.variants.White + ']', 0);
             }
             else {
                 formData.append('updates[' + faucet.variants.Black + ']', 0);
             }
-
-            updateCart(formData);
+    
+            await updateCart(formData);
         }
-    });
+    }
 }
 
 

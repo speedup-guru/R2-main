@@ -1,3 +1,5 @@
+/* events */
+
 document.addEventListener('DOMContentLoaded', () => {
     bindForms();
 });
@@ -15,27 +17,17 @@ document.addEventListener('cart.requestComplete', (event) => {
     }
 });
 
+
+
+/*  render  */
+
 const reloadDrawer = (array) => {
-    const cart = array.detail.cart;
     const source = array.detail.source;
-    const input = array.detail.input;
-    const gift = array.detail.gift;
 
-    updateSection('footer-cart-drawer', 'cart-dynamic-content')
-    .then(() => {
-        if (source === 'addToCart') {
+    updateSection('footer-cart-drawer', 'cart-dynamic-content').then(() => {
+        if (source === 'addToCart' || source === 'addToCartJson') {
             showCart();
-
-            if (typeof gift === 'undefined') {
-                toogleGift(cart);
-            }
-        }
-
-        if(source == 'changeCart')
-        {
-            if (typeof syncCart === 'function') {
-                syncCart(input);
-            }
+            //toogleGift();
         }
 
         getCartState().then(cart => {
@@ -44,17 +36,14 @@ const reloadDrawer = (array) => {
 
         bindForms();
 
-        //reload upsell carousel
         document.querySelectorAll('slide-carousel').forEach((el) => {
             el.QureSlideCarousel();
         });
-
     })
     .catch(console.error);
 }
 
 const bindForms = () => {
-
     //clear all binds before if they are exist
     document.querySelectorAll('form[action$="/cart/add"]').forEach((form) => {
         if (form.getAttribute('data-static') === 'true') {
@@ -127,6 +116,105 @@ const showCart = () => {
     }
 };
 
+
+
+/*  default functions   */
+
+const addToCart = (input) => {
+    return fetch((window.Shopify?.routes?.root || '/') + 'cart/add.js', {
+        method: 'POST',
+        body: input
+    })
+    .then(response => response.json())
+    .then(() => {
+        toogleGift().then(() => {
+            const event = new CustomEvent('cart.requestComplete', { detail: { source: 'addToCart' } });
+            document.dispatchEvent(event);
+        });
+    })
+    .catch((error) => {
+        console.error('Error cart adding:', error);
+    });
+};
+
+const addToCartJson = (input) => {
+    return fetch((window.Shopify?.routes?.root || '/') + 'cart/add.js', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ items: input })
+    })
+    .then(response => response.json())
+    .then(() => {
+        toogleGift().then(() => {
+            const event = new CustomEvent('cart.requestComplete', { detail: { source: 'addToCartJson' } });
+            document.dispatchEvent(event);
+        })
+    })
+    .catch((error) => {
+        console.error('Error cart adding:', error);
+    });
+};
+
+const changeCart = (input) => {
+    return fetch((window.Shopify?.routes?.root || '/') + 'cart/change.js', {
+        method: 'POST',
+        body: input
+    })
+    .then(response => response.json())
+    .then(() => {
+        toogleGift().then(() => {
+            if (typeof syncCart === 'function') {
+                syncCart(input).then(() => {
+                    const event = new CustomEvent('cart.requestComplete', { detail: { source: 'syncCart' } });
+                    document.dispatchEvent(event);
+                });
+            }
+            else {
+                const event = new CustomEvent('cart.requestComplete', { detail: { source: 'changeCart' } });
+                document.dispatchEvent(event);
+            }
+        })
+    })
+    .catch((error) => {
+        console.error('Error cart changing:', error);
+    });
+};
+
+const clearCart = () => {
+    fetch((window.Shopify?.routes?.root || '/') + 'cart/clear.js', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+        }
+    })
+    .then(response => response.json())
+    .then(cart => {
+        const event = new CustomEvent('cart.requestComplete', { detail: { source: 'clearCart' } });
+        document.dispatchEvent(event);
+    })
+    .catch(error => {
+        console.error('Error clearing cart:', error);
+    });
+}
+
+const getCartState = () => {
+    return fetch((window.Shopify?.routes?.root || '/') + 'cart.js')
+            .then(response => response.json())
+            .then(cart => {
+                console.log('Cart state:', cart);
+                return cart; 
+            })
+            .catch(error => {
+                console.error('Error fetching cart:', error);
+                return null;
+            });
+}
+
+
+
+/*  special functions   */
+
 const toogleInsurance = () => {
     document.querySelectorAll('form[action$="/cart/add"]:has(input[type="checkbox"]#insurance)').forEach((form) => {
         const checkbox = form.querySelector('input[type="checkbox"]#insurance');
@@ -143,18 +231,18 @@ const toogleInsurance = () => {
                     formData.set('id', insuranceItem.id);
                     formData.set('quantity', 0);
 
-                    changeCart(formData, true)
+                    changeCart(formData)
                     .then((cart) => {
                         if (checkbox.checked) {
                             const formData = new FormData(form);
-                            addToCart(formData, true);
+                            addToCart(formData);
                         }
                     });
                 }
                 else {
                     const formData = new FormData(form);
                     if (checkbox.checked) {
-                        addToCart(formData, true);
+                        addToCart(formData);
                     }
                 }
             });
@@ -162,175 +250,17 @@ const toogleInsurance = () => {
     });
 };
 
-const __reloadInsurance = (cart) => {
-    const checkbox = document.querySelector('input[type="checkbox"]#insurance');
-    const insurance_id = +(document.querySelector('#insurance_id').value);
-    const insuranceItem = cart.items.find(item => item.title.includes('Shipping Insurance'));
-
-    if(insuranceItem)
-    {
-        const formData = new FormData();
-        formData.append('updates[' + insuranceItem.id + ']', 0);
-
-        updateCart(formData)
-        .then((cart) => {
-            if (checkbox.checked) {
-                const formData = new FormData();
-                formData.set('id', insurance_id);
-                formData.set('quantity', 1);
-                addToCart(formData, true);
-            }
-        });
-    }
-    else {
-        const formData = new FormData();
-        formData.set('id', insurance_id);
-        formData.set('quantity', 1);
-        if (checkbox.checked) {
-            addToCart(formData, true);
-        }
-    }
-};
-
-const addToCartJson = (input, insurance = undefined, gift = undefined) => {
-    return fetch((window.Shopify?.routes?.root || '/') + 'cart/add.js', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ items: input })
-    })
-    .then(response => response.json())
-    .then((addedItem) => {
-        return getCartState().then(cart => {
-            const eventDetail = {
-                cart: cart,
-                source: 'addToCart'
-            };
-
-            const event = new CustomEvent('cart.requestComplete', { detail: eventDetail });
-            document.dispatchEvent(event);
-            //console.log('The product was added to the cart:', addedItem);
-            return cart;
-        });
-    })
-    .catch((error) => {
-        console.error('Error cart adding:', error);
-    });
-};
-
-const addToCart = (input, insurance = undefined, gift = undefined) => {
-    return fetch((window.Shopify?.routes?.root || '/') + 'cart/add.js', {
-        method: 'POST',
-        body: input
-    })
-    .then(response => response.json())
-    .then((addedItem) => {
-        return getCartState().then(cart => {
-            const eventDetail = {
-                cart: cart,
-                source: 'addToCart'
-            };
-
-            if (typeof insurance !== 'undefined') {
-                eventDetail.insurance = insurance;
-            }
-
-            if (typeof gift !== 'undefined') {
-                eventDetail.gift = gift;
-            }
-
-            const event = new CustomEvent('cart.requestComplete', { detail: eventDetail });
-            document.dispatchEvent(event);
-            //console.log('The product was added to the cart:', addedItem);
-            return cart;
-        });
-    })
-    .catch((error) => {
-        console.error('Error cart adding:', error);
-    });
-};
-
-const updateCart = (input) => {
-    return fetch((window.Shopify?.routes?.root || '/') + 'cart/update.js', {
-        method: 'POST',
-        body: input
-    })
-    .then(response => response.json())
-    .then(cart => {
-        const event = new CustomEvent('cart.requestComplete', { detail: { source: 'updateCart', input: input } });
-        document.dispatchEvent(event);
-        return cart;
-    })
-    .catch((error) => {
-        console.error('Error cart updating:', error);
-        return null;
-    });
-};
-
-const changeCart = (input, insurance = undefined, gift = undefined) => {
-    return fetch((window.Shopify?.routes?.root || '/') + 'cart/change.js', {
-        method: 'POST',
-        body: input
-    })
-    .then(response => response.json())
-    .then(cart => {
-        if (typeof gift === 'undefined') {
-            toogleGift(cart).then(() => {
-                const eventDetail = {
-                    cart: cart,
-                    source: 'changeCart',
-                    input: input
-                };
-                const event = new CustomEvent('cart.requestComplete', { detail: eventDetail });
-                document.dispatchEvent(event);
-            });
-        }
-
-        //console.log('The cart was changed:', cart);
-        return cart;
-    })
-    .catch((error) => {
-        console.error('Error cart changing:', error);
-    });
-};
-
-const clearCart = () => {
-    fetch((window.Shopify?.routes?.root || '/') + 'cart/clear.js', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-            'Accept': 'application/json'
-        }
-    })
-        .then(response => response.json())
-        .then(cart => {
-            const event = new CustomEvent('cart.requestComplete', { detail: { source: 'clearCart' } });
-            document.dispatchEvent(event);
-            //console.log('Cart cleared:', cart);
-        })
-        .catch(error => {
-            console.error('Error clearing cart:', error);
-        });
-}
-
-const getCartState = () => {
-    return fetch((window.Shopify?.routes?.root || '/') + 'cart.js')
-            .then(response => response.json())
-            .then(cart => {
-                console.log('Cart state:', cart);
-                return cart; 
-            })
-            .catch(error => {
-                console.error('Error fetching cart:', error);
-                return null;
-            });
-}
-
-const toogleGift = async (cart) => {
+const toogleGift = async () => {
     const forms = document.querySelectorAll('form.footer-cart-drawer-gift[action$="/cart/add"]');
 
     if (forms.length === 0) {
         await new Promise(resolve => setTimeout(resolve, 100));
     };
+
+    const gifts_adding = [];
+    const gift_updating = {};
+
+    const cart = await getCartState();
 
     for (const form of forms) {
         const formData = new FormData(form);
@@ -344,15 +274,75 @@ const toogleGift = async (cart) => {
 
         if (!giftItem) {
             if (cart.total_price >= price_limit) {
-                await addToCart(formData, undefined, true);
+                gifts_adding.push({
+                    id: +(formData.get('id')),
+                    properties: {
+                        _required_validation: formData.get('properties[_required_validation]')
+                    },
+                    quantity: 1
+                });
             }
         } else {
             if (cart.total_price < price_limit) {
-                formData.set('quantity', 0);
-                await changeCart(formData, undefined, true);
+                gift_updating[formData.get('id')] = 0;
             }
         }
     }
 
+    if (gifts_adding.length > 0) {
+        await addToCartMany(gifts_adding);
+    }
+
+    if (Object.keys(gift_updating).length > 0) {
+        await updateCartMany(gift_updating);
+    }
+
     await new Promise(resolve => setTimeout(resolve, 100));
+};
+
+const updateCart = async (input) => {
+    return fetch((window.Shopify?.routes?.root || '/') + 'cart/update.js', {
+        method: 'POST',
+        body: input
+    })
+    .then(response => {
+        return response.json();
+    })
+    .catch((error) => {
+        console.error('Error cart updating:', error);
+        return null;
+    });
+};
+
+const addToCartMany = (input) => {
+    return fetch((window.Shopify?.routes?.root || '/') + 'cart/add.js', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ items: input })
+    })
+    .then(response => response.json())
+    .then(() => {
+        const event = new CustomEvent('cart.requestComplete', { detail: { source: 'addToCartMany' } });
+        document.dispatchEvent(event);
+    })
+    .catch((error) => {
+        console.error('Error cart adding:', error);
+    });
+};
+
+const updateCartMany = (updates) => {
+    return fetch(window.Shopify.routes.root + 'cart/update.js', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ updates })
+      })
+      .then(() => {
+        const event = new CustomEvent('cart.requestComplete', { detail: { source: 'updateCartMany' } });
+        document.dispatchEvent(event);
+      })
+      .catch((error) => {
+        console.error('Error updating cart:', error);
+      });
 };
