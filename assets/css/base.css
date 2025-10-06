@@ -1667,6 +1667,12 @@ html, body{
 button#gdpr-accept-button, button#gdpr-decline-button {padding: 11px;}
 .qure__product-gallery .swiper-slide{border-radius:10px;overflow:hidden;}
 .swiper-thumbnail-press-slider .swiper-slide{border-radius: 0 !important;} 
-.word_wrap{
+body.page\.car-giveaway .faq_content a {
+    color: #000;
+    text-decoration: underline;
     word-wrap: break-word;
 }
+body.page\.hairgrowth-helmet-guide .tab-content a{
+    color: #000;
+    text-decoration: underline;
+} 

@@ -1,3 +1,26 @@
+if (window.innerWidth < 768) { // Only for screens < 768px
+    document.querySelectorAll('.qure__faucet-button').forEach(button => {
+        // Only target buttons that are direct children of .qure__faucet-item
+        if (!button.parentElement.classList.contains('qure__faucet-item')) return;
+
+        const targetId = button.getAttribute('data-bs-target');
+        const targetEl = document.querySelector(targetId);
+
+        if (!targetEl) return;
+
+        // Also ensure the target is not inside #faqs
+        if (targetEl.closest('#faqs')) return;
+
+        targetEl.addEventListener('shown.bs.collapse', function () {
+            button.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        });
+    });
+}
+
+ 
  const dropdown = document.getElementById('accordionDropdown');
   const selected = dropdown.querySelector('.dropdown-selected');
   const options = dropdown.querySelector('.dropdown-options');
@@ -37,3 +60,6 @@ options.querySelectorAll('div').forEach(option => {
     }
   });
 });
+
+
+

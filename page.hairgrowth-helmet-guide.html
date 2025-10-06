@@ -49,9 +49,9 @@
             <source media="(min-width:720px)" srcset="sections/isolated/page-banner/images/helmet_banner.webp"
                 class="img-fluid" width="1440" height="557">
             <source media="(min-width:540px)"
-                srcset="sections/isolated/page-banner/images/helmet_banner-mob.webp" class="img-fluid"
+                srcset="sections/isolated/page-banner/images/helmet_banner_mob.webp" class="img-fluid"
                 width="1440" height="557">
-            <img src="sections/isolated/page-banner/images/helmet_banner-mob.webp" width="225" height="281"
+            <img src="sections/isolated/page-banner/images/helmet_banner_mob.webp" width="225" height="281"
                 alt="" class="img-fluid w-100">
         </picture>
         <div
@@ -120,19 +120,6 @@
                     <div class="tab-content faucet-tab-content accordion" id="myTabContent">
                         <div class="tab-pane fade show active qure__faucet-item" id="qb-1-tab-pane" role="tabpanel"
                             aria-labelledby="qb-1-tab" tabindex="0">
-                            <div class="qure-filter-cards d-inline-block">
-                                <a href="#" data-bs-toggle="modal" data-bs-target="#shower2"
-                                    class="filter-card-item filter-card-video d-md-none">
-                                    <div class="filter-card-video-icon align-items-end px-20 py-10">
-                                        <div class="align-items-center d-flex justify-content-between w-100">
-                                            <div class="text-white fs-20">Watch: How To Use</div>
-                                            <img src="assets/images/play_button.svg" alt="">
-                                        </div>
-                                    </div>
-                                    <img src="sections/isolated/meet-the-qure-filter/images/quick-start-guide.webp"
-                                        alt="shower" class="img-fluid" />
-                                </a>
-                            </div>
                             <button class="qure__faucet-button d-lg-none" type="button" data-bs-toggle="collapse"
                                 data-bs-target="#qb-1" aria-expanded="true" aria-controls="qb-1">Quick Start
                                 Guide</button>
@@ -142,8 +129,8 @@
                                 <div class="qure__faucet-body px-6 pb-30 pb-lg-0">
                                     <h2 class="d-md-block d-none qure__section-heading" style="--heading-size: 28px;">
                                         Quick Start Guide</h2>
-                                    <p class="fs-20 py-20">Ready to begin? To get started with your first treatment, you’ll need the following:</p>
-                                    <ul class="list-dots ml-15 d-flex flex-column gap-1 pt-15">
+                                    <p class="fs-20 pt-10 pb-20">Ready to begin? To get started with your first treatment, you’ll need the following:</p>
+                                    <ul class="list-dots ml-15 d-flex flex-column gap-1 pt-0">
                                         <li>Q-Renew LLLT Helmet</li>
                                         <li>Charging Base (provided)</li>
                                         <li>USB-C Charging Cable (provided)</li>
@@ -202,38 +189,32 @@
                                     <h2 class="d-md-block d-none qure__section-heading" style="--heading-size: 28px;">
                                         Charging Your Device</h2>
                                     <div class="row custom__grid" style="--column-gap:30px; --column-gap-mobile:20px;">
-                                        <div class="col-sm-8 custom__block">
+                                        <div class="col-7 custom__block">
                                             <p>Connect the included USB-C cable to the charging base and plug it into a 5V power adapter (not included).</p>
-                                            <p>Tap the LCD screen to check charging progress.</p>
-                                             <div class="mt-15">
-                                                <p>Full charge time is approximately 4 hours.</p>
-                                                <ul class="list-dots ml-15 d-flex flex-column gap-1 pt-15">
-                                                    <li>The device will not operate while charging.</li>
-                                                    <li>Ensure all ports are completely dry before charging.</li>
-                                                </ul>
-                                            </div>
+                                            <div class="d-none d-md-block">
+                                                <p>Tap the LCD screen to check charging progress.</p>
+                                                <div class="mt-15">
+                                                    <p>Full charge time is approximately 4 hours.</p>
+                                                    <ul class="list-dots ml-15 d-flex flex-column gap-1 pt-0">
+                                                        <li>The device will not operate while charging.</li>
+                                                        <li>Ensure all ports are completely dry before charging.</li>
+                                                    </ul>
+                                                </div>
 
-                                           <div class="mt-15">
-                                                <p>Tips to maximize battery life:</p>
-                                                <ul class="list-dots ml-15 d-flex flex-column gap-1 pt-15">
-                                                    <li>Avoid leaving your device charging for long periods of time. </li>
-                                                    <li>Avoid letting the battery completely run out. </li>
-                                                    <li>Do not use your device while it’s connected to the charger.</li>
-                                                </ul>
+                                                <div class="mt-15">
+                                                    <p>Tips to maximize battery life:</p>
+                                                    <ul class="list-dots ml-15 d-flex flex-column gap-1 pt-0">
+                                                        <li>Avoid leaving your device charging for long periods of time. </li>
+                                                        <li>Avoid letting the battery completely run out. </li>
+                                                        <li>Do not use your device while it’s connected to the charger.</li>
+                                                    </ul>
+                                                </div>
                                             </div>
                                         </div>
-                                        <div class="col-sm-4 custom__block">
+                                        <div class="col-5 custom__block">
                                             <div class="qure-filter-cards d-block">
                                                 <a href="#" data-bs-toggle="modal" data-bs-target="#shower3"
                                                     class="filter-card-item filter-card-video">
-                                                    <div class="filter-card-video-icon align-items-end px-20 py-10">
-                                                        <div
-                                                            class="align-items-center d-flex justify-content-between w-100">
-                                                            <div class="text-white fs-20">Watch: Charging Guide
-                                                            </div>
-                                                            <!-- <img src="assets/images/play_button.svg" alt=""> -->
-                                                        </div>
-                                                    </div>
                                                     <img src="sections/isolated/meet-the-qure-filter/images/charging_device.webp"
                                                         alt="shower" class="img-fluid" />
                                                 </a>
@@ -269,6 +250,25 @@
                                                 <!-- modal end-->
                                             </div>
                                         </div>
+                                        <div class="col-12 custom__block d-md-none">
+                                            <p>Tap the LCD screen to check charging progress.</p>
+                                             <div class="mt-15">
+                                                <p>Full charge time is approximately 4 hours.</p>
+                                                <ul class="list-dots ml-15 d-flex flex-column gap-1 pt-0">
+                                                    <li>The device will not operate while charging.</li>
+                                                    <li>Ensure all ports are completely dry before charging.</li>
+                                                </ul>
+                                            </div>
+
+                                           <div class="mt-30 border-top pt-30">
+                                                <p>Tips to maximize battery life:</p>
+                                                <ul class="list-dots ml-15 d-flex flex-column gap-1 pt-0">
+                                                    <li>Avoid leaving your device charging for long periods of time. </li>
+                                                    <li>Avoid letting the battery completely run out. </li>
+                                                    <li>Do not use your device while it’s connected to the charger.</li>
+                                                </ul>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -286,19 +286,19 @@
                                     <h2 class="d-md-block d-none qure__section-heading" style="--heading-size: 28px;">
                                         Care & Storage</h2>
 
-                                    <div class="mt-10 border-bottom pb-30">
+                                    <div class="mt-10 border-bottom pb-25">
                                         <p class="fw-600">Cleaning</p>
-                                        <ul class="list-dots ml-15 d-flex flex-column gap-1 pt-15">
+                                        <ul class="list-dots ml-15 d-flex flex-column gap-1 pt-0">
                                             <li>Wipe with a damp cloth or water-based wipe. </li>
                                             <li>For stubborn spots, gently use 70% alcohol. </li>
                                             <li>Optionally, spray the inside with Qure Dermal Mist before wiping to help maintain freshness.</li>
                                             <li>Do not clean while the device is on or charging.</li>
-                                            <li>Avoid abrasive materials, solvents, or cleaners.</li>
+                                            <li>Avoid abrasive materials, solvents, or cleaners.</li> 
                                         </ul>
                                     </div>
-                                    <div class="mt-10">
+                                    <div class="mt-25">
                                         <p class="fw-600">Storage</p>
-                                        <ul class="list-dots ml-15 d-flex flex-column gap-1 pt-15">
+                                        <ul class="list-dots ml-15 d-flex flex-column gap-1 pt-0">
                                             <li>Allow the device to cool completely before storing.</li>
                                             <li>Keep in a dry, room-temperature location, away from sunlight or humidity.</li>
                                             <li>Use the charging base or original box for safe storage.</li>
@@ -336,7 +336,7 @@
                                     <hr class="mb-20" />
                                     <p class="mb-10"><strong>Something else?</strong></p>
                                     <p>DO NOT attempt to investigate or modify the product. It contains no serviceable parts.</p>
-                                    <p class="mt-20">If the issue persists, please contact Qure Support at support@qureskincare.com for further assistance.</p>
+                                    <p class="mt-20">If the issue persists, please contact Qure Support at <a href="mailto:support@qureskincare.com">support@qureskincare.com</a>  for further assistance.</p>
 
                                 </div>
                             </div>
@@ -468,6 +468,7 @@
         document.addEventListener("DOMContentLoaded", function () {
             loadScriptOnce('main-slider', 'assets/js/main-slider.js');
             loadScriptOnce('wistia-script', 'https://fast.wistia.com/assets/external/E-v1.js');
+            loadScriptOnce('faucet-creative-brief', 'sections/isolated/faucet-creative-brief/faucet-creative-brief.js');
         });
     </script>
     <!-- Section faucet creative brief end -->
