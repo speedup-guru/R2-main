@@ -44,4 +44,7 @@ h3.classy{
     height: 300px;
     object-fit: cover;
 }
+.email_icon{
+    height: 80px !important;
+}
 }
