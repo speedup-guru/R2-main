@@ -539,6 +539,9 @@
 .qure__variant-label+div {
     align-items: end;
 }
+.patch__variant-label+div {
+    align-items: end;
+}
 /* ================ Best Value Flag ================ */
 .page\.sunil-micro-infusion-pdp .qure__variant-box .qv-img {
     max-height: 60px;
@@ -606,3 +609,70 @@
     line-height: 18px;
 }
 /* car giveway qure founder section end */
+
+
+
+
+/* all in one bf section css starts */
+.all-in-one-bf .qure__variant-box{
+    flex-direction: row !important;
+    justify-content: space-between;
+}
+.all-in-one-bf .vp-best-value {
+    max-width: 100px;
+    margin: 0 30px 0 auto;
+}
+.all-in-one-bf  .qure__variant-item {
+    margin-bottom: 12px;
+}
+.all-in-one-bf .bf-buy-Wrapper {
+    display: flex;
+    gap: 10px;
+    text-align: start;
+}
+.all-in-one-bf  .qure__variant-item:nth-child(1) .qure__variant-box{
+    padding-top: 12px;
+}
+.all-in-one-bf .qure__variant-box {
+    padding: 12px;
+}
+.all-in-one-bf .vp-price{
+    position: relative;
+}
+.all-in-one-bf .vp-price:before {
+    position: absolute;
+    content: "";
+    height: 2px;
+    width: 100%;
+    background: #FF5429;
+    transform: rotate(5deg);
+    top: 10px;
+}
+.black_friday_pricing{
+    background: linear-gradient(90deg, #FF4E22 -1.33%, #FF8F72 50.38%, #FF4E22 100.13%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 16px; 
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px;
+}
+.save_perc{
+    border-radius: 40px;
+    background: linear-gradient(94deg, #FF4E22 -2.55%, #FF8566 50.51%, #FF4E22 97.13%);
+    display: flex;
+    padding: 2px 12px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    color: #fff;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px;
+}
+.all-in-one-bf{
+    display: unset !important;
+}
+/* all in one bf section css ends */
