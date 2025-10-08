@@ -1676,3 +1676,27 @@ body.page\.hairgrowth-helmet-guide .tab-content a{
     color: #000;
     text-decoration: underline;
 } 
+.black_friday_pricing{
+    background: linear-gradient(90deg, #FF4E22 -1.33%, #FF8F72 50.38%, #FF4E22 100.13%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 16px; 
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px;
+}
+.save_perc{
+    border-radius: 40px;
+    background: linear-gradient(94deg, #FF4E22 -2.55%, #FF8566 50.51%, #FF4E22 97.13%);
+    display: flex;
+    padding: 2px 12px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    color: #fff;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px;
+}
