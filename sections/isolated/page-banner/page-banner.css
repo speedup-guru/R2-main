@@ -79,3 +79,54 @@
     }
 }
 /* banner car giveaway end */
+
+/* css for targeting page banner content with the body class for specific pages  */
+body.page\.all-in-one-face-serum-creative-content-guide .ctm_cls_title_wrapper {
+    max-width: 450px;
+}
+body.page\.neck-decolletage-led-pro-content-guide .ctm_cls_title_wrapper {
+    max-width: 605px;
+}
+body.page\.dermal-mist-brief .ctm_cls_title_wrapper {
+    max-width: 408px;
+}
+body.page\.led-mask-brief .ctm_cls_title_wrapper {
+    max-width: 450px;
+}
+body.page\.micro-infusion-patches-content-guide .ctm_cls_title_wrapper {
+    max-width: 605px;
+}
+body.page\.content-instructions .ctm_cls_title_wrapper {
+    max-width: 450px;
+}
+body.page\.shower-creative-brief .ctm_cls_title_wrapper {
+    max-width: 425px;
+}
+body.page\.faucet-creative-brief .ctm_cls_title_wrapper {
+    max-width: 450px;
+}
+body.page\.n-d-quickstart-guide .ctm_cls_title_wrapper {
+    max-width: 550px;
+}
+body.page\.shower-filter-online-guide .ctm_cls_title_wrapper {
+    max-width: 450px;
+}
+body.page\.faucet-online-guide .ctm_cls_title_wrapper {
+    max-width: 540px;
+}
+body.page\.microinfusion-safety-guide .ctm_cls_title_wrapper {
+    max-width: 450px;
+}
+
+@media(min-width:768px){
+    body.page\.microinfusion-safety-guide .ctm_cls_title_wrapper {
+        padding-right: 130px;
+    }
+}
+@media(max-width:767px){
+    body.page\.microinfusion-safety-guide .ctm_cls_title_wrapper {
+        padding-bottom: 50px;
+    }
+}
+
+/* css for targeting page banner content with the body class for specific pages */
