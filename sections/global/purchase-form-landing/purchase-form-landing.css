@@ -625,3 +625,23 @@
     display: unset !important;
 }
 /* all in one bf section css ends */
+
+/* black friday limited edition kit start */
+.save_price {
+    color: #FF5429;
+    background: #FFEEEA;
+    padding: 1px 12px;
+    border-radius: 12px;
+    font-weight: 600;
+}
+.moneyback_guarantee{
+    border-radius: 10px;
+    background: var(--Mist, #F6F6F7);
+    padding: 32px 24px;
+}
+@media(max-width:767px){
+    .moneyback_guarantee{
+        padding: 24px 16px;
+    }
+}
+/* black friday limited edition kit end */

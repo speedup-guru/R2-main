@@ -130,3 +130,25 @@ body.page\.microinfusion-safety-guide .ctm_cls_title_wrapper {
 }
 
 /* css for targeting page banner content with the body class for specific pages */
+
+/* css for page.bf-limited-edition-kit.html start */
+.add_clss {
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px;
+}
+.adi_cls li {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+.moneyback_guarantee_content p{
+    margin-bottom: 0;
+}
+.ctm_grid {
+    grid-template-columns: 80px 1fr;
+    gap: 10px;
+    place-items: center;
+}
+/* css for page.bf-limited-edition-kit.html end */

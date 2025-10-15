@@ -658,6 +658,7 @@ ul.list-dots {
 100%{transform:translateX(-100%)}
 }
 .qure_shipping-scroll{animation:ticker var(--s-text-time,20s) infinite linear;flex-shrink:0}
+.bg_marquee_section .qure_shipping-scroll .qure_shipping-inner{width: 220px;}
                   
 /* ======================= Accordion =================== */
 .qure__accordion-item{background:transparent}
@@ -1700,3 +1701,22 @@ body.page\.hairgrowth-helmet-guide .tab-content a{
     font-weight: 600;
     line-height: 20px;
 }
+.bg-teal{
+    background: #C7E5DB;
+    padding: 3px 12px;
+    font-size: 14px;
+    font-weight: 600; 
+}
+.limited_edition {
+    background: #FF5429;
+    max-width: max-content;
+    color: #fff;
+    padding: 1px 12px;
+    border-radius: 5px;
+    font-weight: 400;
+    margin-bottom: 15px;
+    font-family: "TT Commons";
+    font-size: 18px;
+}
+.bg_marquee_section{background: #212428;}
+.bg_marquee_section .qure_shipping-content {color: #fff;}
